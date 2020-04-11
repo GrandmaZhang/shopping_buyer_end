@@ -1,0 +1,35 @@
+.cart-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(52, 54, 57, 0.5);
+}
+.cart-container .cart-main {
+  height: 60%;
+  width: 80%;
+}
+.cart-container .cart-main .image {
+  height: 60%;
+  width: 100%;
+  object-fit: cover;
+}
+.cart-container .cart-main .cart-operation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #ffffff;
+}
+.cart-container .cart-main .cart-operation > div {
+  height: 3.125rem;
+  line-height: 3.125rem;
+  font-size: 1.875rem;
+  color: #6b9cf8;
+}
+.cart-container .cart-main .cart-operation .operation {
+  cursor: pointer;
+}

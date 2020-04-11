@@ -1,0 +1,201 @@
+.user-info-container {
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #e6e6e6;
+}
+.user-info-container .user-avatar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user-info-container .user-avatar-container .user-avatar {
+  object-fit: contain;
+  border-radius: 50%;
+  width: 3.125rem;
+  height: 3.125rem;
+}
+.user-info-container .user-avatar-container .user-info {
+  height: 1.875rem;
+  line-height: 1.875rem;
+}
+.user-info-container .user-info-bar {
+  width: 60%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.user-info-container .user-info-bar .user-info-bar-item {
+  background: #ffffff;
+  border-radius: 0.9375rem;
+  padding: 0.625rem;
+  margin: 0.625rem auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.shopping-cart-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #e6e6e6;
+}
+.shopping-cart-container .shopping-item-container {
+  overflow: scroll;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.shopping-cart-container .shopping-item-container .shopping-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 3.75rem;
+  width: 80%;
+  margin: 0.625rem;
+  border-radius: 0.9375rem;
+  padding: 0.9375rem;
+  background-color: #ffffff;
+}
+.shopping-cart-container .shopping-item-container .shopping-item > img {
+  display: block;
+  width: 3.75rem;
+  height: 3.75rem;
+  object-fit: contain;
+}
+.shopping-cart-container .shopping-item-container .shopping-item .item {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.shopping-cart-container .shopping-item-container .shopping-item .item .title {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.shopping-cart-container
+  .shopping-item-container
+  .shopping-item
+  .item
+  .title
+  > span {
+  margin: 0.625rem;
+}
+.shopping-cart-container .shopping-item-container .shopping-item .item .desc {
+  font-size: 0.875rem;
+  margin-left: 0.625rem;
+}
+.shopping-cart-container .shopping-item-container .shopping-item .item .opera {
+  text-align: right;
+  color: #6b9cf8;
+  font-size: 1.25rem;
+}
+.shopping-cart-container
+  .shopping-item-container
+  .shopping-item
+  .item
+  .opera
+  > span {
+  margin: 0.625rem;
+}
+.shopping-cart-container .bug-bar {
+  width: 100%;
+  height: 3.125rem;
+  line-height: 3.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+}
+.shopping-cart-container .bug-bar .money {
+  font-size: 2rem;
+  color: #fe4a48;
+}
+.shopping-cart-container .bug-bar .submit {
+  width: 4.75rem;
+  background: #6b9cf8;
+  color: #ffffff;
+  text-align: center;
+}
+.order-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  overflow: scroll;
+}
+.order-container .order-item {
+  background: #e6e6e6;
+  border-radius: 0.9375rem;
+  margin: 0.625rem;
+}
+.order-container .order-item .shopping-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 3.75rem;
+  flex: 1;
+  margin: 0.625rem;
+  border-radius: 0.9375rem;
+  padding: 0.9375rem;
+  background-color: #ffffff;
+}
+.order-container .order-item .shopping-item > img {
+  display: block;
+  width: 3.75rem;
+  height: 3.75rem;
+  object-fit: contain;
+}
+.order-container .order-item .shopping-item .item {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.order-container .order-item .shopping-item .item .title {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.order-container .order-item .shopping-item .item .title > span {
+  margin: 0.625rem;
+}
+.order-container .order-item .shopping-item .item .desc {
+  font-size: 0.875rem;
+  margin-left: 0.625rem;
+}
+.order-container .order-item .shopping-item .item .opera {
+  text-align: right;
+  color: #6b9cf8;
+  font-size: 1.25rem;
+}
+.order-container .order-item .shopping-item .item .opera > span {
+  margin: 0.625rem;
+}
+.order-container .order-item .order-status-container {
+  margin-bottom: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 1.875rem;
+  font-size: 0.75rem;
+}
+.order-container .order-item .order-status-container .btn {
+  margin: 0.625rem;
+  padding: 0 0.625rem;
+  background: #6b9cf8;
+  color: #ffffff;
+  border-radius: 0.3125rem;
+  height: 25px;
+  line-height: 25px;
+}

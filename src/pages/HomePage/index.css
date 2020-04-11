@@ -1,0 +1,130 @@
+.homepage-container {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+}
+.homepage-container .homepage-carousel {
+  width: 100%;
+  height: 40vw;
+  background-color: aqua;
+}
+.homepage-container .homepage-carousel .carousel-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.homepage-container .carousel-indicator-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0.625rem;
+  height: 1.25rem;
+}
+.homepage-container .carousel-indicator-container .carousel-indicator {
+  width: 0.625rem;
+  height: 0.625rem;
+  margin: 0.3125rem;
+  border-radius: 50%;
+  background-color: #e6e6e6;
+}
+.homepage-container .carousel-indicator-container .carousel-indicator.active {
+  background-color: #ffffff;
+}
+.homepage-container .classify-container {
+  width: 100%;
+}
+.homepage-container .classify-container .classify-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333;
+  margin: 0.625rem auto 0.625rem 0.625rem;
+}
+.homepage-container .classify-container .classify-item-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.homepage-container
+  .classify-container
+  .classify-item-container
+  .classify-item {
+  width: 3.125rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.homepage-container
+  .classify-container
+  .classify-item-container
+  .classify-item
+  .classify-image {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5625rem;
+  color: #ffffff;
+}
+.homepage-container
+  .classify-container
+  .classify-item-container
+  .classify-item
+  > div {
+  text-align: center;
+  margin-top: 0.625rem;
+  font-size: 0.75rem;
+  color: #333333;
+}
+.homepage-container .goods-recommend-container {
+  width: 100%;
+}
+.homepage-container .goods-recommend-container .goods-recommend-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333;
+  margin: 0.625rem auto 0.625rem 0.625rem;
+}
+.homepage-container .goods-recommend-container .goods-recommend-main {
+  display: flex;
+  flex-wrap: wrap;
+}
+.homepage-container
+  .goods-recommend-container
+  .goods-recommend-main
+  .goods-recommend-item {
+  width: 50%;
+}
+.homepage-container
+  .goods-recommend-container
+  .goods-recommend-main
+  .goods-recommend-item
+  .image {
+  display: block;
+  width: 9.375rem;
+  height: 12.5rem;
+  margin: 0.625rem auto;
+  object-fit: contain;
+}
+.homepage-container
+  .goods-recommend-container
+  .goods-recommend-main
+  .goods-recommend-item
+  .name {
+  padding-left: 0.625rem;
+  font-size: 0.75rem;
+}
+.homepage-container
+  .goods-recommend-container
+  .goods-recommend-main
+  .goods-recommend-item
+  .price {
+  padding-left: 0.625rem;
+  color: #ff3872;
+  font-size: 0.875rem;
+}

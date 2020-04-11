@@ -1,0 +1,5 @@
+.main-container {
+  box-sizing: border-box;
+  height: calc(100vh - 3.125rem);
+  overflow: scroll
+}
