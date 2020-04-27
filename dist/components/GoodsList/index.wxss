@@ -1,0 +1,10 @@
+.recomend-goods-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10rpx; }
+  .recomend-goods-wrap .recomend-goods-item {
+    display: inline-block;
+    width: 50%; }
+

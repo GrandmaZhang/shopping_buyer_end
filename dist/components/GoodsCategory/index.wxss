@@ -1,0 +1,21 @@
+.cate-wrap {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; }
+  .cate-wrap .cate-item {
+    width: 20%;
+    box-sizing: border-box;
+    font-size: 27rpx;
+    text-align: center;
+    position: relative; }
+    .cate-wrap .cate-item .img-wrap {
+      height: 150rpx;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 40rpx; }
+    .cate-wrap .cate-item span {
+      position: relative;
+      top: -20rpx; }
+    .cate-wrap .cate-item image {
+      height: 100% !important; }
+

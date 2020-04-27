@@ -1,0 +1,20 @@
+.goods-item {
+  margin: 10rpx;
+  padding: 10rpx;
+  box-shadow: 2rpx 2rpx 10rpx 3rpx rgba(0, 0, 0, 0.1);
+  border-radius: 10rpx;
+  height: 490rpx;
+  display: inline-block; }
+  .goods-item .goods-img {
+    height: 340rpx;
+    border-radius: 10rpx; }
+  .goods-item .goods-desc {
+    line-height: 14rpx; }
+    .goods-item .goods-desc .goods-desc-text {
+      font-size: 24rpx;
+      overflow: hidden;
+      line-height: 1rem;
+      display: inline-block;
+      height: 66rpx;
+      margin: 20rpx 0; }
+

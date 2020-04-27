@@ -1,0 +1,9 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="goods-item">
+        <image class="goods-img" src="{{imgSrc}}"></image>
+        <view class="goods-desc"><text class="goods-desc-text">{{desc}}</text>
+            <view class="goods-desc-price"><text>{{'¥ ' + price}}</text>
+            </view>
+        </view>
+    </view>
+</block>

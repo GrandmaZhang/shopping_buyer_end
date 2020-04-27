@@ -1,0 +1,7 @@
+<block wx:if="{{$taroCompReady}}">
+    <swiper class="ad-swiper" indicator-color="#999" indicator-active-color="#fc392d" circular="{{true}}" indicator-dots="{{true}}" autoplay="{{true}}">
+        <swiper-item class="ad-swiper-item" wx:key="id" wx:for="{{data}}" wx:for-item="item" wx:for-index="_anonIdx2">
+            <image src="{{item.url[0]}}"></image>
+        </swiper-item>
+    </swiper>
+</block>

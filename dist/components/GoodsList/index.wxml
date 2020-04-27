@@ -1,0 +1,7 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="recomend-goods-wrap">
+        <view class="recomend-goods-item" wx:key="$loopState__temp2" wx:for="{{loopArray2}}" wx:for-item="item" wx:for-index="index">
+            <goods-item compid="{{item.$compid__3}}"></goods-item>
+        </view>
+    </view>
+</block>

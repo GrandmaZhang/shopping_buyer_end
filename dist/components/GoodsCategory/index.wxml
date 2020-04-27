@@ -1,0 +1,10 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="cate-wrap">
+        <view class="cate-item" wx:key="key" wx:for="{{categoryMap}}" wx:for-item="item" wx:for-index="_anonIdx2">
+            <view class="img-wrap">
+                <image src="{{item.pic}}"></image>
+            </view>
+            <span>{{item.name}}</span>
+        </view>
+    </view>
+</block>

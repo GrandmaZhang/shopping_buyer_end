@@ -1,0 +1,6 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="login-page" id="login-page">
+        <view class="title">您好，请登录</view>
+        <view class="title-des">新用户注册即享18天会员98元</view>
+    </view>
+</block>

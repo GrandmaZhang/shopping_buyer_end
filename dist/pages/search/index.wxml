@@ -1,0 +1,6 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="search-page">
+        <at-search-bar compid="{{$compid__29}}"></at-search-bar>
+        <goods-list compid="{{$compid__30}}"></goods-list>
+    </view>
+</block>

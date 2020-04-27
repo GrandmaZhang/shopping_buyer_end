@@ -1,0 +1,10 @@
+@import "../../styles/mixin";
+
+.home-page {
+  @include wh(100%, 100%);
+  .at-search-bar {
+    .at-search-bar__action {
+      background: #fc392d;
+    }
+  }
+}

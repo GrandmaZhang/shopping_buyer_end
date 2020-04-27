@@ -1,0 +1,25 @@
+.cate-wrap {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  .cate-item {
+    width: 20%;
+    box-sizing: border-box;
+    font-size: 27px;
+    text-align: center;
+    position: relative;
+    .img-wrap {
+      height: 150px;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 40px;
+    }
+    span {
+      position: relative;
+      top: -20px;
+    }
+    image {
+      height: 100% !important;
+    }
+  }
+}
