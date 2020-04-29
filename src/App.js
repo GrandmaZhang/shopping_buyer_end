@@ -1,11 +1,19 @@
 import "@tarojs/async-await";
 import Taro, { Component } from "@tarojs/taro";
-// import { Provider } from "@tarojs/redux";
+import { Provider, connect } from "@tarojs/redux";
 import Home from "./pages/home";
+import Login from "./pages/login";
+import userAPI from "./api/user";
+import Request from "./utils/request";
+import configStore from "./flux/store";
+import { mapStateToProps, mapDispatchToProps } from "./connect";
 
 import "./styles/base.scss";
 import "taro-ui/dist/style/index.scss";
 
+const store = configStore();
+
+@connect(mapStateToProps, mapDispatchToProps)
 class App extends Component {
   config = {
     pages: [
@@ -50,13 +58,37 @@ class App extends Component {
     }
   };
 
-  async componentDidMount() {}
+  async componentDidMount() {
+    const { changeLogin } = this.props;
+    try {
+      const userInfo = await Request({
+        url: userAPI.userInfo,
+        method: "GET"
+      });
+      console.log(userInfo, "userInfo");
+      if (userInfo.code === -1) {
+        changeLogin(false);
+        // Taro.navigateTo({
+        //   url: `/pages/login/index`
+        // });
+      } else {
+        changeLogin(true);
+        // Taro.navigateTo({
+        //   url: `/pages/home/index`
+        // });
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  }
 
   render() {
+    const { isLogin } = this.props;
+    console.log(isLogin, "isLogin");
     return (
-      // <Provider store={store}>
-      <Home />
-      // </Provider>
+      <Provider store={store}>
+        <Home />
+      </Provider>
     );
   }
 }

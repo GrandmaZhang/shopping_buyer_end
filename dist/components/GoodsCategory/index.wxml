@@ -1,10 +1,10 @@
 <block wx:if="{{$taroCompReady}}">
     <view class="cate-wrap">
-        <view class="cate-item" wx:key="key" wx:for="{{categoryMap}}" wx:for-item="item" wx:for-index="_anonIdx2">
+        <view class="cate-item" wx:key="key" bindtap="anonymousFunc0" wx:for="{{loopArray1}}" wx:for-item="item" wx:for-index="index" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey}}">
             <view class="img-wrap">
-                <image src="{{item.pic}}"></image>
+                <image src="{{item.$original.pic}}"></image>
             </view>
-            <span>{{item.name}}</span>
+            <span>{{item.$original.name}}</span>
         </view>
     </view>
 </block>

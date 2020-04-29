@@ -1,6 +1,10 @@
 <block wx:if="{{$taroCompReady}}">
     <view class="login-page" id="login-page">
-        <view class="title">您好，请登录</view>
-        <view class="title-des">新用户注册即享18天会员98元</view>
+        <at-form compid="{{$compid__22}}">
+            <at-input compid="{{$compid__23}}"></at-input>
+            <at-input compid="{{$compid__24}}"></at-input>
+            <at-button compid="{{$compid__25}}">{{loginType === LOGIN ? "登录" : "注册"}}</at-button>
+        </at-form><text bindtap="changeLoginType" class="change-type">{{loginType === LOGIN ? "没有账号？请点此注册" : "已有账号？请点此登录"}}</text>
+        <at-toast compid="{{$compid__26}}"></at-toast>
     </view>
 </block>

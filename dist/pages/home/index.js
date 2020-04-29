@@ -1,5 +1,38 @@
 (wx["webpackJsonp"] = wx["webpackJsonp"] || []).push([["pages/home/index"],{
 
+/***/ "./src/pages/home/connect.js":
+/*!***********************************!*\
+  !*** ./src/pages/home/connect.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.mapStateToProps = exports.mapDispatchToProps = undefined;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _user = __webpack_require__(/*! ../../flux/actions/user */ "./src/flux/actions/user.js");
+
+var mapDispatchToProps = exports.mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    changeLogin: function changeLogin(params) {
+      return dispatch((0, _user.changeLogin)(params));
+    }
+  };
+};
+
+var mapStateToProps = exports.mapStateToProps = function mapStateToProps(state) {
+  return _extends({}, state.user);
+};
+
+/***/ }),
+
 /***/ "./src/pages/home/index.js":
 /*!*********************************!*\
   !*** ./src/pages/home/index.js ***!
@@ -20,11 +53,13 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-var _class, _temp2;
+var _dec, _class, _class2, _temp2;
 
 var _taroWeapp = __webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/@tarojs/taro-weapp/index.js");
 
 var _taroWeapp2 = _interopRequireDefault(_taroWeapp);
+
+var _redux = __webpack_require__(/*! @tarojs/redux */ "./node_modules/@tarojs/redux/index.js");
 
 var _request = __webpack_require__(/*! ../../utils/request */ "./src/utils/request.js");
 
@@ -33,6 +68,12 @@ var _request2 = _interopRequireDefault(_request);
 var _homePage = __webpack_require__(/*! ../../api/homePage */ "./src/api/homePage.js");
 
 var _homePage2 = _interopRequireDefault(_homePage);
+
+var _user = __webpack_require__(/*! ../../api/user */ "./src/api/user.js");
+
+var _user2 = _interopRequireDefault(_user);
+
+var _connect = __webpack_require__(/*! ./connect */ "./src/pages/home/connect.js");
 
 __webpack_require__(/*! ./index.scss */ "./src/pages/home/index.scss");
 
@@ -48,7 +89,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var HomePage = (_temp2 = _class = function (_BaseComponent) {
+var HomePage = (_dec = (0, _redux.connect)(_connect.mapStateToProps, _connect.mapDispatchToProps), _dec(_class = (_temp2 = _class2 = function (_BaseComponent) {
   _inherits(HomePage, _BaseComponent);
 
   function HomePage() {
@@ -63,7 +104,7 @@ var HomePage = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = HomePage.__proto__ || Object.getPrototypeOf(HomePage)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__10", "$compid__11", "$compid__12", "goods", "banner", "searchValue"], _this.config = {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = HomePage.__proto__ || Object.getPrototypeOf(HomePage)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__45", "$compid__46", "$compid__47", "goods", "banner", "searchValue", "isLogin"], _this.config = {
       navigationBarTitleText: "zml的黑店-首页"
     }, _this.state = {
       goods: [],
@@ -160,9 +201,65 @@ var HomePage = (_temp2 = _class = function (_BaseComponent) {
     }
   }, {
     key: "componentDidMount",
-    value: function componentDidMount() {
-      this.getBanner();
-      this.getGoods();
+    value: function () {
+      var _ref4 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
+        var userInfo;
+        return regeneratorRuntime.wrap(function _callee3$(_context3) {
+          while (1) {
+            switch (_context3.prev = _context3.next) {
+              case 0:
+                _context3.prev = 0;
+                _context3.next = 3;
+                return (0, _request2.default)({
+                  url: _user2.default.userInfo,
+                  method: "GET"
+                });
+
+              case 3:
+                userInfo = _context3.sent;
+
+                console.log(userInfo, "userInfo");
+                if (userInfo.code === -1) {
+                  _taroWeapp2.default.navigateTo({
+                    url: "/pages/login/index"
+                  });
+                } else {
+                  this.getBanner();
+                  this.getGoods();
+                }
+                _context3.next = 11;
+                break;
+
+              case 8:
+                _context3.prev = 8;
+                _context3.t0 = _context3["catch"](0);
+
+                console.log(_context3.t0);
+
+              case 11:
+              case "end":
+                return _context3.stop();
+            }
+          }
+        }, _callee3, this, [[0, 8]]);
+      }));
+
+      function componentDidMount() {
+        return _ref4.apply(this, arguments);
+      }
+
+      return componentDidMount;
+    }()
+  }, {
+    key: "componentDidShow",
+    value: function componentDidShow() {
+      var isLogin = this.props.isLogin;
+
+      console.log(isLogin, "isLogin");
+      if (isLogin) {
+        this.getBanner();
+        this.getGoods();
+      }
     }
 
     //分享
@@ -192,20 +289,20 @@ var HomePage = (_temp2 = _class = function (_BaseComponent) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__10"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__45"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__10 = _genCompid2[0],
-          $compid__10 = _genCompid2[1];
+          $prevCompid__45 = _genCompid2[0],
+          $compid__45 = _genCompid2[1];
 
-      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__11"),
+      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__46"),
           _genCompid4 = _slicedToArray(_genCompid3, 2),
-          $prevCompid__11 = _genCompid4[0],
-          $compid__11 = _genCompid4[1];
+          $prevCompid__46 = _genCompid4[0],
+          $compid__46 = _genCompid4[1];
 
-      var _genCompid5 = (0, _taroWeapp.genCompid)(__prefix + "$compid__12"),
+      var _genCompid5 = (0, _taroWeapp.genCompid)(__prefix + "$compid__47"),
           _genCompid6 = _slicedToArray(_genCompid5, 2),
-          $prevCompid__12 = _genCompid6[0],
-          $compid__12 = _genCompid6[1];
+          $prevCompid__47 = _genCompid6[0],
+          $compid__47 = _genCompid6[1];
 
       var _state = this.__state,
           searchValue = _state.searchValue,
@@ -215,24 +312,24 @@ var HomePage = (_temp2 = _class = function (_BaseComponent) {
       _taroWeapp.propsManager.set({
         "value": searchValue,
         "onFocus": this.goToSearchPage
-      }, $compid__10, $prevCompid__10);
+      }, $compid__45, $prevCompid__45);
       _taroWeapp.propsManager.set({
         "data": banner
-      }, $compid__11, $prevCompid__11);
+      }, $compid__46, $prevCompid__46);
       _taroWeapp.propsManager.set({
         "goods": goods
-      }, $compid__12, $prevCompid__12);
+      }, $compid__47, $prevCompid__47);
       Object.assign(this.__state, {
-        $compid__10: $compid__10,
-        $compid__11: $compid__11,
-        $compid__12: $compid__12
+        $compid__45: $compid__45,
+        $compid__46: $compid__46,
+        $compid__47: $compid__47
       });
       return this.__state;
     }
   }]);
 
   return HomePage;
-}(_taroWeapp.Component), _class.$$events = [], _class.$$componentPath = "pages/home/index", _temp2);
+}(_taroWeapp.Component), _class2.$$events = [], _class2.$$componentPath = "pages/home/index", _temp2)) || _class);
 exports.default = HomePage;
 
 Component(__webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/@tarojs/taro-weapp/index.js").default.createComponent(HomePage, true));

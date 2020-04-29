@@ -34,7 +34,13 @@ var _homePage = __webpack_require__(/*! ../../api/homePage */ "./src/api/homePag
 
 var _homePage2 = _interopRequireDefault(_homePage);
 
+var _config = __webpack_require__(/*! ../../components/GoodsCategory/config */ "./src/components/GoodsCategory/config.js");
+
+__webpack_require__(/*! ./style.scss */ "./src/pages/search/style.scss");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
@@ -59,11 +65,8 @@ var SearchPage = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = SearchPage.__proto__ || Object.getPrototypeOf(SearchPage)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__29", "$compid__30", "searchValue", "goods"], _this.config = {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = SearchPage.__proto__ || Object.getPrototypeOf(SearchPage)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "loopArray3", "$compid__12", "$compid__13", "$compid__14", "$compid__15", "tabList", "searchValue", "goods", "currentTab"], _this.config = {
       navigationBarTitleText: "商品列表"
-    }, _this.state = {
-      searchValue: "",
-      goods: []
     }, _this.handleSearch = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
       var searchValue, moreGoods;
       return regeneratorRuntime.wrap(function _callee$(_context) {
@@ -107,7 +110,55 @@ var SearchPage = (_temp2 = _class = function (_BaseComponent) {
       _this.setState({
         searchValue: value
       });
-    }, _this.customComponents = ["AtSearchBar", "GoodsList"], _temp), _possibleConstructorReturn(_this, _ret);
+    }, _this.handleTabClick = function () {
+      var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(tabIndex) {
+        var goodsItems;
+        return regeneratorRuntime.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                _context2.prev = 0;
+                _context2.next = 3;
+                return (0, _request2.default)({
+                  url: _homePage2.default.getGoodsItems,
+                  method: "GET",
+                  data: {
+                    categoryId: tabIndex
+                  }
+                });
+
+              case 3:
+                goodsItems = _context2.sent;
+
+                _this.setState({
+                  goods: goodsItems
+                });
+                _context2.next = 10;
+                break;
+
+              case 7:
+                _context2.prev = 7;
+                _context2.t0 = _context2["catch"](0);
+
+                console.log(_context2.t0);
+
+              case 10:
+                _this.setState({
+                  currentTab: tabIndex
+                });
+
+              case 11:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2, _this2, [[0, 7]]);
+      }));
+
+      return function (_x) {
+        return _ref3.apply(this, arguments);
+      };
+    }(), _this.customComponents = ["AtSearchBar", "AtTabs", "AtTabsPane", "GoodsList"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(SearchPage, [{
@@ -115,8 +166,63 @@ var SearchPage = (_temp2 = _class = function (_BaseComponent) {
     value: function _constructor(props) {
       _get(SearchPage.prototype.__proto__ || Object.getPrototypeOf(SearchPage.prototype), "_constructor", this).call(this, props);
 
+      var curTab = parseInt(this.$router.params.id, 10);
+      this.state = {
+        searchValue: "",
+        goods: [],
+        currentTab: curTab
+      };
       this.$$refs = new _taroWeapp2.default.RefsArray();
     }
+  }, {
+    key: "componentDidMount",
+    value: function () {
+      var _ref4 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
+        var currentTab, goodsItems;
+        return regeneratorRuntime.wrap(function _callee3$(_context3) {
+          while (1) {
+            switch (_context3.prev = _context3.next) {
+              case 0:
+                currentTab = this.state.currentTab;
+                _context3.prev = 1;
+                _context3.next = 4;
+                return (0, _request2.default)({
+                  url: _homePage2.default.getGoodsItems,
+                  method: "GET",
+                  data: {
+                    categoryId: currentTab
+                  }
+                });
+
+              case 4:
+                goodsItems = _context3.sent;
+
+                this.setState({
+                  goods: goodsItems
+                });
+                _context3.next = 11;
+                break;
+
+              case 8:
+                _context3.prev = 8;
+                _context3.t0 = _context3["catch"](1);
+
+                console.log(_context3.t0);
+
+              case 11:
+              case "end":
+                return _context3.stop();
+            }
+          }
+        }, _callee3, this, [[1, 8]]);
+      }));
+
+      function componentDidMount() {
+        return _ref4.apply(this, arguments);
+      }
+
+      return componentDidMount;
+    }()
   }, {
     key: "_createData",
     value: function _createData() {
@@ -126,33 +232,91 @@ var SearchPage = (_temp2 = _class = function (_BaseComponent) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__29"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__12"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__29 = _genCompid2[0],
-          $compid__29 = _genCompid2[1];
+          $prevCompid__12 = _genCompid2[0],
+          $compid__12 = _genCompid2[1];
 
-      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__30"),
+      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__13"),
           _genCompid4 = _slicedToArray(_genCompid3, 2),
-          $prevCompid__30 = _genCompid4[0],
-          $compid__30 = _genCompid4[1];
+          $prevCompid__13 = _genCompid4[0],
+          $compid__13 = _genCompid4[1];
+
+      var _genCompid5 = (0, _taroWeapp.genCompid)(__prefix + "$compid__14"),
+          _genCompid6 = _slicedToArray(_genCompid5, 2),
+          $prevCompid__14 = _genCompid6[0],
+          $compid__14 = _genCompid6[1];
+
+      var _genCompid7 = (0, _taroWeapp.genCompid)(__prefix + "$compid__15"),
+          _genCompid8 = _slicedToArray(_genCompid7, 2),
+          $prevCompid__15 = _genCompid8[0],
+          $compid__15 = _genCompid8[1];
 
       var _state = this.__state,
           searchValue = _state.searchValue,
-          goods = _state.goods;
+          goods = _state.goods,
+          currentTab = _state.currentTab;
 
       console.log(goods, "searchGoods");
+      var anonymousState__temp = [{ title: "全部" }].concat(_toConsumableArray(_config.tabList));
+      var loopArray3 = _config.tabList.map(function (item, index) {
+        item = {
+          $original: (0, _taroWeapp.internal_get_original)(item)
+        };
+        var $loopState__temp3 = index + 1;
+
+        var _genCompid9 = (0, _taroWeapp.genCompid)(__prefix + "czzzzzzzzz" + index, true),
+            _genCompid10 = _slicedToArray(_genCompid9, 2),
+            $prevCompid__10 = _genCompid10[0],
+            $compid__10 = _genCompid10[1];
+
+        _taroWeapp.propsManager.set({
+          "current": currentTab,
+          "index": $loopState__temp3
+        }, $compid__10, $prevCompid__10);
+
+        var _genCompid11 = (0, _taroWeapp.genCompid)(__prefix + "dzzzzzzzzz" + index, true),
+            _genCompid12 = _slicedToArray(_genCompid11, 2),
+            $prevCompid__11 = _genCompid12[0],
+            $compid__11 = _genCompid12[1];
+
+        _taroWeapp.propsManager.set({
+          "goods": goods
+        }, $compid__11, $prevCompid__11);
+        return {
+          $loopState__temp3: $loopState__temp3,
+          $compid__10: $compid__10,
+          $compid__11: $compid__11,
+          $original: item.$original
+        };
+      });
       _taroWeapp.propsManager.set({
         "focus": true,
         "value": searchValue,
         "onChange": this.handleChange,
         "onActionClick": this.handleSearch
-      }, $compid__29, $prevCompid__29);
+      }, $compid__12, $prevCompid__12);
+      _taroWeapp.propsManager.set({
+        "current": currentTab,
+        "scroll": true,
+        "tabList": anonymousState__temp,
+        "onClick": this.handleTabClick
+      }, $compid__13, $prevCompid__13);
+      _taroWeapp.propsManager.set({
+        "current": currentTab,
+        "index": 0
+      }, $compid__14, $prevCompid__14);
       _taroWeapp.propsManager.set({
         "goods": goods
-      }, $compid__30, $prevCompid__30);
+      }, $compid__15, $prevCompid__15);
       Object.assign(this.__state, {
-        $compid__29: $compid__29,
-        $compid__30: $compid__30
+        anonymousState__temp: anonymousState__temp,
+        loopArray3: loopArray3,
+        $compid__12: $compid__12,
+        $compid__13: $compid__13,
+        $compid__14: $compid__14,
+        $compid__15: $compid__15,
+        tabList: _config.tabList
       });
       return this.__state;
     }
@@ -163,6 +327,17 @@ var SearchPage = (_temp2 = _class = function (_BaseComponent) {
 exports.default = SearchPage;
 
 Component(__webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/@tarojs/taro-weapp/index.js").default.createComponent(SearchPage, true));
+
+/***/ }),
+
+/***/ "./src/pages/search/style.scss":
+/*!*************************************!*\
+  !*** ./src/pages/search/style.scss ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
 
 /***/ })
 

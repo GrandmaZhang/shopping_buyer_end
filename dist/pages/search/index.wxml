@@ -1,6 +1,17 @@
 <block wx:if="{{$taroCompReady}}">
     <view class="search-page">
-        <at-search-bar compid="{{$compid__29}}"></at-search-bar>
-        <goods-list compid="{{$compid__30}}"></goods-list>
+        <at-search-bar compid="{{$compid__12}}"></at-search-bar>
+        <at-tabs compid="{{$compid__13}}">
+            <at-tabs-pane compid="{{$compid__14}}">
+                <view class="search-page__content">
+                    <goods-list compid="{{$compid__15}}"></goods-list>
+                </view>
+            </at-tabs-pane>
+            <at-tabs-pane wx:for="{{loopArray3}}" wx:for-item="item" wx:for-index="index" compid="{{item.$compid__10}}">
+                <view class="search-page__content">
+                    <goods-list compid="{{item.$compid__11}}"></goods-list>
+                </view>
+            </at-tabs-pane>
+        </at-tabs>
     </view>
 </block>

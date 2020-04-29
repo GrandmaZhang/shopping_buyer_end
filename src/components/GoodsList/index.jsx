@@ -1,13 +1,12 @@
 import Taro from "@tarojs/taro";
 import PropTypes from "prop-types";
-import { View, Text, Image } from "@tarojs/components";
+import { View } from "@tarojs/components";
 import GoodsItem from "../GoodsItem";
 
 import "./style.scss";
 
-const GoodsList = props => {
+function GoodsList(props) {
   const { goods } = props;
-  console.log(goods, "goods");
   return (
     <View className="recomend-goods-wrap">
       {goods.map((item, index) => (
@@ -15,14 +14,14 @@ const GoodsList = props => {
           <GoodsItem
             name={item.name}
             imgSrc={item.url[0]}
-            desc={item.desc}
+            name={item.name}
             price={item.price}
           />
         </View>
       ))}
     </View>
   );
-};
+}
 
 GoodsList.defaultProps = {
   goods: []

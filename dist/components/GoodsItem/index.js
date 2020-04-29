@@ -52,7 +52,7 @@ var GoodsItem = (_temp2 = _class = function (_Taro$Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = GoodsItem.__proto__ || Object.getPrototypeOf(GoodsItem)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["imgSrc", "desc", "price"], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = GoodsItem.__proto__ || Object.getPrototypeOf(GoodsItem)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["imgSrc", "name", "price"], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(GoodsItem, [{
@@ -73,12 +73,12 @@ var GoodsItem = (_temp2 = _class = function (_Taro$Component) {
       var props = this.__props;
 
       var imgSrc = props.imgSrc,
-          desc = props.desc,
+          name = props.name,
           price = props.price;
 
       Object.assign(this.__state, {
         imgSrc: imgSrc,
-        desc: desc,
+        name: name,
         price: price
       });
       return this.__state;
@@ -91,7 +91,7 @@ var GoodsItem = (_temp2 = _class = function (_Taro$Component) {
 
 GoodsItem.propTypes = {
   imgSrc: _propTypes2.default.string.isRequired,
-  desc: _propTypes2.default.string.isRequired,
+  name: _propTypes2.default.string.isRequired,
   price: _propTypes2.default.number.isRequired
 };
 

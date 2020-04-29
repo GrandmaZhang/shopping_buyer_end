@@ -34,6 +34,8 @@ __webpack_require__(/*! ./style.scss */ "./src/components/GoodsList/style.scss")
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -76,24 +78,23 @@ var GoodsList = (_temp2 = _class = function (_Taro$Component) {
 
       var goods = props.goods;
 
-      console.log(goods, "goods");
       var loopArray2 = goods.map(function (item, index) {
+        var _propsManager$set;
+
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
         var $loopState__temp2 = item.$original.id + "-" + index;
 
-        var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "azzzzzzzzz" + index, true),
+        var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "bzzzzzzzzz" + index, true),
             _genCompid2 = _slicedToArray(_genCompid, 2),
             $prevCompid__3 = _genCompid2[0],
             $compid__3 = _genCompid2[1];
 
-        _taroWeapp.propsManager.set({
+        _taroWeapp.propsManager.set((_propsManager$set = {
           "name": item.$original.name,
-          "imgSrc": item.$original.url[0],
-          "desc": item.$original.desc,
-          "price": item.$original.price
-        }, $compid__3, $prevCompid__3);
+          "imgSrc": item.$original.url[0]
+        }, _defineProperty(_propsManager$set, "name", item.$original.name), _defineProperty(_propsManager$set, "price", item.$original.price), _propsManager$set), $compid__3, $prevCompid__3);
         return {
           $loopState__temp2: $loopState__temp2,
           $compid__3: $compid__3,

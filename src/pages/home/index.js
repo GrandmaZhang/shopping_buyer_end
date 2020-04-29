@@ -1,13 +1,17 @@
 import Taro, { Component } from "@tarojs/taro";
 import { View, Text, Image } from "@tarojs/components";
 import { AtSearchBar } from "taro-ui";
+import { connect } from "@tarojs/redux";
 import Request from "../../utils/request";
 import AdSwiper from "../../components/AdSwiper";
 import GoodsCategory from "../../components/GoodsCategory";
 import GoodsList from "../../components/GoodsList";
 import homePageAPI from "../../api/homePage";
+import userAPI from "../../api/user";
+import { mapDispatchToProps, mapStateToProps } from "./connect";
 import "./index.scss";
 
+@connect(mapStateToProps, mapDispatchToProps)
 class HomePage extends Component {
   config = {
     navigationBarTitleText: "zml的黑店-首页"
@@ -19,9 +23,33 @@ class HomePage extends Component {
     searchValue: ""
   };
 
-  componentDidMount() {
-    this.getBanner();
-    this.getGoods();
+  async componentDidMount() {
+    try {
+      const userInfo = await Request({
+        url: userAPI.userInfo,
+        method: "GET"
+      });
+      console.log(userInfo, "userInfo");
+      if (userInfo.code === -1) {
+        Taro.navigateTo({
+          url: `/pages/login/index`
+        });
+      } else {
+        this.getBanner();
+        this.getGoods();
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
+  componentDidShow() {
+    const { isLogin } = this.props;
+    console.log(isLogin, "isLogin");
+    if (isLogin) {
+      this.getBanner();
+      this.getGoods();
+    }
   }
 
   //分享
@@ -84,25 +112,9 @@ class HomePage extends Component {
     const { searchValue, banner, goods } = this.state;
     return (
       <View className="home-page">
-        <AtSearchBar
-          value={searchValue}
-          // onChange={this.handleSearch}
-          onFocus={this.goToSearchPage}
-        />
+        <AtSearchBar value={searchValue} onFocus={this.goToSearchPage} />
         <AdSwiper data={banner} />
         <GoodsCategory />
-        {/* <View className="recomend-goods-wrap">
-          {goods.map((item, index) => (
-            <View className="recomend-goods-item" key={`${item.id}-${index}`}>
-              <GoodsItem
-                name={item.name}
-                imgSrc={item.url[0]}
-                desc={item.desc}
-                price={item.price}
-              />
-            </View>
-          ))}
-        </View> */}
         <GoodsList goods={goods} />
       </View>
     );

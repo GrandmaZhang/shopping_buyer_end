@@ -1,5 +1,38 @@
 (wx["webpackJsonp"] = wx["webpackJsonp"] || []).push([["pages/login/index"],{
 
+/***/ "./src/pages/login/connect.js":
+/*!************************************!*\
+  !*** ./src/pages/login/connect.js ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.mapStateToProps = exports.mapDispatchToProps = undefined;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _user = __webpack_require__(/*! ../../flux/actions/user */ "./src/flux/actions/user.js");
+
+var mapDispatchToProps = exports.mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    changeLogin: function changeLogin(params) {
+      return dispatch((0, _user.changeLogin)(params));
+    }
+  };
+};
+
+var mapStateToProps = exports.mapStateToProps = function mapStateToProps(state) {
+  return _extends({}, state);
+};
+
+/***/ }),
+
 /***/ "./src/pages/login/index.js":
 /*!**********************************!*\
   !*** ./src/pages/login/index.js ***!
@@ -14,19 +47,35 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-var _class, _temp2;
+var _dec, _class, _class2, _temp2;
 
 var _taroWeapp = __webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/@tarojs/taro-weapp/index.js");
 
 var _taroWeapp2 = _interopRequireDefault(_taroWeapp);
 
+var _redux = __webpack_require__(/*! @tarojs/redux */ "./node_modules/@tarojs/redux/index.js");
+
+var _request = __webpack_require__(/*! ../../utils/request */ "./src/utils/request.js");
+
+var _request2 = _interopRequireDefault(_request);
+
+var _user = __webpack_require__(/*! ../../api/user */ "./src/api/user.js");
+
+var _user2 = _interopRequireDefault(_user);
+
+var _connect = __webpack_require__(/*! ./connect */ "./src/pages/login/connect.js");
+
 __webpack_require__(/*! ./index.scss */ "./src/pages/login/index.scss");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -34,13 +83,14 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var setIntervalTime = null;
-
-var Login = (_temp2 = _class = function (_BaseComponent) {
+var LOGIN = 1,
+    REGISTER = 0;
+var Login = (_dec = (0, _redux.connect)(_connect.mapStateToProps, _connect.mapDispatchToProps), _dec(_class = (_temp2 = _class2 = function (_BaseComponent) {
   _inherits(Login, _BaseComponent);
 
   function Login() {
-    var _ref;
+    var _ref,
+        _this2 = this;
 
     var _temp, _this, _ret;
 
@@ -50,9 +100,115 @@ var Login = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Login.__proto__ || Object.getPrototypeOf(Login)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["mobile", "code", "invitation_code", "access_token", "nickname", "new_user", "is_has_buy_card", "smsText", "sending", "smsTime", "erroMessage"], _this.config = {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Login.__proto__ || Object.getPrototypeOf(Login)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__22", "$compid__23", "$compid__24", "$compid__25", "$compid__26", "loginType", "LOGIN", "username", "password", "toastText", "isToastOpened", "changeLogin"], _this.config = {
       navigationBarTitleText: "登录"
-    }, _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
+    }, _this.handleUserNameChange = function (value) {
+      _this.setState({
+        username: value
+      });
+    }, _this.handlePasswordChange = function (value) {
+      _this.setState({
+        password: value
+      });
+    }, _this.changeLoginType = function () {
+      var loginType = _this.state.loginType;
+
+      _this.setState({
+        loginType: loginType === LOGIN ? REGISTER : LOGIN
+      });
+    }, _this.handleRegister = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+      var _this$state, username, password, data;
+
+      return regeneratorRuntime.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _this$state = _this.state, username = _this$state.username, password = _this$state.password;
+              _context.prev = 1;
+              _context.next = 4;
+              return (0, _request2.default)({
+                url: _user2.default.register,
+                method: "POST",
+                data: {
+                  username: username,
+                  password: password
+                }
+              });
+
+            case 4:
+              data = _context.sent;
+
+              _this.setState({
+                isToastOpened: true,
+                toastText: "注册成功"
+              });
+              _this.handleLogin();
+              _context.next = 12;
+              break;
+
+            case 9:
+              _context.prev = 9;
+              _context.t0 = _context["catch"](1);
+
+              console.log(_context.t0);
+
+            case 12:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee, _this2, [[1, 9]]);
+    })), _this.handleLogin = function () {
+      var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(e) {
+        var changeLogin, _this$state2, username, password;
+
+        return regeneratorRuntime.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                changeLogin = _this.props.changeLogin;
+                _this$state2 = _this.state, username = _this$state2.username, password = _this$state2.password;
+                _context2.prev = 2;
+                _context2.next = 5;
+                return (0, _request2.default)({
+                  url: _user2.default.login,
+                  method: "POST",
+                  data: {
+                    username: username,
+                    password: password
+                  }
+                });
+
+              case 5:
+                changeLogin(true);
+                _this.setState({
+                  isToastOpened: true,
+                  toastText: "登录成功"
+                });
+                _taroWeapp2.default.switchTab({
+                  url: "/pages/home/index"
+                });
+                _context2.next = 13;
+                break;
+
+              case 10:
+                _context2.prev = 10;
+                _context2.t0 = _context2["catch"](2);
+
+                console.log(_context2.t0);
+
+              case 13:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2, _this2, [[2, 10]]);
+      }));
+
+      return function (_x) {
+        return _ref3.apply(this, arguments);
+      };
+    }(), _this.customComponents = ["AtForm", "AtInput", "AtButton", "AtToast"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Login, [{
@@ -60,17 +216,11 @@ var Login = (_temp2 = _class = function (_BaseComponent) {
     value: function _constructor(props) {
       _get(Login.prototype.__proto__ || Object.getPrototypeOf(Login.prototype), "_constructor", this).call(this, props);
       this.state = {
-        mobile: "",
-        code: "",
-        invitation_code: "",
-        access_token: "",
-        nickname: "",
-        new_user: "",
-        is_has_buy_card: "",
-        smsText: "发送验证码",
-        sending: 0,
-        smsTime: 30,
-        erroMessage: ""
+        username: "",
+        password: "",
+        loginType: LOGIN,
+        toastText: "",
+        isToastOpened: false
       };
       this.$$refs = new _taroWeapp2.default.RefsArray();
     }
@@ -94,23 +244,85 @@ var Login = (_temp2 = _class = function (_BaseComponent) {
       var __prefix = this.$prefix;
       ;
 
-      var _props = this.__props,
-          sending = _props.sending,
-          smsTime = _props.smsTime;
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__22"),
+          _genCompid2 = _slicedToArray(_genCompid, 2),
+          $prevCompid__22 = _genCompid2[0],
+          $compid__22 = _genCompid2[1];
 
-      if (_taroWeapp2.default.getEnv() === _taroWeapp2.default.ENV_TYPE.WEAPP) {
-        this.setState({
-          sending: sending,
-          smsTime: smsTime
-        });
-      }
-      Object.assign(this.__state, {});
+      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__23"),
+          _genCompid4 = _slicedToArray(_genCompid3, 2),
+          $prevCompid__23 = _genCompid4[0],
+          $compid__23 = _genCompid4[1];
+
+      var _genCompid5 = (0, _taroWeapp.genCompid)(__prefix + "$compid__24"),
+          _genCompid6 = _slicedToArray(_genCompid5, 2),
+          $prevCompid__24 = _genCompid6[0],
+          $compid__24 = _genCompid6[1];
+
+      var _genCompid7 = (0, _taroWeapp.genCompid)(__prefix + "$compid__25"),
+          _genCompid8 = _slicedToArray(_genCompid7, 2),
+          $prevCompid__25 = _genCompid8[0],
+          $compid__25 = _genCompid8[1];
+
+      var _genCompid9 = (0, _taroWeapp.genCompid)(__prefix + "$compid__26"),
+          _genCompid10 = _slicedToArray(_genCompid9, 2),
+          $prevCompid__26 = _genCompid10[0],
+          $compid__26 = _genCompid10[1];
+
+      var _state = this.__state,
+          username = _state.username,
+          password = _state.password,
+          loginType = _state.loginType,
+          isToastOpened = _state.isToastOpened,
+          toastText = _state.toastText;
+
+
+      this.anonymousFunc0 = loginType === LOGIN ? this.handleLogin : this.handleRegister;
+      _taroWeapp.propsManager.set({
+        "onSubmit": this.anonymousFunc0
+      }, $compid__22, $prevCompid__22);
+      _taroWeapp.propsManager.set({
+        "name": "username",
+        "title": "\u7528\u6237\u540D",
+        "type": "text",
+        "placeholder": "\u8BF7\u8F93\u5165\u7528\u6237\u540D",
+        "value": username,
+        "onChange": this.handleUserNameChange
+      }, $compid__23, $prevCompid__23);
+      _taroWeapp.propsManager.set({
+        "name": "username",
+        "title": "\u5BC6\u7801",
+        "type": "password",
+        "placeholder": "\u8BF7\u8F93\u5165\u5BC6\u7801",
+        "value": password,
+        "onChange": this.handlePasswordChange
+      }, $compid__24, $prevCompid__24);
+      _taroWeapp.propsManager.set({
+        "formType": "submit"
+      }, $compid__25, $prevCompid__25);
+      _taroWeapp.propsManager.set({
+        "isOpened": isToastOpened,
+        "text": toastText
+      }, $compid__26, $prevCompid__26);
+      Object.assign(this.__state, {
+        $compid__22: $compid__22,
+        $compid__23: $compid__23,
+        $compid__24: $compid__24,
+        $compid__25: $compid__25,
+        $compid__26: $compid__26,
+        LOGIN: LOGIN
+      });
       return this.__state;
+    }
+  }, {
+    key: "anonymousFunc0",
+    value: function anonymousFunc0(e) {
+      ;
     }
   }]);
 
   return Login;
-}(_taroWeapp.Component), _class.$$events = [], _class.$$componentPath = "pages/login/index", _temp2);
+}(_taroWeapp.Component), _class2.$$events = ["changeLoginType"], _class2.$$componentPath = "pages/login/index", _temp2)) || _class);
 exports.default = Login;
 
 Component(__webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/@tarojs/taro-weapp/index.js").default.createComponent(Login, true));

@@ -61,3 +61,5 @@ export const categoryMap = [
     pic: medicine_img
   }
 ];
+
+export const tabList = categoryMap.map(({ name }) => ({ title: name }));
