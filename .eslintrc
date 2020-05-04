@@ -1,5 +1,5 @@
 {
-  "extends": ["airbnb", "prettier"],
+  "extends": ["taro", "prettier"],
   "env": {
     "browser": true,
     "jest": true

@@ -20,7 +20,9 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-var _class, _temp2;
+var _class, _temp2; /* eslint-disable import/no-unresolved */
+/* eslint-disable taro/no-stateless-component */
+
 
 var _taroWeapp = __webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/@tarojs/taro-weapp/index.js");
 
@@ -33,8 +35,6 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 __webpack_require__(/*! ./style.scss */ "./src/components/GoodsList/style.scss");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -56,7 +56,7 @@ var GoodsList = (_temp2 = _class = function (_Taro$Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = GoodsList.__proto__ || Object.getPrototypeOf(GoodsList)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray2", "goods"], _this.customComponents = ["GoodsItem"], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = GoodsList.__proto__ || Object.getPrototypeOf(GoodsList)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray110", "goods"], _this.anonymousFunc0Map = {}, _this.customComponents = ["GoodsItem"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(GoodsList, [{
@@ -69,6 +69,8 @@ var GoodsList = (_temp2 = _class = function (_Taro$Component) {
   }, {
     key: "_createData",
     value: function _createData() {
+      var _this2 = this;
+
       this.__state = arguments[0] || this.state || {};
       this.__props = arguments[1] || this.props || {};
       var __isRunloopRef = arguments[2];
@@ -78,39 +80,65 @@ var GoodsList = (_temp2 = _class = function (_Taro$Component) {
 
       var goods = props.goods;
 
-      var loopArray2 = goods.map(function (item, index) {
-        var _propsManager$set;
 
+      var goToDetail = function goToDetail(id) {
+        _taroWeapp2.default.navigateTo({
+          url: "/pages/detail/index?id=" + id
+        });
+      };
+
+      var loopArray110 = goods.map(function (item, index) {
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
         var $loopState__temp2 = item.$original.id + "-" + index;
 
-        var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "bzzzzzzzzz" + index, true),
-            _genCompid2 = _slicedToArray(_genCompid, 2),
-            $prevCompid__3 = _genCompid2[0],
-            $compid__3 = _genCompid2[1];
+        var _$indexKey = "bgazz" + index;
 
-        _taroWeapp.propsManager.set((_propsManager$set = {
+        _this2.anonymousFunc0Map[_$indexKey] = function () {
+          return goToDetail(item.$original.id);
+        };
+
+        var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "bgbzzzzzzz" + index, true),
+            _genCompid2 = _slicedToArray(_genCompid, 2),
+            $prevCompid__955 = _genCompid2[0],
+            $compid__955 = _genCompid2[1];
+
+        _taroWeapp.propsManager.set({
           "name": item.$original.name,
-          "imgSrc": item.$original.url[0]
-        }, _defineProperty(_propsManager$set, "name", item.$original.name), _defineProperty(_propsManager$set, "price", item.$original.price), _propsManager$set), $compid__3, $prevCompid__3);
+          "imgSrc": item.$original.url[0],
+          "price": item.$original.price
+        }, $compid__955, $prevCompid__955);
         return {
           $loopState__temp2: $loopState__temp2,
-          $compid__3: $compid__3,
+          _$indexKey: _$indexKey,
+          $compid__955: $compid__955,
           $original: item.$original
         };
       });
       Object.assign(this.__state, {
-        loopArray2: loopArray2,
+        loopArray110: loopArray110,
         goods: goods
       });
       return this.__state;
     }
+  }, {
+    key: "anonymousFunc0",
+    value: function anonymousFunc0(_$indexKey) {
+      var _anonymousFunc0Map;
+
+      ;
+
+      for (var _len2 = arguments.length, e = Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
+        e[_key2 - 1] = arguments[_key2];
+      }
+
+      return this.anonymousFunc0Map[_$indexKey] && (_anonymousFunc0Map = this.anonymousFunc0Map)[_$indexKey].apply(_anonymousFunc0Map, e);
+    }
   }]);
 
   return GoodsList;
-}(_taroWeapp2.default.Component), _class.$$events = [], _class.$$componentPath = "components/GoodsList/index", _temp2);
+}(_taroWeapp2.default.Component), _class.$$events = ["anonymousFunc0"], _class.$$componentPath = "components/GoodsList/index", _temp2);
 
 
 GoodsList.defaultProps = {

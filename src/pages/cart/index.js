@@ -1,11 +1,22 @@
+/* eslint-disable import/no-unresolved */
 import Taro, { Component } from "@tarojs/taro";
 import { connect } from "@tarojs/redux";
-import { View, Image, Button, Text } from "@tarojs/components";
+import { View } from "@tarojs/components";
+import { AtButton } from "taro-ui";
+import cartAPI from "../../api/cart";
+import Request from "../../utils/request";
+import CartItem from "../../components/CartItem";
+import { mapStateToProps } from "./connect";
 import "./index.scss";
 
+@connect(mapStateToProps, null)
 class Cart extends Component {
   config = {
     navigationBarTitleText: "购物车"
+  };
+
+  state = {
+    cartItems: []
   };
 
   goHome() {
@@ -20,28 +31,70 @@ class Cart extends Component {
     }
   }
 
-  // componentDidMount = () => {
-  //   wx.createInterstitialAd({
-  //     adUnitId: 'adunit-5266635b7140e545'
-  //   }).show()
-  // };
+  async componentDidMount() {}
 
-  componentDidShow() {
-    // 设置衣袋小红点
-    // if (this.props.items.length > 0) {
-    //   Taro.setTabBarBadge({
-    //     index: 1,
-    //     text: String(this.props.items.length)
-    //   });
-    // } else {
-    //   Taro.removeTabBarBadge({
-    //     index: 1
-    //   });
-    // }
+  async componentDidShow() {
+    this.getCartItem();
   }
 
+  getCartItem = async () => {
+    const { userInfo } = this.props;
+    try {
+      const cartItems = await Request({
+        url: cartAPI.getCartItem,
+        method: "GET",
+        data: {
+          userId: userInfo.id
+        }
+      });
+      console.log(cartItems, "cartItems");
+      this.setState({
+        cartItems
+      });
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  countMoney = async () => {
+    const { userInfo } = this.props;
+    const { cartItems } = this.state;
+    try {
+      const result = await Request({
+        url: cartAPI.addOrder,
+        method: "POST",
+        data: {
+          userId: userInfo.id,
+          goods: cartItems
+        }
+      });
+      console.log(result, "result");
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
   render() {
-    return <View className="cart-page">购物车</View>;
+    const { userInfo } = this.props;
+    const { cartItems } = this.state;
+    return (
+      <View className="cart-page">
+        <View className="content">
+          {cartItems.map(item => (
+            <CartItem
+              // eslint-disable-next-line taro/no-spread-in-props
+              {...item}
+              key={item.id}
+              userId={userInfo.id}
+              refresh={this.getCartItem}
+            />
+          ))}
+        </View>
+        <View className="bottom-bar">
+          <AtButton onClick={this.countMoney}>结算</AtButton>
+        </View>
+      </View>
+    );
   }
 }
 

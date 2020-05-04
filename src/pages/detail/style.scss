@@ -1,0 +1,17 @@
+.detail-page {
+  .detail-image {
+    width: 100%;
+    height: 660px;
+  }
+  .detail-bottom {
+    display: flex;
+    flex-direction: row;
+    .detail-btn {
+      width: 60%;
+    }
+    .cart-icon {
+      width: 88px;
+      height: 88px;
+    }
+  }
+}

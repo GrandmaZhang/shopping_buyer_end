@@ -1,15 +1,14 @@
 import "@tarojs/async-await";
 import Taro, { Component } from "@tarojs/taro";
 import { Provider, connect } from "@tarojs/redux";
+import "taro-ui/dist/style/index.scss";
 import Home from "./pages/home";
-import Login from "./pages/login";
 import userAPI from "./api/user";
 import Request from "./utils/request";
 import configStore from "./flux/store";
 import { mapStateToProps, mapDispatchToProps } from "./connect";
 
 import "./styles/base.scss";
-import "taro-ui/dist/style/index.scss";
 
 const store = configStore();
 
@@ -22,7 +21,9 @@ class App extends Component {
       "pages/user/index",
       "pages/login/index",
       "pages/message/index",
-      "pages/search/index"
+      "pages/search/index",
+      "pages/detail/index",
+      "pages/order/index"
     ],
     window: {
       backgroundTextStyle: "dark",
@@ -65,17 +66,10 @@ class App extends Component {
         url: userAPI.userInfo,
         method: "GET"
       });
-      console.log(userInfo, "userInfo");
       if (userInfo.code === -1) {
         changeLogin(false);
-        // Taro.navigateTo({
-        //   url: `/pages/login/index`
-        // });
       } else {
         changeLogin(true);
-        // Taro.navigateTo({
-        //   url: `/pages/home/index`
-        // });
       }
     } catch (e) {
       console.log(e);

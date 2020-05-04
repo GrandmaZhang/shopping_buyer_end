@@ -1,3 +1,5 @@
+/* eslint-disable taro/no-stateless-component */
+// eslint-disable-next-line no-unused-vars
 import Taro from "@tarojs/taro";
 import PropTypes from "prop-types";
 import { View, Text, Image } from "@tarojs/components";

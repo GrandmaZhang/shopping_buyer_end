@@ -29,6 +29,8 @@ var _taroWeapp2 = _interopRequireDefault(_taroWeapp);
 
 var _redux = __webpack_require__(/*! @tarojs/redux */ "./node_modules/@tarojs/redux/index.js");
 
+__webpack_require__(/*! taro-ui/dist/style/index.scss */ "./node_modules/taro-ui/dist/style/index.scss");
+
 var _user = __webpack_require__(/*! ./api/user */ "./src/api/user.js");
 
 var _user2 = _interopRequireDefault(_user);
@@ -44,8 +46,6 @@ var _index2 = _interopRequireDefault(_index);
 var _connect = __webpack_require__(/*! ./connect */ "./src/connect.js");
 
 __webpack_require__(/*! ./styles/base.scss */ "./src/styles/base.scss");
-
-__webpack_require__(/*! taro-ui/dist/style/index.scss */ "./node_modules/taro-ui/dist/style/index.scss");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -85,7 +85,7 @@ var _App = (_dec = (0, _redux.connect)(_connect.mapStateToProps, _connect.mapDis
     }
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = _App.__proto__ || Object.getPrototypeOf(_App)).call.apply(_ref, [this].concat(args))), _this), _this.config = {
-      pages: ["pages/home/index", "pages/cart/index", "pages/user/index", "pages/login/index", "pages/message/index", "pages/search/index"],
+      pages: ["pages/home/index", "pages/cart/index", "pages/user/index", "pages/login/index", "pages/message/index", "pages/search/index", "pages/detail/index", "pages/order/index"],
       window: {
         backgroundTextStyle: "dark",
         navigationBarBackgroundColor: "#fff",
@@ -137,33 +137,26 @@ var _App = (_dec = (0, _redux.connect)(_connect.mapStateToProps, _connect.mapDis
               case 4:
                 userInfo = _context.sent;
 
-                console.log(userInfo, "userInfo");
                 if (userInfo.code === -1) {
                   changeLogin(false);
-                  // Taro.navigateTo({
-                  //   url: `/pages/login/index`
-                  // });
                 } else {
                   changeLogin(true);
-                  // Taro.navigateTo({
-                  //   url: `/pages/home/index`
-                  // });
                 }
-                _context.next = 12;
+                _context.next = 11;
                 break;
 
-              case 9:
-                _context.prev = 9;
+              case 8:
+                _context.prev = 8;
                 _context.t0 = _context["catch"](1);
 
                 console.log(_context.t0);
 
-              case 12:
+              case 11:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, this, [[1, 9]]);
+        }, _callee, this, [[1, 8]]);
       }));
 
       function componentDidMount() {
@@ -349,6 +342,10 @@ function user() {
     case _user.LOGIN:
       return _extends({}, state, {
         isLogin: action.payload
+      });
+    case _user.SET_USER:
+      return _extends({}, state, {
+        userInfo: action.payload
       });
     default:
       return state;

@@ -1,8 +1,8 @@
 <block wx:if="{{$taroCompReady}}">
     <view class="home-page">
-        <at-search-bar compid="{{$compid__45}}"></at-search-bar>
-        <ad-swiper compid="{{$compid__46}}"></ad-swiper>
+        <at-search-bar compid="{{$compid__951}}"></at-search-bar>
+        <ad-swiper compid="{{$compid__952}}"></ad-swiper>
         <goods-category></goods-category>
-        <goods-list compid="{{$compid__47}}"></goods-list>
+        <goods-list compid="{{$compid__953}}"></goods-list>
     </view>
 </block>

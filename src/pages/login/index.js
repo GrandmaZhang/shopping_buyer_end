@@ -1,5 +1,5 @@
 import Taro, { Component } from "@tarojs/taro";
-import { View, Text, Input, Button } from "@tarojs/components";
+import { View, Text } from "@tarojs/components";
 import { AtForm, AtInput, AtButton, AtToast } from "taro-ui";
 import { connect } from "@tarojs/redux";
 import Request from "../../utils/request";
@@ -56,7 +56,7 @@ class Login extends Component {
   handleRegister = async () => {
     const { username, password } = this.state;
     try {
-      const data = await Request({
+      await Request({
         url: userAPI.register,
         method: "POST",
         data: {
@@ -74,11 +74,11 @@ class Login extends Component {
     }
   };
 
-  handleLogin = async e => {
-    const { changeLogin } = this.props;
+  handleLogin = async () => {
+    const { changeLogin, setUserInfo } = this.props;
     const { username, password } = this.state;
     try {
-      await Request({
+      const userInfo = await Request({
         url: userAPI.login,
         method: "POST",
         data: {
@@ -86,7 +86,9 @@ class Login extends Component {
           password
         }
       });
+      console.log(userInfo, "userInfo");
       changeLogin(true);
+      setUserInfo(userInfo);
       this.setState({
         isToastOpened: true,
         toastText: "登录成功"

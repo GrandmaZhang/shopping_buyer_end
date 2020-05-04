@@ -18,7 +18,9 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-var _class, _temp2;
+var _class, _temp2; /* eslint-disable taro/no-anonymous-function-in-props */
+/* eslint-disable taro/no-stateless-component */
+
 
 var _taroWeapp = __webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/@tarojs/taro-weapp/index.js");
 
@@ -50,7 +52,7 @@ var GoodsCategory = (_temp2 = _class = function (_Taro$Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = GoodsCategory.__proto__ || Object.getPrototypeOf(GoodsCategory)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray1", "categoryMap"], _this.anonymousFunc0Map = {}, _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = GoodsCategory.__proto__ || Object.getPrototypeOf(GoodsCategory)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray102", "categoryMap"], _this.anonymousFunc0Map = {}, _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(GoodsCategory, [{
@@ -77,12 +79,12 @@ var GoodsCategory = (_temp2 = _class = function (_Taro$Component) {
         });
       };
 
-      var loopArray1 = _config.categoryMap.map(function (item, index) {
+      var loopArray102 = _config.categoryMap.map(function (item, index) {
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
 
-        var _$indexKey = "azzzz" + index;
+        var _$indexKey = "bejzz" + index;
 
         _this2.anonymousFunc0Map[_$indexKey] = function () {
           return handleClick(index + 1);
@@ -94,7 +96,7 @@ var GoodsCategory = (_temp2 = _class = function (_Taro$Component) {
         };
       });
       Object.assign(this.__state, {
-        loopArray1: loopArray1,
+        loopArray102: loopArray102,
         categoryMap: _config.categoryMap
       });
       return this.__state;

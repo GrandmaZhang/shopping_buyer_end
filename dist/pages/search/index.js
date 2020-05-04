@@ -65,7 +65,7 @@ var SearchPage = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = SearchPage.__proto__ || Object.getPrototypeOf(SearchPage)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "loopArray3", "$compid__12", "$compid__13", "$compid__14", "$compid__15", "tabList", "searchValue", "goods", "currentTab"], _this.config = {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = SearchPage.__proto__ || Object.getPrototypeOf(SearchPage)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "loopArray4", "$compid__16", "$compid__17", "$compid__18", "$compid__19", "tabList", "searchValue", "goods", "currentTab"], _this.config = {
       navigationBarTitleText: "商品列表"
     }, _this.handleSearch = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
       var searchValue, moreGoods;
@@ -232,25 +232,25 @@ var SearchPage = (_temp2 = _class = function (_BaseComponent) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__12"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__16"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__12 = _genCompid2[0],
-          $compid__12 = _genCompid2[1];
+          $prevCompid__16 = _genCompid2[0],
+          $compid__16 = _genCompid2[1];
 
-      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__13"),
+      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__17"),
           _genCompid4 = _slicedToArray(_genCompid3, 2),
-          $prevCompid__13 = _genCompid4[0],
-          $compid__13 = _genCompid4[1];
+          $prevCompid__17 = _genCompid4[0],
+          $compid__17 = _genCompid4[1];
 
-      var _genCompid5 = (0, _taroWeapp.genCompid)(__prefix + "$compid__14"),
+      var _genCompid5 = (0, _taroWeapp.genCompid)(__prefix + "$compid__18"),
           _genCompid6 = _slicedToArray(_genCompid5, 2),
-          $prevCompid__14 = _genCompid6[0],
-          $compid__14 = _genCompid6[1];
+          $prevCompid__18 = _genCompid6[0],
+          $compid__18 = _genCompid6[1];
 
-      var _genCompid7 = (0, _taroWeapp.genCompid)(__prefix + "$compid__15"),
+      var _genCompid7 = (0, _taroWeapp.genCompid)(__prefix + "$compid__19"),
           _genCompid8 = _slicedToArray(_genCompid7, 2),
-          $prevCompid__15 = _genCompid8[0],
-          $compid__15 = _genCompid8[1];
+          $prevCompid__19 = _genCompid8[0],
+          $compid__19 = _genCompid8[1];
 
       var _state = this.__state,
           searchValue = _state.searchValue,
@@ -259,34 +259,34 @@ var SearchPage = (_temp2 = _class = function (_BaseComponent) {
 
       console.log(goods, "searchGoods");
       var anonymousState__temp = [{ title: "全部" }].concat(_toConsumableArray(_config.tabList));
-      var loopArray3 = _config.tabList.map(function (item, index) {
+      var loopArray4 = _config.tabList.map(function (item, index) {
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
         var $loopState__temp3 = index + 1;
 
-        var _genCompid9 = (0, _taroWeapp.genCompid)(__prefix + "czzzzzzzzz" + index, true),
+        var _genCompid9 = (0, _taroWeapp.genCompid)(__prefix + "ezzzzzzzzz" + index, true),
             _genCompid10 = _slicedToArray(_genCompid9, 2),
-            $prevCompid__10 = _genCompid10[0],
-            $compid__10 = _genCompid10[1];
+            $prevCompid__14 = _genCompid10[0],
+            $compid__14 = _genCompid10[1];
 
         _taroWeapp.propsManager.set({
           "current": currentTab,
           "index": $loopState__temp3
-        }, $compid__10, $prevCompid__10);
+        }, $compid__14, $prevCompid__14);
 
-        var _genCompid11 = (0, _taroWeapp.genCompid)(__prefix + "dzzzzzzzzz" + index, true),
+        var _genCompid11 = (0, _taroWeapp.genCompid)(__prefix + "fzzzzzzzzz" + index, true),
             _genCompid12 = _slicedToArray(_genCompid11, 2),
-            $prevCompid__11 = _genCompid12[0],
-            $compid__11 = _genCompid12[1];
+            $prevCompid__15 = _genCompid12[0],
+            $compid__15 = _genCompid12[1];
 
         _taroWeapp.propsManager.set({
           "goods": goods
-        }, $compid__11, $prevCompid__11);
+        }, $compid__15, $prevCompid__15);
         return {
           $loopState__temp3: $loopState__temp3,
-          $compid__10: $compid__10,
-          $compid__11: $compid__11,
+          $compid__14: $compid__14,
+          $compid__15: $compid__15,
           $original: item.$original
         };
       });
@@ -295,27 +295,27 @@ var SearchPage = (_temp2 = _class = function (_BaseComponent) {
         "value": searchValue,
         "onChange": this.handleChange,
         "onActionClick": this.handleSearch
-      }, $compid__12, $prevCompid__12);
+      }, $compid__16, $prevCompid__16);
       _taroWeapp.propsManager.set({
         "current": currentTab,
         "scroll": true,
         "tabList": anonymousState__temp,
         "onClick": this.handleTabClick
-      }, $compid__13, $prevCompid__13);
+      }, $compid__17, $prevCompid__17);
       _taroWeapp.propsManager.set({
         "current": currentTab,
         "index": 0
-      }, $compid__14, $prevCompid__14);
+      }, $compid__18, $prevCompid__18);
       _taroWeapp.propsManager.set({
         "goods": goods
-      }, $compid__15, $prevCompid__15);
+      }, $compid__19, $prevCompid__19);
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
-        loopArray3: loopArray3,
-        $compid__12: $compid__12,
-        $compid__13: $compid__13,
-        $compid__14: $compid__14,
-        $compid__15: $compid__15,
+        loopArray4: loopArray4,
+        $compid__16: $compid__16,
+        $compid__17: $compid__17,
+        $compid__18: $compid__18,
+        $compid__19: $compid__19,
         tabList: _config.tabList
       });
       return this.__state;

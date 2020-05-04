@@ -1,5 +1,6 @@
+/* eslint-disable import/no-unresolved */
 import Taro, { Component } from "@tarojs/taro";
-import { View, Text, Image } from "@tarojs/components";
+import { View } from "@tarojs/components";
 import { AtSearchBar } from "taro-ui";
 import { connect } from "@tarojs/redux";
 import Request from "../../utils/request";
@@ -98,7 +99,7 @@ class HomePage extends Component {
   handleSearch = value => {
     console.log(value, "value");
     this.setState({
-      searchValue
+      searchValue: value
     });
   };
 

@@ -1,5 +1,7 @@
-import Taro, { Component } from "@tarojs/taro";
-import { View, Text, Image } from "@tarojs/components";
+/* eslint-disable taro/no-anonymous-function-in-props */
+/* eslint-disable taro/no-stateless-component */
+import Taro from "@tarojs/taro";
+import { View, Image, Text } from "@tarojs/components";
 import { categoryMap } from "./config";
 import "./style.scss";
 
@@ -21,7 +23,7 @@ const GoodsCategory = () => {
           <View className="img-wrap">
             <Image src={item.pic} />
           </View>
-          <span>{item.name}</span>
+          <Text>{item.name}</Text>
         </View>
       ))}
     </View>

@@ -23,6 +23,9 @@ var mapDispatchToProps = exports.mapDispatchToProps = function mapDispatchToProp
   return {
     changeLogin: function changeLogin(params) {
       return dispatch((0, _user.changeLogin)(params));
+    },
+    setUserInfo: function setUserInfo(params) {
+      return dispatch((0, _user.setUserInfo)(params));
     }
   };
 };
@@ -100,7 +103,7 @@ var Login = (_dec = (0, _redux.connect)(_connect.mapStateToProps, _connect.mapDi
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Login.__proto__ || Object.getPrototypeOf(Login)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__22", "$compid__23", "$compid__24", "$compid__25", "$compid__26", "loginType", "LOGIN", "username", "password", "toastText", "isToastOpened", "changeLogin"], _this.config = {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Login.__proto__ || Object.getPrototypeOf(Login)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__906", "$compid__907", "$compid__908", "$compid__909", "$compid__910", "loginType", "LOGIN", "username", "password", "toastText", "isToastOpened", "changeLogin", "setUserInfo"], _this.config = {
       navigationBarTitleText: "登录"
     }, _this.handleUserNameChange = function (value) {
       _this.setState({
@@ -117,7 +120,7 @@ var Login = (_dec = (0, _redux.connect)(_connect.mapStateToProps, _connect.mapDi
         loginType: loginType === LOGIN ? REGISTER : LOGIN
       });
     }, _this.handleRegister = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-      var _this$state, username, password, data;
+      var _this$state, username, password;
 
       return regeneratorRuntime.wrap(function _callee$(_context) {
         while (1) {
@@ -136,79 +139,75 @@ var Login = (_dec = (0, _redux.connect)(_connect.mapStateToProps, _connect.mapDi
               });
 
             case 4:
-              data = _context.sent;
-
               _this.setState({
                 isToastOpened: true,
                 toastText: "注册成功"
               });
               _this.handleLogin();
-              _context.next = 12;
+              _context.next = 11;
               break;
 
-            case 9:
-              _context.prev = 9;
+            case 8:
+              _context.prev = 8;
               _context.t0 = _context["catch"](1);
 
               console.log(_context.t0);
 
-            case 12:
+            case 11:
             case "end":
               return _context.stop();
           }
         }
-      }, _callee, _this2, [[1, 9]]);
-    })), _this.handleLogin = function () {
-      var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(e) {
-        var changeLogin, _this$state2, username, password;
+      }, _callee, _this2, [[1, 8]]);
+    })), _this.handleLogin = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+      var _this$props, changeLogin, setUserInfo, _this$state2, username, password, userInfo;
 
-        return regeneratorRuntime.wrap(function _callee2$(_context2) {
-          while (1) {
-            switch (_context2.prev = _context2.next) {
-              case 0:
-                changeLogin = _this.props.changeLogin;
-                _this$state2 = _this.state, username = _this$state2.username, password = _this$state2.password;
-                _context2.prev = 2;
-                _context2.next = 5;
-                return (0, _request2.default)({
-                  url: _user2.default.login,
-                  method: "POST",
-                  data: {
-                    username: username,
-                    password: password
-                  }
-                });
+      return regeneratorRuntime.wrap(function _callee2$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              _this$props = _this.props, changeLogin = _this$props.changeLogin, setUserInfo = _this$props.setUserInfo;
+              _this$state2 = _this.state, username = _this$state2.username, password = _this$state2.password;
+              _context2.prev = 2;
+              _context2.next = 5;
+              return (0, _request2.default)({
+                url: _user2.default.login,
+                method: "POST",
+                data: {
+                  username: username,
+                  password: password
+                }
+              });
 
-              case 5:
-                changeLogin(true);
-                _this.setState({
-                  isToastOpened: true,
-                  toastText: "登录成功"
-                });
-                _taroWeapp2.default.switchTab({
-                  url: "/pages/home/index"
-                });
-                _context2.next = 13;
-                break;
+            case 5:
+              userInfo = _context2.sent;
 
-              case 10:
-                _context2.prev = 10;
-                _context2.t0 = _context2["catch"](2);
+              console.log(userInfo, "userInfo");
+              changeLogin(true);
+              setUserInfo(userInfo);
+              _this.setState({
+                isToastOpened: true,
+                toastText: "登录成功"
+              });
+              _taroWeapp2.default.switchTab({
+                url: "/pages/home/index"
+              });
+              _context2.next = 16;
+              break;
 
-                console.log(_context2.t0);
+            case 13:
+              _context2.prev = 13;
+              _context2.t0 = _context2["catch"](2);
 
-              case 13:
-              case "end":
-                return _context2.stop();
-            }
+              console.log(_context2.t0);
+
+            case 16:
+            case "end":
+              return _context2.stop();
           }
-        }, _callee2, _this2, [[2, 10]]);
-      }));
-
-      return function (_x) {
-        return _ref3.apply(this, arguments);
-      };
-    }(), _this.customComponents = ["AtForm", "AtInput", "AtButton", "AtToast"], _temp), _possibleConstructorReturn(_this, _ret);
+        }
+      }, _callee2, _this2, [[2, 13]]);
+    })), _this.customComponents = ["AtForm", "AtInput", "AtButton", "AtToast"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Login, [{
@@ -244,30 +243,30 @@ var Login = (_dec = (0, _redux.connect)(_connect.mapStateToProps, _connect.mapDi
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__22"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__906"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__22 = _genCompid2[0],
-          $compid__22 = _genCompid2[1];
+          $prevCompid__906 = _genCompid2[0],
+          $compid__906 = _genCompid2[1];
 
-      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__23"),
+      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__907"),
           _genCompid4 = _slicedToArray(_genCompid3, 2),
-          $prevCompid__23 = _genCompid4[0],
-          $compid__23 = _genCompid4[1];
+          $prevCompid__907 = _genCompid4[0],
+          $compid__907 = _genCompid4[1];
 
-      var _genCompid5 = (0, _taroWeapp.genCompid)(__prefix + "$compid__24"),
+      var _genCompid5 = (0, _taroWeapp.genCompid)(__prefix + "$compid__908"),
           _genCompid6 = _slicedToArray(_genCompid5, 2),
-          $prevCompid__24 = _genCompid6[0],
-          $compid__24 = _genCompid6[1];
+          $prevCompid__908 = _genCompid6[0],
+          $compid__908 = _genCompid6[1];
 
-      var _genCompid7 = (0, _taroWeapp.genCompid)(__prefix + "$compid__25"),
+      var _genCompid7 = (0, _taroWeapp.genCompid)(__prefix + "$compid__909"),
           _genCompid8 = _slicedToArray(_genCompid7, 2),
-          $prevCompid__25 = _genCompid8[0],
-          $compid__25 = _genCompid8[1];
+          $prevCompid__909 = _genCompid8[0],
+          $compid__909 = _genCompid8[1];
 
-      var _genCompid9 = (0, _taroWeapp.genCompid)(__prefix + "$compid__26"),
+      var _genCompid9 = (0, _taroWeapp.genCompid)(__prefix + "$compid__910"),
           _genCompid10 = _slicedToArray(_genCompid9, 2),
-          $prevCompid__26 = _genCompid10[0],
-          $compid__26 = _genCompid10[1];
+          $prevCompid__910 = _genCompid10[0],
+          $compid__910 = _genCompid10[1];
 
       var _state = this.__state,
           username = _state.username,
@@ -280,7 +279,7 @@ var Login = (_dec = (0, _redux.connect)(_connect.mapStateToProps, _connect.mapDi
       this.anonymousFunc0 = loginType === LOGIN ? this.handleLogin : this.handleRegister;
       _taroWeapp.propsManager.set({
         "onSubmit": this.anonymousFunc0
-      }, $compid__22, $prevCompid__22);
+      }, $compid__906, $prevCompid__906);
       _taroWeapp.propsManager.set({
         "name": "username",
         "title": "\u7528\u6237\u540D",
@@ -288,7 +287,7 @@ var Login = (_dec = (0, _redux.connect)(_connect.mapStateToProps, _connect.mapDi
         "placeholder": "\u8BF7\u8F93\u5165\u7528\u6237\u540D",
         "value": username,
         "onChange": this.handleUserNameChange
-      }, $compid__23, $prevCompid__23);
+      }, $compid__907, $prevCompid__907);
       _taroWeapp.propsManager.set({
         "name": "username",
         "title": "\u5BC6\u7801",
@@ -296,20 +295,20 @@ var Login = (_dec = (0, _redux.connect)(_connect.mapStateToProps, _connect.mapDi
         "placeholder": "\u8BF7\u8F93\u5165\u5BC6\u7801",
         "value": password,
         "onChange": this.handlePasswordChange
-      }, $compid__24, $prevCompid__24);
+      }, $compid__908, $prevCompid__908);
       _taroWeapp.propsManager.set({
         "formType": "submit"
-      }, $compid__25, $prevCompid__25);
+      }, $compid__909, $prevCompid__909);
       _taroWeapp.propsManager.set({
         "isOpened": isToastOpened,
         "text": toastText
-      }, $compid__26, $prevCompid__26);
+      }, $compid__910, $prevCompid__910);
       Object.assign(this.__state, {
-        $compid__22: $compid__22,
-        $compid__23: $compid__23,
-        $compid__24: $compid__24,
-        $compid__25: $compid__25,
-        $compid__26: $compid__26,
+        $compid__906: $compid__906,
+        $compid__907: $compid__907,
+        $compid__908: $compid__908,
+        $compid__909: $compid__909,
+        $compid__910: $compid__910,
         LOGIN: LOGIN
       });
       return this.__state;

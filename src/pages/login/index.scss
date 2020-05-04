@@ -1,5 +1,7 @@
 @import "../../styles/mixin";
 
+@import "~taro-ui/dist/style/components/form.scss";
+
 .login-page {
   @include wh(100%, 100%);
 }
