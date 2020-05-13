@@ -1,17 +1,19 @@
 <block wx:if="{{$taroCompReady}}">
-    <view class="search-page">
-        <at-search-bar compid="{{$compid__895}}"></at-search-bar>
-        <at-tabs compid="{{$compid__896}}">
-            <at-tabs-pane compid="{{$compid__897}}">
-                <view class="search-page__content">
-                    <goods-list compid="{{$compid__898}}"></goods-list>
-                </view>
-            </at-tabs-pane>
-            <at-tabs-pane wx:for="{{loopArray97}}" wx:for-item="item" wx:for-index="index" compid="{{item.$compid__893}}">
-                <view class="search-page__content">
-                    <goods-list compid="{{item.$compid__894}}"></goods-list>
-                </view>
-            </at-tabs-pane>
-        </at-tabs>
-    </view>
+    <root-page>
+        <view class="search-page">
+            <at-search-bar compid="{{$compid__771}}"></at-search-bar>
+            <at-tabs compid="{{$compid__772}}">
+                <at-tabs-pane compid="{{$compid__773}}">
+                    <view class="search-page__content">
+                        <goods-list compid="{{$compid__774}}"></goods-list>
+                    </view>
+                </at-tabs-pane>
+                <at-tabs-pane wx:key="key" wx:for="{{loopArray115}}" wx:for-item="item" wx:for-index="index" compid="{{item.$compid__769}}">
+                    <view class="search-page__content">
+                        <goods-list compid="{{item.$compid__770}}"></goods-list>
+                    </view>
+                </at-tabs-pane>
+            </at-tabs>
+        </view>
+    </root-page>
 </block>

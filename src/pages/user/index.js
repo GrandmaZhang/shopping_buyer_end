@@ -21,11 +21,12 @@ class User extends Component {
   };
 
   render() {
+    const { userInfo } = this.props;
     return (
       <View className="user-page">
         <View className="user-head">
           <AtAvatar circle image={userAvatar}></AtAvatar>
-          <Text>姓名</Text>
+          <Text>{userInfo.username}</Text>
         </View>
         <AtButton onClick={this.checkOrder}>查看订单</AtButton>
       </View>

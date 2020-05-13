@@ -1,10 +1,12 @@
 <block wx:if="{{$taroCompReady}}">
-    <view class="cart-page">
-        <view class="content">
-            <cart-item wx:key="id" wx:for="{{loopArray108}}" wx:for-item="item" wx:for-index="_anonIdx2" compid="{{item.$compid__949}}"></cart-item>
+    <root-page>
+        <view class="cart-page">
+            <view class="content">
+                <cart-item wx:key="id" wx:for="{{loopArray114}}" wx:for-item="item" wx:for-index="_anonIdx2" compid="{{item.$compid__760}}"></cart-item>
+            </view>
+            <view class="bottom-bar"><text>¥{{totalMoney}}</text>
+                <at-button compid="{{$compid__761}}">结算</at-button>
+            </view>
         </view>
-        <view class="bottom-bar">
-            <at-button compid="{{$compid__950}}">结算</at-button>
-        </view>
-    </view>
+    </root-page>
 </block>

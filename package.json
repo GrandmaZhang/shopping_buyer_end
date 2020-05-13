@@ -35,13 +35,16 @@
     "@tarojs/taro-swan": "2.0.2",
     "@tarojs/taro-tt": "^2.0.2",
     "@tarojs/taro-weapp": "2.0.2",
+    "antd": "^4.2.2",
     "dva-core": "^1.4.0",
     "dva-loading": "^2.0.5",
+    "moment": "^2.25.1",
     "nervjs": "^1.3.0",
     "redux": "^4.0.0",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
-    "taro-ui": "^2.3.3"
+    "taro-ui": "^2.3.4",
+    "weapp.socket.io": "^2.0.6"
   },
   "devDependencies": {
     "@tarojs/plugin-babel": "1.2.2",
@@ -58,9 +61,9 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "eslint": "^4.19.1",
-    "eslint-config-taro": "1.2.2",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^6.7.0",
+    "eslint-config-taro": "1.2.2",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-react": "^7.8.2",
     "eslint-plugin-taro": "1.2.2"

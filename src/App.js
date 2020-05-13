@@ -1,6 +1,9 @@
+/* eslint-disable import/no-unresolved */
 import "@tarojs/async-await";
 import Taro, { Component } from "@tarojs/taro";
 import { Provider, connect } from "@tarojs/redux";
+import io from "weapp.socket.io";
+// import { AtMessage } from "taro-ui";
 import "taro-ui/dist/style/index.scss";
 import Home from "./pages/home";
 import userAPI from "./api/user";
@@ -74,11 +77,28 @@ class App extends Component {
     } catch (e) {
       console.log(e);
     }
+
+    try {
+      const socket = io("http://localhost:7001");
+
+      console.log(socket, "socket");
+      socket.on("connect", () => {
+        console.log("connect!");
+      });
+
+      socket.on("res", () => {
+        Taro.atMessage({
+          message: "您的订单状态有更新～",
+          type: "info",
+          duration: 5000
+        });
+      });
+    } catch (e) {
+      console.log(e, "socket error");
+    }
   }
 
   render() {
-    const { isLogin } = this.props;
-    console.log(isLogin, "isLogin");
     return (
       <Provider store={store}>
         <Home />

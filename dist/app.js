@@ -19,7 +19,10 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _dec, _class;
+var _dec, _class; /* eslint-disable import/no-unresolved */
+
+// import { AtMessage } from "taro-ui";
+
 
 __webpack_require__(/*! @tarojs/async-await */ "./node_modules/@tarojs/async-await/index.js");
 
@@ -28,6 +31,10 @@ var _taroWeapp = __webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/@
 var _taroWeapp2 = _interopRequireDefault(_taroWeapp);
 
 var _redux = __webpack_require__(/*! @tarojs/redux */ "./node_modules/@tarojs/redux/index.js");
+
+var _weappSocket = __webpack_require__(/*! weapp.socket.io */ "./node_modules/weapp.socket.io/lib/weapp.socket.io.js");
+
+var _weappSocket2 = _interopRequireDefault(_weappSocket);
 
 __webpack_require__(/*! taro-ui/dist/style/index.scss */ "./node_modules/taro-ui/dist/style/index.scss");
 
@@ -121,7 +128,7 @@ var _App = (_dec = (0, _redux.connect)(_connect.mapStateToProps, _connect.mapDis
     key: "componentDidMount",
     value: function () {
       var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-        var changeLogin, userInfo;
+        var changeLogin, userInfo, socket;
         return regeneratorRuntime.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -152,6 +159,28 @@ var _App = (_dec = (0, _redux.connect)(_connect.mapStateToProps, _connect.mapDis
                 console.log(_context.t0);
 
               case 11:
+
+                try {
+                  socket = (0, _weappSocket2.default)("http://localhost:7001");
+
+
+                  console.log(socket, "socket");
+                  socket.on("connect", function () {
+                    console.log("connect!");
+                  });
+
+                  socket.on("res", function () {
+                    _taroWeapp2.default.atMessage({
+                      message: "您的订单状态有更新～",
+                      type: "info",
+                      duration: 5000
+                    });
+                  });
+                } catch (e) {
+                  console.log(e, "socket error");
+                }
+
+              case 12:
               case "end":
                 return _context.stop();
             }

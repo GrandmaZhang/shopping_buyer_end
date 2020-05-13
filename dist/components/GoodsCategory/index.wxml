@@ -1,6 +1,6 @@
 <block wx:if="{{$taroCompReady}}">
     <view class="cate-wrap">
-        <view class="cate-item" wx:key="key" bindtap="anonymousFunc0" wx:for="{{loopArray102}}" wx:for-item="item" wx:for-index="index" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey}}">
+        <view class="cate-item" wx:key="key" bindtap="anonymousFunc0" wx:for="{{loopArray1}}" wx:for-item="item" wx:for-index="index" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey}}">
             <view class="img-wrap">
                 <image src="{{item.$original.pic}}"></image>
             </view><text>{{item.$original.name}}</text>

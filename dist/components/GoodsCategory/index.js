@@ -52,7 +52,7 @@ var GoodsCategory = (_temp2 = _class = function (_Taro$Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = GoodsCategory.__proto__ || Object.getPrototypeOf(GoodsCategory)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray102", "categoryMap"], _this.anonymousFunc0Map = {}, _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = GoodsCategory.__proto__ || Object.getPrototypeOf(GoodsCategory)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray1", "categoryMap"], _this.anonymousFunc0Map = {}, _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(GoodsCategory, [{
@@ -79,12 +79,12 @@ var GoodsCategory = (_temp2 = _class = function (_Taro$Component) {
         });
       };
 
-      var loopArray102 = _config.categoryMap.map(function (item, index) {
+      var loopArray1 = _config.categoryMap.map(function (item, index) {
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
 
-        var _$indexKey = "bejzz" + index;
+        var _$indexKey = "azzzz" + index;
 
         _this2.anonymousFunc0Map[_$indexKey] = function () {
           return handleClick(index + 1);
@@ -96,7 +96,7 @@ var GoodsCategory = (_temp2 = _class = function (_Taro$Component) {
         };
       });
       Object.assign(this.__state, {
-        loopArray102: loopArray102,
+        loopArray1: loopArray1,
         categoryMap: _config.categoryMap
       });
       return this.__state;

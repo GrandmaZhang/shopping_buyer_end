@@ -1,7 +1,7 @@
 <block wx:if="{{$taroCompReady}}">
     <view class="recomend-goods-wrap">
-        <view class="recomend-goods-item" wx:key="$loopState__temp2" bindtap="anonymousFunc0" wx:for="{{loopArray110}}" wx:for-item="item" wx:for-index="index" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey}}">
-            <goods-item compid="{{item.$compid__955}}"></goods-item>
+        <view class="recomend-goods-item" wx:key="$loopState__temp2" bindtap="anonymousFunc0" wx:for="{{loopArray2}}" wx:for-item="item" wx:for-index="index" data-e-tap-so="this" data-e-tap-a-a="{{item._$indexKey}}">
+            <goods-item compid="{{item.$compid__3}}"></goods-item>
         </view>
     </view>
 </block>

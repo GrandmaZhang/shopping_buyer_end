@@ -90,7 +90,7 @@ var Cart = (_dec = (0, _redux.connect)(_connect.mapStateToProps, null), _dec(_cl
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Cart.__proto__ || Object.getPrototypeOf(Cart)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray108", "$compid__950", "cartItems", "userInfo"], _this.config = {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Cart.__proto__ || Object.getPrototypeOf(Cart)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray53", "$compid__336", "cartItems", "totalMoney", "userInfo"], _this.config = {
       navigationBarTitleText: "购物车"
     }, _this.state = {
       cartItems: []
@@ -134,44 +134,58 @@ var Cart = (_dec = (0, _redux.connect)(_connect.mapStateToProps, null), _dec(_cl
         }
       }, _callee, _this2, [[1, 9]]);
     })), _this.countMoney = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
-      var userInfo, cartItems, result;
+      var userInfo, cartItems, totalMoney, result;
       return regeneratorRuntime.wrap(function _callee2$(_context2) {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
               userInfo = _this.props.userInfo;
               cartItems = _this.state.cartItems;
-              _context2.prev = 2;
-              _context2.next = 5;
+              totalMoney = _this.getTotalMoney(cartItems);
+              _context2.prev = 3;
+              _context2.next = 6;
               return (0, _request2.default)({
                 url: _cart2.default.addOrder,
                 method: "POST",
                 data: {
                   userId: userInfo.id,
-                  goods: cartItems
+                  goods: cartItems,
+                  price: totalMoney
                 }
               });
 
-            case 5:
+            case 6:
               result = _context2.sent;
 
               console.log(result, "result");
-              _context2.next = 12;
+              _taroWeapp2.default.showToast({
+                title: "下单成功",
+                icon: "success",
+                duration: 3000
+              });
+              _context2.next = 14;
               break;
 
-            case 9:
-              _context2.prev = 9;
-              _context2.t0 = _context2["catch"](2);
+            case 11:
+              _context2.prev = 11;
+              _context2.t0 = _context2["catch"](3);
 
               console.log(_context2.t0);
 
-            case 12:
+            case 14:
             case "end":
               return _context2.stop();
           }
         }
-      }, _callee2, _this2, [[2, 9]]);
-    })), _this.customComponents = ["CartItem", "AtButton"], _temp), _possibleConstructorReturn(_this, _ret);
+      }, _callee2, _this2, [[3, 11]]);
+    })), _this.getTotalMoney = function (cartItems) {
+      return cartItems.reduce(function (prev, _ref4) {
+        var price = _ref4.price,
+            goodsNumber = _ref4.goodsNumber;
+
+        return prev + price * goodsNumber;
+      }, 0);
+    }, _this.customComponents = ["RootPage", "CartItem", "AtButton"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Cart, [{
@@ -197,7 +211,7 @@ var Cart = (_dec = (0, _redux.connect)(_connect.mapStateToProps, null), _dec(_cl
   }, {
     key: "componentDidMount",
     value: function () {
-      var _ref4 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
+      var _ref5 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
         return regeneratorRuntime.wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
@@ -210,7 +224,7 @@ var Cart = (_dec = (0, _redux.connect)(_connect.mapStateToProps, null), _dec(_cl
       }));
 
       function componentDidMount() {
-        return _ref4.apply(this, arguments);
+        return _ref5.apply(this, arguments);
       }
 
       return componentDidMount;
@@ -218,7 +232,7 @@ var Cart = (_dec = (0, _redux.connect)(_connect.mapStateToProps, null), _dec(_cl
   }, {
     key: "componentDidShow",
     value: function () {
-      var _ref5 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4() {
+      var _ref6 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4() {
         return regeneratorRuntime.wrap(function _callee4$(_context4) {
           while (1) {
             switch (_context4.prev = _context4.next) {
@@ -234,7 +248,7 @@ var Cart = (_dec = (0, _redux.connect)(_connect.mapStateToProps, null), _dec(_cl
       }));
 
       function componentDidShow() {
-        return _ref5.apply(this, arguments);
+        return _ref6.apply(this, arguments);
       }
 
       return componentDidShow;
@@ -250,39 +264,41 @@ var Cart = (_dec = (0, _redux.connect)(_connect.mapStateToProps, null), _dec(_cl
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__950"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__336"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__950 = _genCompid2[0],
-          $compid__950 = _genCompid2[1];
+          $prevCompid__336 = _genCompid2[0],
+          $compid__336 = _genCompid2[1];
 
       var userInfo = this.__props.userInfo;
       var cartItems = this.__state.cartItems;
 
-      var loopArray108 = cartItems.map(function (item, _anonIdx) {
+      var totalMoney = this.getTotalMoney(cartItems);
+      var loopArray53 = cartItems.map(function (item, _anonIdx) {
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
 
-        var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "bfhzzzzzzz" + _anonIdx, true),
+        var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "gizzzzzzzz" + _anonIdx, true),
             _genCompid4 = _slicedToArray(_genCompid3, 2),
-            $prevCompid__949 = _genCompid4[0],
-            $compid__949 = _genCompid4[1];
+            $prevCompid__335 = _genCompid4[0],
+            $compid__335 = _genCompid4[1];
 
         _taroWeapp.propsManager.set(_extends({}, item.$original, {
           "userId": userInfo.id,
           "refresh": _this3.getCartItem
-        }), $compid__949, $prevCompid__949);
+        }), $compid__335, $prevCompid__335);
         return {
-          $compid__949: $compid__949,
+          $compid__335: $compid__335,
           $original: item.$original
         };
       });
       _taroWeapp.propsManager.set({
         "onClick": this.countMoney
-      }, $compid__950, $prevCompid__950);
+      }, $compid__336, $prevCompid__336);
       Object.assign(this.__state, {
-        loopArray108: loopArray108,
-        $compid__950: $compid__950
+        loopArray53: loopArray53,
+        $compid__336: $compid__336,
+        totalMoney: totalMoney
       });
       return this.__state;
     }

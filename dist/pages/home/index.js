@@ -56,6 +56,9 @@ var _get = function get(object, property, receiver) { if (object === null) objec
 var _dec, _class, _class2, _temp2; /* eslint-disable import/no-unresolved */
 
 
+// import io from "weapp.socket.io";
+
+
 var _taroWeapp = __webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/@tarojs/taro-weapp/index.js");
 
 var _taroWeapp2 = _interopRequireDefault(_taroWeapp);
@@ -105,7 +108,7 @@ var HomePage = (_dec = (0, _redux.connect)(_connect.mapStateToProps, _connect.ma
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = HomePage.__proto__ || Object.getPrototypeOf(HomePage)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__951", "$compid__952", "$compid__953", "goods", "banner", "searchValue", "isLogin"], _this.config = {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = HomePage.__proto__ || Object.getPrototypeOf(HomePage)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__221", "$compid__222", "$compid__223", "goods", "banner", "searchValue", "isLogin"], _this.config = {
       navigationBarTitleText: "zml的黑店-首页"
     }, _this.state = {
       goods: [],
@@ -190,7 +193,7 @@ var HomePage = (_dec = (0, _redux.connect)(_connect.mapStateToProps, _connect.ma
       _taroWeapp2.default.navigateTo({
         url: "/pages/search/index"
       });
-    }, _this.customComponents = ["AtSearchBar", "AdSwiper", "GoodsCategory", "GoodsList"], _temp), _possibleConstructorReturn(_this, _ret);
+    }, _this.customComponents = ["RootPage", "AtSearchBar", "AdSwiper", "GoodsCategory", "GoodsList"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(HomePage, [{
@@ -290,20 +293,20 @@ var HomePage = (_dec = (0, _redux.connect)(_connect.mapStateToProps, _connect.ma
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__951"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__221"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__951 = _genCompid2[0],
-          $compid__951 = _genCompid2[1];
+          $prevCompid__221 = _genCompid2[0],
+          $compid__221 = _genCompid2[1];
 
-      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__952"),
+      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__222"),
           _genCompid4 = _slicedToArray(_genCompid3, 2),
-          $prevCompid__952 = _genCompid4[0],
-          $compid__952 = _genCompid4[1];
+          $prevCompid__222 = _genCompid4[0],
+          $compid__222 = _genCompid4[1];
 
-      var _genCompid5 = (0, _taroWeapp.genCompid)(__prefix + "$compid__953"),
+      var _genCompid5 = (0, _taroWeapp.genCompid)(__prefix + "$compid__223"),
           _genCompid6 = _slicedToArray(_genCompid5, 2),
-          $prevCompid__953 = _genCompid6[0],
-          $compid__953 = _genCompid6[1];
+          $prevCompid__223 = _genCompid6[0],
+          $compid__223 = _genCompid6[1];
 
       var _state = this.__state,
           searchValue = _state.searchValue,
@@ -313,17 +316,17 @@ var HomePage = (_dec = (0, _redux.connect)(_connect.mapStateToProps, _connect.ma
       _taroWeapp.propsManager.set({
         "value": searchValue,
         "onFocus": this.goToSearchPage
-      }, $compid__951, $prevCompid__951);
+      }, $compid__221, $prevCompid__221);
       _taroWeapp.propsManager.set({
         "data": banner
-      }, $compid__952, $prevCompid__952);
+      }, $compid__222, $prevCompid__222);
       _taroWeapp.propsManager.set({
         "goods": goods
-      }, $compid__953, $prevCompid__953);
+      }, $compid__223, $prevCompid__223);
       Object.assign(this.__state, {
-        $compid__951: $compid__951,
-        $compid__952: $compid__952,
-        $compid__953: $compid__953
+        $compid__221: $compid__221,
+        $compid__222: $compid__222,
+        $compid__223: $compid__223
       });
       return this.__state;
     }

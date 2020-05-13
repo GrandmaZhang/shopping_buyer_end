@@ -20,7 +20,10 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-var _class, _temp2;
+var _class, _temp2; /* eslint-disable import/no-unresolved */
+
+// eslint-disable-next-line no-unused-vars
+
 
 var _taroWeapp = __webpack_require__(/*! @tarojs/taro-weapp */ "./node_modules/@tarojs/taro-weapp/index.js");
 
@@ -65,7 +68,7 @@ var SearchPage = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = SearchPage.__proto__ || Object.getPrototypeOf(SearchPage)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "loopArray4", "$compid__16", "$compid__17", "$compid__18", "$compid__19", "tabList", "searchValue", "goods", "currentTab"], _this.config = {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = SearchPage.__proto__ || Object.getPrototypeOf(SearchPage)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "loopArray34", "$compid__216", "$compid__217", "$compid__218", "$compid__219", "tabList", "searchValue", "goods", "currentTab"], _this.config = {
       navigationBarTitleText: "商品列表"
     }, _this.handleSearch = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
       var searchValue, moreGoods;
@@ -158,7 +161,7 @@ var SearchPage = (_temp2 = _class = function (_BaseComponent) {
       return function (_x) {
         return _ref3.apply(this, arguments);
       };
-    }(), _this.customComponents = ["AtSearchBar", "AtTabs", "AtTabsPane", "GoodsList"], _temp), _possibleConstructorReturn(_this, _ret);
+    }(), _this.customComponents = ["RootPage", "AtSearchBar", "AtTabs", "AtTabsPane", "GoodsList"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(SearchPage, [{
@@ -232,25 +235,25 @@ var SearchPage = (_temp2 = _class = function (_BaseComponent) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__16"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__216"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__16 = _genCompid2[0],
-          $compid__16 = _genCompid2[1];
+          $prevCompid__216 = _genCompid2[0],
+          $compid__216 = _genCompid2[1];
 
-      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__17"),
+      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__217"),
           _genCompid4 = _slicedToArray(_genCompid3, 2),
-          $prevCompid__17 = _genCompid4[0],
-          $compid__17 = _genCompid4[1];
+          $prevCompid__217 = _genCompid4[0],
+          $compid__217 = _genCompid4[1];
 
-      var _genCompid5 = (0, _taroWeapp.genCompid)(__prefix + "$compid__18"),
+      var _genCompid5 = (0, _taroWeapp.genCompid)(__prefix + "$compid__218"),
           _genCompid6 = _slicedToArray(_genCompid5, 2),
-          $prevCompid__18 = _genCompid6[0],
-          $compid__18 = _genCompid6[1];
+          $prevCompid__218 = _genCompid6[0],
+          $compid__218 = _genCompid6[1];
 
-      var _genCompid7 = (0, _taroWeapp.genCompid)(__prefix + "$compid__19"),
+      var _genCompid7 = (0, _taroWeapp.genCompid)(__prefix + "$compid__219"),
           _genCompid8 = _slicedToArray(_genCompid7, 2),
-          $prevCompid__19 = _genCompid8[0],
-          $compid__19 = _genCompid8[1];
+          $prevCompid__219 = _genCompid8[0],
+          $compid__219 = _genCompid8[1];
 
       var _state = this.__state,
           searchValue = _state.searchValue,
@@ -259,34 +262,34 @@ var SearchPage = (_temp2 = _class = function (_BaseComponent) {
 
       console.log(goods, "searchGoods");
       var anonymousState__temp = [{ title: "全部" }].concat(_toConsumableArray(_config.tabList));
-      var loopArray4 = _config.tabList.map(function (item, index) {
+      var loopArray34 = _config.tabList.map(function (item, index) {
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
         var $loopState__temp3 = index + 1;
 
-        var _genCompid9 = (0, _taroWeapp.genCompid)(__prefix + "ezzzzzzzzz" + index, true),
+        var _genCompid9 = (0, _taroWeapp.genCompid)(__prefix + "edzzzzzzzz" + index, true),
             _genCompid10 = _slicedToArray(_genCompid9, 2),
-            $prevCompid__14 = _genCompid10[0],
-            $compid__14 = _genCompid10[1];
+            $prevCompid__214 = _genCompid10[0],
+            $compid__214 = _genCompid10[1];
 
         _taroWeapp.propsManager.set({
           "current": currentTab,
           "index": $loopState__temp3
-        }, $compid__14, $prevCompid__14);
+        }, $compid__214, $prevCompid__214);
 
-        var _genCompid11 = (0, _taroWeapp.genCompid)(__prefix + "fzzzzzzzzz" + index, true),
+        var _genCompid11 = (0, _taroWeapp.genCompid)(__prefix + "eezzzzzzzz" + index, true),
             _genCompid12 = _slicedToArray(_genCompid11, 2),
-            $prevCompid__15 = _genCompid12[0],
-            $compid__15 = _genCompid12[1];
+            $prevCompid__215 = _genCompid12[0],
+            $compid__215 = _genCompid12[1];
 
         _taroWeapp.propsManager.set({
           "goods": goods
-        }, $compid__15, $prevCompid__15);
+        }, $compid__215, $prevCompid__215);
         return {
           $loopState__temp3: $loopState__temp3,
-          $compid__14: $compid__14,
-          $compid__15: $compid__15,
+          $compid__214: $compid__214,
+          $compid__215: $compid__215,
           $original: item.$original
         };
       });
@@ -295,27 +298,27 @@ var SearchPage = (_temp2 = _class = function (_BaseComponent) {
         "value": searchValue,
         "onChange": this.handleChange,
         "onActionClick": this.handleSearch
-      }, $compid__16, $prevCompid__16);
+      }, $compid__216, $prevCompid__216);
       _taroWeapp.propsManager.set({
         "current": currentTab,
         "scroll": true,
         "tabList": anonymousState__temp,
         "onClick": this.handleTabClick
-      }, $compid__17, $prevCompid__17);
+      }, $compid__217, $prevCompid__217);
       _taroWeapp.propsManager.set({
         "current": currentTab,
         "index": 0
-      }, $compid__18, $prevCompid__18);
+      }, $compid__218, $prevCompid__218);
       _taroWeapp.propsManager.set({
         "goods": goods
-      }, $compid__19, $prevCompid__19);
+      }, $compid__219, $prevCompid__219);
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
-        loopArray4: loopArray4,
-        $compid__16: $compid__16,
-        $compid__17: $compid__17,
-        $compid__18: $compid__18,
-        $compid__19: $compid__19,
+        loopArray34: loopArray34,
+        $compid__216: $compid__216,
+        $compid__217: $compid__217,
+        $compid__218: $compid__218,
+        $compid__219: $compid__219,
         tabList: _config.tabList
       });
       return this.__state;

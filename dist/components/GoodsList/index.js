@@ -56,7 +56,7 @@ var GoodsList = (_temp2 = _class = function (_Taro$Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = GoodsList.__proto__ || Object.getPrototypeOf(GoodsList)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray110", "goods"], _this.anonymousFunc0Map = {}, _this.customComponents = ["GoodsItem"], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = GoodsList.__proto__ || Object.getPrototypeOf(GoodsList)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray2", "goods"], _this.anonymousFunc0Map = {}, _this.customComponents = ["GoodsItem"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(GoodsList, [{
@@ -87,37 +87,37 @@ var GoodsList = (_temp2 = _class = function (_Taro$Component) {
         });
       };
 
-      var loopArray110 = goods.map(function (item, index) {
+      var loopArray2 = goods.map(function (item, index) {
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
         var $loopState__temp2 = item.$original.id + "-" + index;
 
-        var _$indexKey = "bgazz" + index;
+        var _$indexKey = "bzzzz" + index;
 
         _this2.anonymousFunc0Map[_$indexKey] = function () {
           return goToDetail(item.$original.id);
         };
 
-        var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "bgbzzzzzzz" + index, true),
+        var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "czzzzzzzzz" + index, true),
             _genCompid2 = _slicedToArray(_genCompid, 2),
-            $prevCompid__955 = _genCompid2[0],
-            $compid__955 = _genCompid2[1];
+            $prevCompid__3 = _genCompid2[0],
+            $compid__3 = _genCompid2[1];
 
         _taroWeapp.propsManager.set({
           "name": item.$original.name,
           "imgSrc": item.$original.url[0],
           "price": item.$original.price
-        }, $compid__955, $prevCompid__955);
+        }, $compid__3, $prevCompid__3);
         return {
           $loopState__temp2: $loopState__temp2,
           _$indexKey: _$indexKey,
-          $compid__955: $compid__955,
+          $compid__3: $compid__3,
           $original: item.$original
         };
       });
       Object.assign(this.__state, {
-        loopArray110: loopArray110,
+        loopArray2: loopArray2,
         goods: goods
       });
       return this.__state;

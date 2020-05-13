@@ -1,9 +1,13 @@
+/* eslint-disable import/no-unresolved */
+
+// eslint-disable-next-line no-unused-vars
 import Taro, { Component } from "@tarojs/taro";
 import { View } from "@tarojs/components";
 import { AtSearchBar, AtTabs, AtTabsPane } from "taro-ui";
 import Request from "../../utils/request";
 import homePageAPI from "../../api/homePage";
 import GoodsList from "../../components/GoodsList";
+import RootPage from "../RootPage";
 import { tabList } from "../../components/GoodsCategory/config";
 
 import "./style.scss";
@@ -91,33 +95,35 @@ class SearchPage extends Component {
     const { searchValue, goods, currentTab } = this.state;
     console.log(goods, "searchGoods");
     return (
-      <View className="search-page">
-        <AtSearchBar
-          focus
-          value={searchValue}
-          onChange={this.handleChange}
-          onActionClick={this.handleSearch}
-        />
-        <AtTabs
-          current={currentTab}
-          scroll
-          tabList={[{ title: "全部" }, ...tabList]}
-          onClick={this.handleTabClick}
-        >
-          <AtTabsPane current={currentTab} index={0}>
-            <View className="search-page__content">
-              <GoodsList goods={goods} />
-            </View>
-          </AtTabsPane>
-          {tabList.map((item, index) => (
-            <AtTabsPane current={currentTab} index={index + 1}>
+      <RootPage>
+        <View className="search-page">
+          <AtSearchBar
+            focus
+            value={searchValue}
+            onChange={this.handleChange}
+            onActionClick={this.handleSearch}
+          />
+          <AtTabs
+            current={currentTab}
+            scroll
+            tabList={[{ title: "全部" }, ...tabList]}
+            onClick={this.handleTabClick}
+          >
+            <AtTabsPane current={currentTab} index={0}>
               <View className="search-page__content">
                 <GoodsList goods={goods} />
               </View>
             </AtTabsPane>
-          ))}
-        </AtTabs>
-      </View>
+            {tabList.map((item, index) => (
+              <AtTabsPane current={currentTab} index={index + 1} key={item.key}>
+                <View className="search-page__content">
+                  <GoodsList goods={goods} />
+                </View>
+              </AtTabsPane>
+            ))}
+          </AtTabs>
+        </View>
+      </RootPage>
     );
   }
 }

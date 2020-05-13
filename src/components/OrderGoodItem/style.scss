@@ -4,10 +4,8 @@
   display: flex;
   flex-direction: row;
   margin: 15px;
-  border-radius: 10px;
-  box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, 0.1);
   &__imgWrap {
-    height: 210px;
+    height: 195px;
     width: 455px;
     padding: 10px;
   }
@@ -25,9 +23,6 @@
     margin: 0 40px;
     display: inline-block;
   }
-  .delete-btn {
-    display: inline-block;
-  }
 
   &__name {
     height: 137rpx;
@@ -35,9 +30,3 @@
     display: inline-block;
   }
 }
-
-// .cart-item__handle {
-//   .at-input-number {
-//     margin: 0 40px;
-//   }
-// }

@@ -92,7 +92,7 @@ var User = (_dec = (0, _redux.connect)(_connect.mapStateToProps, null), _dec(_cl
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = User.__proto__ || Object.getPrototypeOf(User)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__1155", "$compid__1156"], _this.config = {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = User.__proto__ || Object.getPrototypeOf(User)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__9", "$compid__10", "userInfo"], _this.config = {
       navigationBarTitleText: "我的"
     }, _this.checkOrder = function () {
       _taroWeapp2.default.navigateTo({
@@ -117,26 +117,29 @@ var User = (_dec = (0, _redux.connect)(_connect.mapStateToProps, null), _dec(_cl
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__1155"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__9"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__1155 = _genCompid2[0],
-          $compid__1155 = _genCompid2[1];
+          $prevCompid__9 = _genCompid2[0],
+          $compid__9 = _genCompid2[1];
 
-      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__1156"),
+      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__10"),
           _genCompid4 = _slicedToArray(_genCompid3, 2),
-          $prevCompid__1156 = _genCompid4[0],
-          $compid__1156 = _genCompid4[1];
+          $prevCompid__10 = _genCompid4[0],
+          $compid__10 = _genCompid4[1];
+
+      var userInfo = this.__props.userInfo;
 
       _taroWeapp.propsManager.set({
         "circle": true,
         "image": _userAvatar2.default
-      }, $compid__1155, $prevCompid__1155);
+      }, $compid__9, $prevCompid__9);
       _taroWeapp.propsManager.set({
         "onClick": this.checkOrder
-      }, $compid__1156, $prevCompid__1156);
+      }, $compid__10, $prevCompid__10);
       Object.assign(this.__state, {
-        $compid__1155: $compid__1155,
-        $compid__1156: $compid__1156
+        $compid__9: $compid__9,
+        $compid__10: $compid__10,
+        userInfo: userInfo
       });
       return this.__state;
     }

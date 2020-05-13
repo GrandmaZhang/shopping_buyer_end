@@ -1,8 +1,8 @@
 <block wx:if="{{$taroCompReady}}">
     <view class="user-page">
         <view class="user-head">
-            <at-avatar compid="{{$compid__1155}}"></at-avatar><text>姓名</text>
+            <at-avatar compid="{{$compid__762}}"></at-avatar><text>{{userInfo.username}}</text>
         </view>
-        <at-button compid="{{$compid__1156}}">查看订单</at-button>
+        <at-button compid="{{$compid__763}}">查看订单</at-button>
     </view>
 </block>

@@ -2,12 +2,14 @@
 import Taro, { Component } from "@tarojs/taro";
 import { View } from "@tarojs/components";
 import { AtSearchBar } from "taro-ui";
+// import io from "weapp.socket.io";
 import { connect } from "@tarojs/redux";
 import Request from "../../utils/request";
 import AdSwiper from "../../components/AdSwiper";
 import GoodsCategory from "../../components/GoodsCategory";
 import GoodsList from "../../components/GoodsList";
 import homePageAPI from "../../api/homePage";
+import RootPage from "../RootPage";
 import userAPI from "../../api/user";
 import { mapDispatchToProps, mapStateToProps } from "./connect";
 import "./index.scss";
@@ -42,6 +44,22 @@ class HomePage extends Component {
     } catch (e) {
       console.log(e);
     }
+
+    // try {
+    //   const socket = io("http://localhost:7001");
+
+    //   socket.on("connect", () => {
+    //     console.log("connect!");
+    //     socket.emit("chat", "hello world!");
+    //   });
+
+    //   socket.on("res", msg => {
+    //     console.log("res from server: %s!", msg);
+    //   });
+
+    // } catch (e) {
+    //   console.log(e, "socket error");
+    // }
   }
 
   componentDidShow() {
@@ -112,12 +130,14 @@ class HomePage extends Component {
   render() {
     const { searchValue, banner, goods } = this.state;
     return (
-      <View className="home-page">
-        <AtSearchBar value={searchValue} onFocus={this.goToSearchPage} />
-        <AdSwiper data={banner} />
-        <GoodsCategory />
-        <GoodsList goods={goods} />
-      </View>
+      <RootPage>
+        <View className="home-page">
+          <AtSearchBar value={searchValue} onFocus={this.goToSearchPage} />
+          <AdSwiper data={banner} />
+          <GoodsCategory />
+          <GoodsList goods={goods} />
+        </View>
+      </RootPage>
     );
   }
 }

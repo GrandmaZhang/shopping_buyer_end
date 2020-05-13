@@ -10,8 +10,16 @@ import cartAPI from "../../api/cart";
 import "./style.scss";
 
 const CartItem = props => {
-  const { id, name, price, url, userId, refresh } = props;
-  const [goodsNumber, setGoodsNumber] = useState(1);
+  const {
+    id,
+    name,
+    price,
+    url,
+    userId,
+    refresh,
+    goodsNumber: curNumber
+  } = props;
+  const [goodsNumber, setGoodsNumber] = useState(curNumber);
 
   const addGoods = async number => {
     try {
@@ -24,6 +32,7 @@ const CartItem = props => {
           userId
         }
       });
+      refresh();
     } catch (e) {
       console.log(e);
     }
@@ -31,7 +40,7 @@ const CartItem = props => {
 
   const handleChange = val => {
     setGoodsNumber(val);
-    addGoods(goodsNumber);
+    addGoods(val);
   };
 
   const handleDelete = async () => {

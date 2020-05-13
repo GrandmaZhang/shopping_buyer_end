@@ -103,7 +103,7 @@ var Login = (_dec = (0, _redux.connect)(_connect.mapStateToProps, _connect.mapDi
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Login.__proto__ || Object.getPrototypeOf(Login)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__906", "$compid__907", "$compid__908", "$compid__909", "$compid__910", "loginType", "LOGIN", "username", "password", "toastText", "isToastOpened", "changeLogin", "setUserInfo"], _this.config = {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Login.__proto__ || Object.getPrototypeOf(Login)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__11", "$compid__12", "$compid__13", "$compid__14", "$compid__15", "loginType", "LOGIN", "username", "password", "toastText", "isToastOpened", "changeLogin", "setUserInfo"], _this.config = {
       navigationBarTitleText: "登录"
     }, _this.handleUserNameChange = function (value) {
       _this.setState({
@@ -207,7 +207,7 @@ var Login = (_dec = (0, _redux.connect)(_connect.mapStateToProps, _connect.mapDi
           }
         }
       }, _callee2, _this2, [[2, 13]]);
-    })), _this.customComponents = ["AtForm", "AtInput", "AtButton", "AtToast"], _temp), _possibleConstructorReturn(_this, _ret);
+    })), _this.customComponents = ["RootPage", "AtForm", "AtInput", "AtButton", "AtToast"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Login, [{
@@ -243,30 +243,30 @@ var Login = (_dec = (0, _redux.connect)(_connect.mapStateToProps, _connect.mapDi
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__906"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__11"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__906 = _genCompid2[0],
-          $compid__906 = _genCompid2[1];
+          $prevCompid__11 = _genCompid2[0],
+          $compid__11 = _genCompid2[1];
 
-      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__907"),
+      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__12"),
           _genCompid4 = _slicedToArray(_genCompid3, 2),
-          $prevCompid__907 = _genCompid4[0],
-          $compid__907 = _genCompid4[1];
+          $prevCompid__12 = _genCompid4[0],
+          $compid__12 = _genCompid4[1];
 
-      var _genCompid5 = (0, _taroWeapp.genCompid)(__prefix + "$compid__908"),
+      var _genCompid5 = (0, _taroWeapp.genCompid)(__prefix + "$compid__13"),
           _genCompid6 = _slicedToArray(_genCompid5, 2),
-          $prevCompid__908 = _genCompid6[0],
-          $compid__908 = _genCompid6[1];
+          $prevCompid__13 = _genCompid6[0],
+          $compid__13 = _genCompid6[1];
 
-      var _genCompid7 = (0, _taroWeapp.genCompid)(__prefix + "$compid__909"),
+      var _genCompid7 = (0, _taroWeapp.genCompid)(__prefix + "$compid__14"),
           _genCompid8 = _slicedToArray(_genCompid7, 2),
-          $prevCompid__909 = _genCompid8[0],
-          $compid__909 = _genCompid8[1];
+          $prevCompid__14 = _genCompid8[0],
+          $compid__14 = _genCompid8[1];
 
-      var _genCompid9 = (0, _taroWeapp.genCompid)(__prefix + "$compid__910"),
+      var _genCompid9 = (0, _taroWeapp.genCompid)(__prefix + "$compid__15"),
           _genCompid10 = _slicedToArray(_genCompid9, 2),
-          $prevCompid__910 = _genCompid10[0],
-          $compid__910 = _genCompid10[1];
+          $prevCompid__15 = _genCompid10[0],
+          $compid__15 = _genCompid10[1];
 
       var _state = this.__state,
           username = _state.username,
@@ -279,7 +279,7 @@ var Login = (_dec = (0, _redux.connect)(_connect.mapStateToProps, _connect.mapDi
       this.anonymousFunc0 = loginType === LOGIN ? this.handleLogin : this.handleRegister;
       _taroWeapp.propsManager.set({
         "onSubmit": this.anonymousFunc0
-      }, $compid__906, $prevCompid__906);
+      }, $compid__11, $prevCompid__11);
       _taroWeapp.propsManager.set({
         "name": "username",
         "title": "\u7528\u6237\u540D",
@@ -287,7 +287,7 @@ var Login = (_dec = (0, _redux.connect)(_connect.mapStateToProps, _connect.mapDi
         "placeholder": "\u8BF7\u8F93\u5165\u7528\u6237\u540D",
         "value": username,
         "onChange": this.handleUserNameChange
-      }, $compid__907, $prevCompid__907);
+      }, $compid__12, $prevCompid__12);
       _taroWeapp.propsManager.set({
         "name": "username",
         "title": "\u5BC6\u7801",
@@ -295,20 +295,20 @@ var Login = (_dec = (0, _redux.connect)(_connect.mapStateToProps, _connect.mapDi
         "placeholder": "\u8BF7\u8F93\u5165\u5BC6\u7801",
         "value": password,
         "onChange": this.handlePasswordChange
-      }, $compid__908, $prevCompid__908);
+      }, $compid__13, $prevCompid__13);
       _taroWeapp.propsManager.set({
         "formType": "submit"
-      }, $compid__909, $prevCompid__909);
+      }, $compid__14, $prevCompid__14);
       _taroWeapp.propsManager.set({
         "isOpened": isToastOpened,
         "text": toastText
-      }, $compid__910, $prevCompid__910);
+      }, $compid__15, $prevCompid__15);
       Object.assign(this.__state, {
-        $compid__906: $compid__906,
-        $compid__907: $compid__907,
-        $compid__908: $compid__908,
-        $compid__909: $compid__909,
-        $compid__910: $compid__910,
+        $compid__11: $compid__11,
+        $compid__12: $compid__12,
+        $compid__13: $compid__13,
+        $compid__14: $compid__14,
+        $compid__15: $compid__15,
         LOGIN: LOGIN
       });
       return this.__state;

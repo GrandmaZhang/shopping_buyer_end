@@ -1,10 +1,12 @@
 <block wx:if="{{$taroCompReady}}">
-    <view class="login-page" id="login-page">
-        <at-form compid="{{$compid__906}}">
-            <at-input compid="{{$compid__907}}"></at-input>
-            <at-input compid="{{$compid__908}}"></at-input>
-            <at-button compid="{{$compid__909}}">{{loginType === LOGIN ? "登录" : "注册"}}</at-button>
-        </at-form><text bindtap="changeLoginType" class="change-type">{{loginType === LOGIN ? "没有账号？请点此注册" : "已有账号？请点此登录"}}</text>
-        <at-toast compid="{{$compid__910}}"></at-toast>
-    </view>
+    <root-page>
+        <view class="login-page" id="login-page">
+            <at-form compid="{{$compid__764}}">
+                <at-input compid="{{$compid__765}}"></at-input>
+                <at-input compid="{{$compid__766}}"></at-input>
+                <at-button compid="{{$compid__767}}">{{loginType === LOGIN ? "登录" : "注册"}}</at-button>
+            </at-form><text bindtap="changeLoginType" class="change-type">{{loginType === LOGIN ? "没有账号？请点此注册" : "已有账号？请点此登录"}}</text>
+            <at-toast compid="{{$compid__768}}"></at-toast>
+        </view>
+    </root-page>
 </block>

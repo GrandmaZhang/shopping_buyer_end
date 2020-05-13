@@ -1,1 +1,1 @@
-{"usingComponents":{"cart-item":"../../components/CartItem/index","at-button":"../../npm/taro-ui/dist/weapp/components/button/index"},"navigationBarTitleText":"购物车"}
+{"usingComponents":{"root-page":"../RootPage/index","cart-item":"../../components/CartItem/index","at-button":"../../npm/taro-ui/dist/weapp/components/button/index"},"navigationBarTitleText":"购物车"}

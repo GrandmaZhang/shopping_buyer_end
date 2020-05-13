@@ -2,6 +2,44 @@
 # yarn lockfile v1
 
 
+"@ant-design/colors@^3.1.0":
+  version "3.2.2"
+  resolved "http://bnpm.byted.org/@ant-design/colors/download/@ant-design/colors-3.2.2.tgz#5ad43d619e911f3488ebac303d606e66a8423903"
+  integrity sha1-WtQ9YZ6RHzSI66wwPWBuZqhCOQM=
+  dependencies:
+    tinycolor2 "^1.4.1"
+
+"@ant-design/css-animation@^1.7.2":
+  version "1.7.2"
+  resolved "http://bnpm.byted.org/@ant-design/css-animation/download/@ant-design/css-animation-1.7.2.tgz#4ee5d2ec0fb7cc0a78b44e1c82628bd4621ac7e3"
+  integrity sha1-TuXS7A+3zAp4tE4cgmKL1GIax+M=
+
+"@ant-design/icons-svg@^4.0.0":
+  version "4.1.0"
+  resolved "http://bnpm.byted.org/@ant-design/icons-svg/download/@ant-design/icons-svg-4.1.0.tgz#480b025f4b20ef7fe8f47d4a4846e4fee84ea06c"
+  integrity sha1-SAsCX0sg73/o9H1KSEbk/uhOoGw=
+
+"@ant-design/icons@^4.1.0":
+  version "4.1.0"
+  resolved "http://bnpm.byted.org/@ant-design/icons/download/@ant-design/icons-4.1.0.tgz#444edcc3822d5b43b2b038d6f893cd7f7dfcc48d"
+  integrity sha1-RE7cw4ItW0OysDjW+JPNf338xI0=
+  dependencies:
+    "@ant-design/colors" "^3.1.0"
+    "@ant-design/icons-svg" "^4.0.0"
+    classnames "^2.2.6"
+    insert-css "^2.0.0"
+    rc-util "^4.9.0"
+
+"@ant-design/react-slick@~0.25.5":
+  version "0.25.6"
+  resolved "http://bnpm.byted.org/@ant-design/react-slick/download/@ant-design/react-slick-0.25.6.tgz#4e826b1519e46727b37a10f372fd21a7e220e660"
+  integrity sha1-ToJrFRnkZyezehDzcv0hp+Ig5mA=
+  dependencies:
+    classnames "^2.2.5"
+    json2mq "^0.2.0"
+    lodash "^4.17.15"
+    resize-observer-polyfill "^1.5.0"
+
 "@babel/code-frame@7.0.0-beta.44":
   version "7.0.0-beta.44"
   resolved "http://registry.npm.taobao.org/@babel/code-frame/download/@babel/code-frame-7.0.0-beta.44.tgz#2a02643368de80916162be70865c97774f3adbd9"
@@ -89,6 +127,13 @@
   integrity sha1-159aIED3yqJNU+VjqtScvAVYEwg=
   dependencies:
     regenerator-runtime "^0.13.2"
+
+"@babel/runtime@^7.8.4":
+  version "7.9.6"
+  resolved "http://bnpm.byted.org/@babel/runtime/download/@babel/runtime-7.9.6.tgz#a9102eb5cadedf3f31d08a9ecf294af7827ea29f"
+  integrity sha1-qRAutcre3z8x0IqezylK94J+op8=
+  dependencies:
+    regenerator-runtime "^0.13.4"
 
 "@babel/template@7.0.0-beta.44":
   version "7.0.0-beta.44"
@@ -1022,6 +1067,13 @@ acorn@^6.0.7, acorn@^6.2.1:
   resolved "http://bnpm.byted.org/acorn/download/acorn-6.4.0.tgz#b659d2ffbafa24baf5db1cdbb2c94a983ecd2784"
   integrity sha1-tlnS/7r6JLr12xzbsslKmD7NJ4Q=
 
+add-dom-event-listener@^1.1.0:
+  version "1.1.0"
+  resolved "http://bnpm.byted.org/add-dom-event-listener/download/add-dom-event-listener-1.1.0.tgz#6a92db3a0dd0abc254e095c0f1dc14acbbaae310"
+  integrity sha1-apLbOg3Qq8JU4JXA8dwUrLuq4xA=
+  dependencies:
+    object-assign "4.x"
+
 adjust-sourcemap-loader@^1.1.0:
   version "1.2.0"
   resolved "http://registry.npm.taobao.org/adjust-sourcemap-loader/download/adjust-sourcemap-loader-1.2.0.tgz#e33fde95e50db9f2a802e3647e311d2fc5000c69"
@@ -1034,6 +1086,11 @@ adjust-sourcemap-loader@^1.1.0:
     lodash.defaults "^3.1.2"
     object-path "^0.9.2"
     regex-parser "^2.2.9"
+
+after@0.8.2:
+  version "0.8.2"
+  resolved "http://bnpm.byted.org/after/download/after-0.8.2.tgz#fedb394f9f0e02aa9768e702bda23b505fae7e1f"
+  integrity sha1-/ts5T58OAqqXaOcCvaI7UF+ufh8=
 
 agent-base@4, agent-base@^4.1.0, agent-base@^4.2.0:
   version "4.2.1"
@@ -1159,6 +1216,56 @@ ansi-styles@^3.2.0, ansi-styles@^3.2.1:
   dependencies:
     color-convert "^1.9.0"
 
+antd@^4.2.2:
+  version "4.2.2"
+  resolved "http://bnpm.byted.org/antd/download/antd-4.2.2.tgz#223ea6b3b3b5ce1a47d390f271c1b145ea9c5c15"
+  integrity sha1-Ij6ms7O1zhpH05DyccGxReqcXBU=
+  dependencies:
+    "@ant-design/css-animation" "^1.7.2"
+    "@ant-design/icons" "^4.1.0"
+    "@ant-design/react-slick" "~0.25.5"
+    array-tree-filter "^2.1.0"
+    classnames "~2.2.6"
+    copy-to-clipboard "^3.2.0"
+    lodash "^4.17.13"
+    moment "~2.25.3"
+    omit.js "^1.0.2"
+    prop-types "^15.7.2"
+    raf "^3.4.1"
+    rc-animate "~3.0.0"
+    rc-cascader "~1.0.0"
+    rc-checkbox "~2.2.0"
+    rc-collapse "~2.0.0"
+    rc-dialog "~7.7.0"
+    rc-drawer "~3.2.0"
+    rc-dropdown "~3.0.0"
+    rc-field-form "~1.2.0"
+    rc-input-number "~4.6.1"
+    rc-mentions "~1.1.0"
+    rc-menu "~8.1.0"
+    rc-notification "~4.3.0"
+    rc-pagination "~2.2.0"
+    rc-picker "~1.4.0"
+    rc-progress "~2.5.0"
+    rc-rate "~2.6.0"
+    rc-resize-observer "^0.2.0"
+    rc-select "~10.3.0"
+    rc-slider "~9.2.3"
+    rc-steps "~3.6.0"
+    rc-switch "~2.0.0"
+    rc-table "~7.5.3"
+    rc-tabs "~10.1.1"
+    rc-tooltip "~4.0.2"
+    rc-tree "~3.2.0"
+    rc-tree-select "~3.1.0"
+    rc-trigger "~4.1.0"
+    rc-upload "~3.0.4"
+    rc-util "^4.20.0"
+    rc-virtual-list "^1.1.0"
+    resize-observer-polyfill "^1.5.1"
+    scroll-into-view-if-needed "^2.2.20"
+    warning "~4.0.3"
+
 any-promise@^1.0.0, any-promise@^1.3.0:
   version "1.3.0"
   resolved "http://registry.npm.taobao.org/any-promise/download/any-promise-1.3.0.tgz#abc6afeedcea52e809cdc0376aed3ce39635d17f"
@@ -1243,6 +1350,11 @@ array-includes@^3.0.3:
     define-properties "^1.1.2"
     es-abstract "^1.7.0"
 
+array-tree-filter@^2.1.0:
+  version "2.1.0"
+  resolved "http://bnpm.byted.org/array-tree-filter/download/array-tree-filter-2.1.0.tgz#873ac00fec83749f255ac8dd083814b4f6329190"
+  integrity sha1-hzrAD+yDdJ8lWsjdCDgUtPYykZA=
+
 array-union@^1.0.1:
   version "1.0.2"
   resolved "http://registry.npm.taobao.org/array-union/download/array-union-1.0.2.tgz#9a34410e4f4e3da23dea375be5be70f24778ec39"
@@ -1259,6 +1371,11 @@ array-unique@^0.3.2:
   version "0.3.2"
   resolved "http://registry.npm.taobao.org/array-unique/download/array-unique-0.3.2.tgz#a894b75d4bc4f6cd679ef3244a9fd8f46ae2d428"
   integrity sha1-qJS3XUvE9s1nnvMkSp/Y9Gri1Cg=
+
+arraybuffer.slice@~0.0.7:
+  version "0.0.7"
+  resolved "http://bnpm.byted.org/arraybuffer.slice/download/arraybuffer.slice-0.0.7.tgz#3bbc4275dd584cc1b10809b89d4e8b63a69e7675"
+  integrity sha1-O7xCdd1YTMGxCAm4nU6LY6aednU=
 
 asap@~2.0.3, asap@~2.0.6:
   version "2.0.6"
@@ -1322,6 +1439,16 @@ async-foreach@^0.1.3:
   version "0.1.3"
   resolved "http://registry.npm.taobao.org/async-foreach/download/async-foreach-0.1.3.tgz#36121f845c0578172de419a97dbeb1d16ec34542"
   integrity sha1-NhIfhFwFeBct5Bmpfb6x0W7DRUI=
+
+async-limiter@~1.0.0:
+  version "1.0.1"
+  resolved "http://bnpm.byted.org/async-limiter/download/async-limiter-1.0.1.tgz#dd379e94f0db8310b08291f9d64c3209766617fd"
+  integrity sha1-3TeelPDbgxCwgpH51kwyCXZmF/0=
+
+async-validator@^3.0.3:
+  version "3.3.0"
+  resolved "http://bnpm.byted.org/async-validator/download/async-validator-3.3.0.tgz#1d92193bbe60d6d6c8b246692c7005e9ed14a8ee"
+  integrity sha1-HZIZO75g1tbIskZpLHAF6e0UqO4=
 
 async@^0.9.0:
   version "0.9.2"
@@ -2127,7 +2254,7 @@ babel-register@^6.26.0, babel-register@^6.9.0:
     mkdirp "^0.5.1"
     source-map-support "^0.4.15"
 
-babel-runtime@^6.0.0, babel-runtime@^6.18.0, babel-runtime@^6.2.0, babel-runtime@^6.22.0, babel-runtime@^6.23.0, babel-runtime@^6.26.0, babel-runtime@^6.9.1, babel-runtime@^6.9.2:
+babel-runtime@6.x, babel-runtime@^6.0.0, babel-runtime@^6.18.0, babel-runtime@^6.2.0, babel-runtime@^6.22.0, babel-runtime@^6.23.0, babel-runtime@^6.26.0, babel-runtime@^6.9.1, babel-runtime@^6.9.2:
   version "6.26.0"
   resolved "http://registry.npm.taobao.org/babel-runtime/download/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   integrity sha1-llxwWGaOgrVde/4E/yM3vItWR/4=
@@ -2181,10 +2308,20 @@ babylon@^6.18.0, babylon@^6.7.0:
   resolved "http://registry.npm.taobao.org/babylon/download/babylon-6.18.0.tgz#af2f3b88fa6f5c1e4c634d1a0f8eac4f55b395e3"
   integrity sha1-ry87iPpvXB5MY00aD46sT1WzleM=
 
+backo2@1.0.2:
+  version "1.0.2"
+  resolved "http://bnpm.byted.org/backo2/download/backo2-1.0.2.tgz#31ab1ac8b129363463e35b3ebb69f4dfcfba7947"
+  integrity sha1-MasayLEpNjRj41s+u2n038+6eUc=
+
 balanced-match@^1.0.0:
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/balanced-match/download/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
   integrity sha1-ibTRmasr7kneFk6gK4nORi1xt2c=
+
+base64-arraybuffer@0.1.5:
+  version "0.1.5"
+  resolved "http://bnpm.byted.org/base64-arraybuffer/download/base64-arraybuffer-0.1.5.tgz#73926771923b5a19747ad666aa5cd4bf9c6e9ce8"
+  integrity sha1-c5JncZI7Whl0etZmqlzUv5xunOg=
 
 base64-js@1.2.0:
   version "1.2.0"
@@ -2220,6 +2357,13 @@ bcrypt-pbkdf@^1.0.0:
   integrity sha1-pDAdOJtqQ/m2f/PKEaP2Y342Dp4=
   dependencies:
     tweetnacl "^0.14.3"
+
+better-assert@~1.0.0:
+  version "1.0.2"
+  resolved "http://bnpm.byted.org/better-assert/download/better-assert-1.0.2.tgz#40866b9e1b9e0b55b481894311e68faffaebc522"
+  integrity sha1-QIZrnhueC1W0gYlDEeaPr/rrxSI=
+  dependencies:
+    callsite "1.0.0"
 
 better-babel-generator@^6.26.1:
   version "6.26.1"
@@ -2273,6 +2417,11 @@ bindings@^1.5.0:
   integrity sha1-EDU8npRTNLwFEabZCzj7x8nFBN8=
   dependencies:
     file-uri-to-path "1.0.0"
+
+blob@0.0.5:
+  version "0.0.5"
+  resolved "http://bnpm.byted.org/blob/download/blob-0.0.5.tgz#d680eeef25f8cd91ad533f5b01eed48e64caf683"
+  integrity sha1-1oDu7yX4zZGtUz9bAe7UjmTK9oM=
 
 block-stream@*:
   version "0.0.9"
@@ -2568,7 +2717,7 @@ caller-path@^0.1.0:
   dependencies:
     callsites "^0.2.0"
 
-callsite@^1.0.0:
+callsite@1.0.0, callsite@^1.0.0:
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/callsite/download/callsite-1.0.0.tgz#280398e5d664bd74038b6f0905153e6e8af1bc20"
   integrity sha1-KAOY5dZkvXQDi28JBRU+borxvCA=
@@ -2809,7 +2958,7 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@^2.2.5, classnames@^2.2.6:
+classnames@2.x, classnames@^2.2.0, classnames@^2.2.1, classnames@^2.2.3, classnames@^2.2.5, classnames@^2.2.6, classnames@~2.2.6:
   version "2.2.6"
   resolved "http://registry.npm.taobao.org/classnames/download/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
   integrity sha1-Q5Nb/90pHzJtrQogUwmzjQD2UM4=
@@ -2973,10 +3122,20 @@ commondir@^1.0.1:
   resolved "http://registry.npm.taobao.org/commondir/download/commondir-1.0.1.tgz#ddd800da0c66127393cca5950ea968a3aaf1253b"
   integrity sha1-3dgA2gxmEnOTzKWVDqloo6rxJTs=
 
-component-emitter@^1.2.0, component-emitter@^1.2.1:
+component-bind@1.0.0:
+  version "1.0.0"
+  resolved "http://bnpm.byted.org/component-bind/download/component-bind-1.0.0.tgz#00c608ab7dcd93897c0009651b1d3a8e1e73bbd1"
+  integrity sha1-AMYIq33Nk4l8AAllGx06jh5zu9E=
+
+component-emitter@1.2.1, component-emitter@^1.2.0, component-emitter@^1.2.1:
   version "1.2.1"
   resolved "http://registry.npm.taobao.org/component-emitter/download/component-emitter-1.2.1.tgz#137918d6d78283f7df7a6b7c5a63e140e69425e6"
   integrity sha1-E3kY1teCg/ffemt8WmPhQOaUJeY=
+
+component-inherit@0.0.3:
+  version "0.0.3"
+  resolved "http://bnpm.byted.org/component-inherit/download/component-inherit-0.0.3.tgz#645fc4adf58b72b649d5cae65135619db26ff143"
+  integrity sha1-ZF/ErfWLcrZJ1crmUTVhnbJv8UM=
 
 component-type@^1.2.1:
   version "1.2.1"
@@ -3002,6 +3161,11 @@ compression@^1.5.2:
     on-headers "~1.0.1"
     safe-buffer "5.1.2"
     vary "~1.1.2"
+
+compute-scroll-into-view@^1.0.13:
+  version "1.0.13"
+  resolved "http://bnpm.byted.org/compute-scroll-into-view/download/compute-scroll-into-view-1.0.13.tgz#be1b1663b0e3f56cd5f7713082549f562a3477e2"
+  integrity sha1-vhsWY7Dj9WzV93EwglSfVio0d+I=
 
 concat-map@0.0.1:
   version "0.0.1"
@@ -3118,6 +3282,13 @@ copy-descriptor@^0.1.0:
   version "0.1.1"
   resolved "http://registry.npm.taobao.org/copy-descriptor/download/copy-descriptor-0.1.1.tgz#676f6eb3c39997c2ee1ac3a924fd6124748f578d"
   integrity sha1-Z29us8OZl8LuGsOpJP1hJHSPV40=
+
+copy-to-clipboard@^3.2.0:
+  version "3.3.1"
+  resolved "http://bnpm.byted.org/copy-to-clipboard/download/copy-to-clipboard-3.3.1.tgz#115aa1a9998ffab6196f93076ad6da3b913662ae"
+  integrity sha1-EVqhqZmP+rYZb5MHatbaO5E2Yq4=
+  dependencies:
+    toggle-selection "^1.0.6"
 
 copy-webpack-plugin@^5.0.3:
   version "5.1.1"
@@ -3486,7 +3657,7 @@ dayjs@^1.7.7:
   resolved "http://bnpm.byted.org/dayjs/download/dayjs-1.8.25.tgz#d09a8696cee7191bc1289e739f96626391b9c73c"
   integrity sha1-0JqGls7nGRvBKJ5zn5ZiY5G5xzw=
 
-debug@*, debug@^4.0.1, debug@^4.1.0:
+debug@*, debug@^4.0.1, debug@^4.1.0, debug@~4.1.0:
   version "4.1.1"
   resolved "http://registry.npm.taobao.org/debug/download/debug-4.1.1.tgz#3b72260255109c6b589cee050f1d516139664791"
   integrity sha1-O3ImAlUQnGtYnO4FDx1RYTlmR5E=
@@ -3500,7 +3671,7 @@ debug@2, debug@2.6.9, debug@^2.1.1, debug@^2.1.2, debug@^2.2.0, debug@^2.3.3, de
   dependencies:
     ms "2.0.0"
 
-debug@3.1.0, debug@=3.1.0:
+debug@3.1.0, debug@=3.1.0, debug@~3.1.0:
   version "3.1.0"
   resolved "http://registry.npm.taobao.org/debug/download/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
   integrity sha1-W7WgZyYotkFJVmuhaBnmFRjGcmE=
@@ -3741,6 +3912,11 @@ doctrine@^3.0.0:
   dependencies:
     esutils "^2.0.2"
 
+dom-align@^1.7.0:
+  version "1.11.1"
+  resolved "http://bnpm.byted.org/dom-align/download/dom-align-1.11.1.tgz#7592be99a660a36cdedc1d6eeb22b8109d758cae"
+  integrity sha1-dZK+maZgo2ze3B1u6yK4EJ11jK4=
+
 dom-converter@~0.2:
   version "0.2.0"
   resolved "http://registry.npm.taobao.org/dom-converter/download/dom-converter-0.2.0.tgz#6721a9daee2e293682955b6afe416771627bb768"
@@ -3907,6 +4083,34 @@ end-of-stream@^1.0.0, end-of-stream@^1.1.0:
   integrity sha1-7SljTRm6ukY7bOa4CjchPqtx7EM=
   dependencies:
     once "^1.4.0"
+
+engine.io-client@~3.4.0:
+  version "3.4.1"
+  resolved "http://bnpm.byted.org/engine.io-client/download/engine.io-client-3.4.1.tgz#922ddb47eecdcb541136a93aeead24718fd05461"
+  integrity sha1-ki3bR+7Ny1QRNqk67q0kcY/QVGE=
+  dependencies:
+    component-emitter "1.2.1"
+    component-inherit "0.0.3"
+    debug "~4.1.0"
+    engine.io-parser "~2.2.0"
+    has-cors "1.1.0"
+    indexof "0.0.1"
+    parseqs "0.0.5"
+    parseuri "0.0.5"
+    ws "~6.1.0"
+    xmlhttprequest-ssl "~1.5.4"
+    yeast "0.1.2"
+
+engine.io-parser@~2.2.0:
+  version "2.2.0"
+  resolved "http://bnpm.byted.org/engine.io-parser/download/engine.io-parser-2.2.0.tgz#312c4894f57d52a02b420868da7b5c1c84af80ed"
+  integrity sha1-MSxIlPV9UqArQgho2ntcHISvgO0=
+  dependencies:
+    after "0.8.2"
+    arraybuffer.slice "~0.0.7"
+    base64-arraybuffer "0.1.5"
+    blob "0.0.5"
+    has-binary2 "~1.0.2"
 
 enhanced-resolve@^4.1.0:
   version "4.1.0"
@@ -5140,6 +5344,11 @@ graceful-fs@^4.2.0:
   resolved "http://bnpm.byted.org/graceful-fs/download/graceful-fs-4.2.3.tgz#4a12ff1b60376ef09862c2093edd908328be8423"
   integrity sha1-ShL/G2A3bvCYYsIJPt2Qgyi+hCM=
 
+hammerjs@^2.0.8:
+  version "2.0.8"
+  resolved "http://bnpm.byted.org/hammerjs/download/hammerjs-2.0.8.tgz#04ef77862cff2bb79d30f7692095930222bf60f1"
+  integrity sha1-BO93hiz/K7edMPdpIJWTAiK/YPE=
+
 handle-thing@^2.0.0:
   version "2.0.0"
   resolved "http://registry.npm.taobao.org/handle-thing/download/handle-thing-2.0.0.tgz#0e039695ff50c93fc288557d696f3c1dc6776754"
@@ -5164,6 +5373,18 @@ has-ansi@^2.0.0:
   integrity sha1-NPUEnOHs3ysGSa8+8k5F7TVBbZE=
   dependencies:
     ansi-regex "^2.0.0"
+
+has-binary2@~1.0.2:
+  version "1.0.3"
+  resolved "http://bnpm.byted.org/has-binary2/download/has-binary2-1.0.3.tgz#7776ac627f3ea77250cfc332dab7ddf5e4f5d11d"
+  integrity sha1-d3asYn8+p3JQz8My2rfd9eT10R0=
+  dependencies:
+    isarray "2.0.1"
+
+has-cors@1.1.0:
+  version "1.1.0"
+  resolved "http://bnpm.byted.org/has-cors/download/has-cors-1.1.0.tgz#5e474793f7ea9843d1bb99c23eef49ff126fff39"
+  integrity sha1-XkdHk/fqmEPRu5nCPu9J/xJv/zk=
 
 has-flag@^1.0.0:
   version "1.0.0"
@@ -5286,6 +5507,13 @@ hoist-non-react-statics@^3.1.0:
   integrity sha1-wJwFVchLOKft5pErYe/dr9bnXh4=
   dependencies:
     react-is "^16.3.2"
+
+hoist-non-react-statics@^3.3.2:
+  version "3.3.2"
+  resolved "http://bnpm.byted.org/hoist-non-react-statics/download/hoist-non-react-statics-3.3.2.tgz#ece0acaf71d62c2969c2ec59feff42a4b1a85b45"
+  integrity sha1-7OCsr3HWLClpwuxZ/v9CpLGoW0U=
+  dependencies:
+    react-is "^16.7.0"
 
 home-dir@^1.0.0:
   version "1.0.0"
@@ -5670,6 +5898,11 @@ inquirer@^6.2.2:
     strip-ansi "^5.1.0"
     through "^2.3.6"
 
+insert-css@^2.0.0:
+  version "2.0.0"
+  resolved "http://bnpm.byted.org/insert-css/download/insert-css-2.0.0.tgz#eb5d1097b7542f4c79ea3060d3aee07d053880f4"
+  integrity sha1-610Ql7dUL0x56jBg067gfQU4gPQ=
+
 instapromise@^2.0.7:
   version "2.0.7"
   resolved "http://registry.npm.taobao.org/instapromise/download/instapromise-2.0.7.tgz#85e66b31021194da11214c865127ef04ec30167a"
@@ -6012,6 +6245,11 @@ isarray@1.0.0, isarray@^1.0.0, isarray@~1.0.0:
   resolved "http://registry.npm.taobao.org/isarray/download/isarray-1.0.0.tgz#bb935d48582cba168c06834957a54a3e07124f11"
   integrity sha1-u5NdSFgsuhaMBoNJV6VKPgcSTxE=
 
+isarray@2.0.1:
+  version "2.0.1"
+  resolved "http://bnpm.byted.org/isarray/download/isarray-2.0.1.tgz#a37d94ed9cda2d59865c9f76fe596ee1f338741e"
+  integrity sha1-o32U7ZzaLVmGXJ92/llu4fM4dB4=
+
 isemail@1.x.x:
   version "1.2.0"
   resolved "http://registry.npm.taobao.org/isemail/download/isemail-1.2.0.tgz#be03df8cc3e29de4d2c5df6501263f1fa4595e9a"
@@ -6159,6 +6397,13 @@ json-stringify-safe@~5.0.1:
   version "5.0.1"
   resolved "http://registry.npm.taobao.org/json-stringify-safe/download/json-stringify-safe-5.0.1.tgz#1296a2d58fd45f19a0f6ce01d65701e2c735b6eb"
   integrity sha1-Epai1Y/UXxmg9s4B1lcB4sc1tus=
+
+json2mq@^0.2.0:
+  version "0.2.0"
+  resolved "http://bnpm.byted.org/json2mq/download/json2mq-0.2.0.tgz#b637bd3ba9eabe122c83e9720483aeb10d2c904a"
+  integrity sha1-tje9O6nqvhIsg+lyBIOusQ0skEo=
+  dependencies:
+    string-convert "^0.2.0"
 
 json3@^3.3.2:
   version "3.3.2"
@@ -6575,7 +6820,7 @@ lodash@4.x, lodash@^4.0.0, lodash@^4.13.1, lodash@^4.14.1, lodash@^4.17.10, loda
   resolved "http://registry.npm.taobao.org/lodash/download/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
   integrity sha1-s56mIp72B+zYniyN8SU2iRysm40=
 
-lodash@^4.17.12, lodash@^4.17.14, lodash@^4.17.15:
+lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15:
   version "4.17.15"
   resolved "http://bnpm.byted.org/lodash/download/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha1-tEf2ZwoEVbv+7dETku/zMOoJdUg=
@@ -6903,6 +7148,15 @@ mini-css-extract-plugin@^0.7.0:
     schema-utils "^1.0.0"
     webpack-sources "^1.1.0"
 
+mini-store@^3.0.1:
+  version "3.0.3"
+  resolved "http://bnpm.byted.org/mini-store/download/mini-store-3.0.3.tgz#3024b2baff96d54d426fbcf5db2c993291bf836f"
+  integrity sha1-MCSyuv+W1U1Cb7z12yyZMpG/g28=
+  dependencies:
+    hoist-non-react-statics "^3.3.2"
+    prop-types "^15.6.0"
+    shallowequal "^1.0.2"
+
 minimalistic-assert@^1.0.0, minimalistic-assert@^1.0.1:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/minimalistic-assert/download/minimalistic-assert-1.0.1.tgz#2e194de044626d4a10e7f7fbc00ce73e83e4d5c7"
@@ -7016,6 +7270,16 @@ moment@2.x.x, moment@^2.10.6:
   version "2.23.0"
   resolved "http://registry.npm.taobao.org/moment/download/moment-2.23.0.tgz#759ea491ac97d54bac5ad776996e2a58cc1bc225"
   integrity sha1-dZ6kkayX1UusWtd2mW4qWMwbwiU=
+
+moment@^2.24.0, moment@~2.25.3:
+  version "2.25.3"
+  resolved "http://bnpm.byted.org/moment/download/moment-2.25.3.tgz#252ff41319cf41e47761a1a88cab30edfe9808c0"
+  integrity sha1-JS/0ExnPQeR3YaGojKsw7f6YCMA=
+
+moment@^2.25.1:
+  version "2.25.1"
+  resolved "http://bnpm.byted.org/moment/download/moment-2.25.1.tgz#1cb546dca1eccdd607c9324747842200b683465d"
+  integrity sha1-HLVG3KHszdYHyTJHR4QiALaDRl0=
 
 move-concurrently@^1.0.1:
   version "1.0.1"
@@ -7425,10 +7689,15 @@ oauth-sign@~0.9.0:
   resolved "http://registry.npm.taobao.org/oauth-sign/download/oauth-sign-0.9.0.tgz#47a7b016baa68b5fa0ecf3dee08a85c679ac6455"
   integrity sha1-R6ewFrqmi1+g7PPe4IqFxnmsZFU=
 
-object-assign@^4.0.1, object-assign@^4.1.0, object-assign@^4.1.1:
+object-assign@4.x, object-assign@^4.0.1, object-assign@^4.1.0, object-assign@^4.1.1:
   version "4.1.1"
   resolved "http://registry.npm.taobao.org/object-assign/download/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
   integrity sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
+
+object-component@0.0.3:
+  version "0.0.3"
+  resolved "http://bnpm.byted.org/object-component/download/object-component-0.0.3.tgz#f0c69aa50efc95b866c186f400a33769cb2f1291"
+  integrity sha1-8MaapQ78lbhmwYb0AKM3acsvEpE=
 
 object-copy@^0.1.0:
   version "0.1.0"
@@ -7510,6 +7779,13 @@ omit.js@^1.0.0:
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/omit.js/download/omit.js-1.0.0.tgz#e013cb86a7517b9cf6f7cfb0ddb4297256a99288"
   integrity sha1-4BPLhqdRe5z298+w3bQpclapkog=
+  dependencies:
+    babel-runtime "^6.23.0"
+
+omit.js@^1.0.2:
+  version "1.0.2"
+  resolved "http://bnpm.byted.org/omit.js/download/omit.js-1.0.2.tgz#91a14f0eba84066dfa015bf30e474c47f30bc858"
+  integrity sha1-kaFPDrqEBm36AVvzDkdMR/MLyFg=
   dependencies:
     babel-runtime "^6.23.0"
 
@@ -7803,6 +8079,20 @@ parse-json@^5.0.0:
     error-ex "^1.3.1"
     json-parse-better-errors "^1.0.1"
     lines-and-columns "^1.1.6"
+
+parseqs@0.0.5:
+  version "0.0.5"
+  resolved "http://bnpm.byted.org/parseqs/download/parseqs-0.0.5.tgz#d5208a3738e46766e291ba2ea173684921a8b89d"
+  integrity sha1-1SCKNzjkZ2bikbouoXNoSSGouJ0=
+  dependencies:
+    better-assert "~1.0.0"
+
+parseuri@0.0.5:
+  version "0.0.5"
+  resolved "http://bnpm.byted.org/parseuri/download/parseuri-0.0.5.tgz#80204a50d4dbb779bfdc6ebe2778d90e4bce320a"
+  integrity sha1-gCBKUNTbt3m/3G6+J3jZDkvOMgo=
+  dependencies:
+    better-assert "~1.0.0"
 
 parseurl@~1.3.2:
   version "1.3.2"
@@ -8343,6 +8633,15 @@ prop-types@^15.5.10, prop-types@^15.6.1, prop-types@^15.6.2:
     loose-envify "^1.3.1"
     object-assign "^4.1.1"
 
+prop-types@^15.5.8, prop-types@^15.5.9, prop-types@^15.6.0, prop-types@^15.7.2:
+  version "15.7.2"
+  resolved "http://bnpm.byted.org/prop-types/download/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
+  integrity sha1-UsQedbjIfnK52TYOAga5ncv/psU=
+  dependencies:
+    loose-envify "^1.4.0"
+    object-assign "^4.1.1"
+    react-is "^16.8.1"
+
 proxy-addr@~2.0.4:
   version "2.0.4"
   resolved "http://registry.npm.taobao.org/proxy-addr/download/proxy-addr-2.0.4.tgz#ecfc733bf22ff8c6f407fa275327b9ab67e48b93"
@@ -8475,7 +8774,7 @@ querystringify@^2.0.0:
   resolved "http://registry.npm.taobao.org/querystringify/download/querystringify-2.1.0.tgz#7ded8dfbf7879dcc60d0a644ac6754b283ad17ef"
   integrity sha1-fe2N+/eHncxg0KZErGdUsoOtF+8=
 
-raf@^3.4.1:
+raf@^3.4.0, raf@^3.4.1:
   version "3.4.1"
   resolved "http://bnpm.byted.org/raf/download/raf-3.4.1.tgz#0742e99a4a6552f445d73e3ee0328af0ff1ede39"
   integrity sha1-B0LpmkplUvRF1z4+4DKK8P8e3jk=
@@ -8528,6 +8827,311 @@ raw-body@2.3.3, raw-body@^2.2.0:
     iconv-lite "0.4.23"
     unpipe "1.0.0"
 
+rc-align@^3.0.0-rc.0:
+  version "3.0.0"
+  resolved "http://bnpm.byted.org/rc-align/download/rc-align-3.0.0.tgz#5b0510aaa12dfef7b8d79877d39e43de5ef831bc"
+  integrity sha1-WwUQqqEt/ve415h3055D3l74Mbw=
+  dependencies:
+    classnames "2.x"
+    dom-align "^1.7.0"
+    rc-util "^4.12.0"
+    resize-observer-polyfill "^1.5.1"
+
+rc-animate@3.x, rc-animate@^3.0.0, rc-animate@~3.0.0:
+  version "3.0.0"
+  resolved "http://bnpm.byted.org/rc-animate/download/rc-animate-3.0.0.tgz#f76d7051136b7d650fb3d29366a160e95a369c0a"
+  integrity sha1-921wURNrfWUPs9KTZqFg6Vo2nAo=
+  dependencies:
+    "@ant-design/css-animation" "^1.7.2"
+    classnames "^2.2.6"
+    raf "^3.4.0"
+    rc-util "^4.15.3"
+
+rc-cascader@~1.0.0:
+  version "1.0.1"
+  resolved "http://bnpm.byted.org/rc-cascader/download/rc-cascader-1.0.1.tgz#770de1e1fa7bd559aabd4d59e525819b8bc809b7"
+  integrity sha1-dw3h4fp71VmqvU1Z5SWBm4vICbc=
+  dependencies:
+    array-tree-filter "^2.1.0"
+    rc-trigger "^4.0.0"
+    rc-util "^4.0.4"
+    warning "^4.0.1"
+
+rc-checkbox@~2.2.0:
+  version "2.2.0"
+  resolved "http://bnpm.byted.org/rc-checkbox/download/rc-checkbox-2.2.0.tgz#a0ce95c34f05e0eb882664174518cd4baa36dce9"
+  integrity sha1-oM6Vw08F4OuIJmQXRRjNS6o23Ok=
+  dependencies:
+    babel-runtime "^6.23.0"
+    classnames "2.x"
+
+rc-collapse@~2.0.0:
+  version "2.0.0"
+  resolved "http://bnpm.byted.org/rc-collapse/download/rc-collapse-2.0.0.tgz#08c5942f82005b4342ced02d983581e4c41cd324"
+  integrity sha1-CMWUL4IAW0NCztAtmDWB5MQc0yQ=
+  dependencies:
+    "@ant-design/css-animation" "^1.7.2"
+    classnames "2.x"
+    rc-animate "3.x"
+    react-is "^16.7.0"
+    shallowequal "^1.1.0"
+
+rc-dialog@~7.7.0:
+  version "7.7.0"
+  resolved "http://bnpm.byted.org/rc-dialog/download/rc-dialog-7.7.0.tgz#c5ca3e04fe8f8b9358505231db0862aa2dfb0e85"
+  integrity sha1-xco+BP6Pi5NYUFIx2whiqi37DoU=
+  dependencies:
+    babel-runtime "6.x"
+    rc-animate "3.x"
+    rc-util "^4.16.1"
+
+rc-drawer@~3.2.0:
+  version "3.2.0"
+  resolved "http://bnpm.byted.org/rc-drawer/download/rc-drawer-3.2.0.tgz#6d9bba2fb1647942840dad61f36b9c88b753f565"
+  integrity sha1-bZu6L7FkeUKEDa1h82uciLdT9WU=
+  dependencies:
+    classnames "^2.2.6"
+    rc-util "^4.16.1"
+
+rc-dropdown@~3.0.0:
+  version "3.0.2"
+  resolved "http://bnpm.byted.org/rc-dropdown/download/rc-dropdown-3.0.2.tgz#e486b67f5e8e8b9e326426d5a80254621453d66a"
+  integrity sha1-5Ia2f16Oi54yZCbVqAJUYhRT1mo=
+  dependencies:
+    babel-runtime "^6.26.0"
+    classnames "^2.2.6"
+    rc-trigger "^4.0.0"
+
+rc-field-form@~1.2.0:
+  version "1.2.4"
+  resolved "http://bnpm.byted.org/rc-field-form/download/rc-field-form-1.2.4.tgz#2634f03ddd340eea81db154e9e891e378a38ce5d"
+  integrity sha1-JjTwPd00DuqB2xVOnokeN4o4zl0=
+  dependencies:
+    "@babel/runtime" "^7.8.4"
+    async-validator "^3.0.3"
+    rc-util "^4.20.3"
+
+rc-hammerjs@~0.6.0:
+  version "0.6.9"
+  resolved "http://bnpm.byted.org/rc-hammerjs/download/rc-hammerjs-0.6.9.tgz#9a4ddbda1b2ec8f9b9596091a6a989842a243907"
+  integrity sha1-mk3b2hsuyPm5WWCRpqmJhCokOQc=
+  dependencies:
+    babel-runtime "6.x"
+    hammerjs "^2.0.8"
+    prop-types "^15.5.9"
+
+rc-input-number@~4.6.1:
+  version "4.6.1"
+  resolved "http://bnpm.byted.org/rc-input-number/download/rc-input-number-4.6.1.tgz#2216d644c78857cc18411f0d3b6c14dba9a0ce7f"
+  integrity sha1-IhbWRMeIV8wYQR8NO2wU26mgzn8=
+  dependencies:
+    babel-runtime "6.x"
+    classnames "^2.2.0"
+    rc-util "^4.5.1"
+
+rc-mentions@~1.1.0:
+  version "1.1.0"
+  resolved "http://bnpm.byted.org/rc-mentions/download/rc-mentions-1.1.0.tgz#fa4994b94eee03e5254a0a600839ed19e1f9f0e9"
+  integrity sha1-+kmUuU7uA+UlSgpgCDntGeH58Ok=
+  dependencies:
+    classnames "^2.2.6"
+    rc-menu "^8.0.1"
+    rc-trigger "^4.0.0"
+    rc-util "^4.6.0"
+
+rc-menu@^8.0.1, rc-menu@~8.1.0:
+  version "8.1.0"
+  resolved "http://bnpm.byted.org/rc-menu/download/rc-menu-8.1.0.tgz#7817f7699b7b2932e70bde8028c285c7a3076791"
+  integrity sha1-eBf3aZt7KTLnC96AKMKFx6MHZ5E=
+  dependencies:
+    classnames "2.x"
+    mini-store "^3.0.1"
+    rc-animate "^3.0.0"
+    rc-trigger "^4.0.0"
+    rc-util "^4.13.0"
+    resize-observer-polyfill "^1.5.0"
+    scroll-into-view-if-needed "^2.2.20"
+    shallowequal "^1.1.0"
+
+rc-notification@~4.3.0:
+  version "4.3.0"
+  resolved "http://bnpm.byted.org/rc-notification/download/rc-notification-4.3.0.tgz#57b00e117417d28e7ee6b837ad9eb8b402e39fff"
+  integrity sha1-V7AOEXQX0o5+5rg3rZ64tALjn/8=
+  dependencies:
+    classnames "2.x"
+    rc-animate "3.x"
+    rc-util "^4.0.4"
+
+rc-pagination@~2.2.0:
+  version "2.2.1"
+  resolved "http://bnpm.byted.org/rc-pagination/download/rc-pagination-2.2.1.tgz#e4325a7177ad547cd2ae2d3c15020f723b5527ed"
+  integrity sha1-5DJacXetVHzSri08FQIPcjtVJ+0=
+  dependencies:
+    classnames "^2.2.1"
+
+rc-picker@~1.4.0:
+  version "1.4.14"
+  resolved "http://bnpm.byted.org/rc-picker/download/rc-picker-1.4.14.tgz#abd293e0b424edb1d9a25f93761f270e66319f5d"
+  integrity sha1-q9KT4LQk7bHZol+Tdh8nDmYxn10=
+  dependencies:
+    classnames "^2.2.1"
+    moment "^2.24.0"
+    rc-trigger "^4.0.0"
+    rc-util "^4.17.0"
+    shallowequal "^1.1.0"
+
+rc-progress@~2.5.0:
+  version "2.5.3"
+  resolved "http://bnpm.byted.org/rc-progress/download/rc-progress-2.5.3.tgz#00f01b95bdbe1856d3a5f82242051902e8b7a8e7"
+  integrity sha1-APAblb2+GFbTpfgiQgUZAui3qOc=
+  dependencies:
+    babel-runtime "6.x"
+    prop-types "^15.5.8"
+
+rc-rate@~2.6.0:
+  version "2.6.0"
+  resolved "http://bnpm.byted.org/rc-rate/download/rc-rate-2.6.0.tgz#3990f1b0c7f0da91465c12af3612c03dd836703d"
+  integrity sha1-OZDxsMfw2pFGXBKvNhLAPdg2cD0=
+  dependencies:
+    classnames "^2.2.5"
+    rc-util "^4.20.1"
+
+rc-resize-observer@^0.2.0:
+  version "0.2.1"
+  resolved "http://bnpm.byted.org/rc-resize-observer/download/rc-resize-observer-0.2.1.tgz#4610acb8a0f2a84b5e8d45664964ac32b5d3df72"
+  integrity sha1-RhCsuKDyqEtejUVmSWSsMrXT33I=
+  dependencies:
+    classnames "^2.2.1"
+    rc-util "^4.14.0"
+    resize-observer-polyfill "^1.5.1"
+
+rc-select@^10.1.0, rc-select@~10.3.0:
+  version "10.3.2"
+  resolved "http://bnpm.byted.org/rc-select/download/rc-select-10.3.2.tgz#c3dd7d101e39b6815ff66c6fccf5cdae80437b40"
+  integrity sha1-w919EB45toFf9mxvzPXNroBDe0A=
+  dependencies:
+    classnames "2.x"
+    rc-animate "^3.0.0"
+    rc-trigger "^4.0.0"
+    rc-util "^4.20.0"
+    rc-virtual-list "^1.1.2"
+    warning "^4.0.3"
+
+rc-slider@~9.2.3:
+  version "9.2.4"
+  resolved "http://bnpm.byted.org/rc-slider/download/rc-slider-9.2.4.tgz#92e2b58c53def9921ae0fc2822727ab5785b9ed0"
+  integrity sha1-kuK1jFPe+ZIa4PwoInJ6tXhbntA=
+  dependencies:
+    babel-runtime "6.x"
+    classnames "^2.2.5"
+    rc-tooltip "^4.0.0"
+    rc-util "^4.0.4"
+    shallowequal "^1.1.0"
+    warning "^4.0.3"
+
+rc-steps@~3.6.0:
+  version "3.6.0"
+  resolved "http://bnpm.byted.org/rc-steps/download/rc-steps-3.6.0.tgz#5a377f6a0a7eacd3152bb96bdf425b654b4a552e"
+  integrity sha1-Wjd/agp+rNMVK7lr30JbZUtKVS4=
+  dependencies:
+    classnames "^2.2.3"
+    lodash "^4.17.5"
+
+rc-switch@~2.0.0:
+  version "2.0.0"
+  resolved "http://bnpm.byted.org/rc-switch/download/rc-switch-2.0.0.tgz#4a29c8dc13a1a9d59259c87f1612137cf497a302"
+  integrity sha1-SinI3BOhqdWSWch/FhITfPSXowI=
+  dependencies:
+    classnames "^2.2.1"
+
+rc-table@~7.5.3:
+  version "7.5.9"
+  resolved "http://bnpm.byted.org/rc-table/download/rc-table-7.5.9.tgz#5d3d19c06e8e5760922dd91f0507a76f469af952"
+  integrity sha1-XT0ZwG6OV2CSLdkfBQenb0aa+VI=
+  dependencies:
+    classnames "^2.2.5"
+    raf "^3.4.1"
+    rc-resize-observer "^0.2.0"
+    rc-util "^4.20.1"
+    shallowequal "^1.1.0"
+
+rc-tabs@~10.1.1:
+  version "10.1.1"
+  resolved "http://bnpm.byted.org/rc-tabs/download/rc-tabs-10.1.1.tgz#847d8c2038842a3cb5f2e74935d0e38b85fce61e"
+  integrity sha1-hH2MIDiEKjy18udJNdDji4X85h4=
+  dependencies:
+    classnames "2.x"
+    lodash "^4.17.5"
+    rc-hammerjs "~0.6.0"
+    resize-observer-polyfill "^1.5.1"
+    warning "^4.0.3"
+
+rc-tooltip@^4.0.0, rc-tooltip@~4.0.2:
+  version "4.0.3"
+  resolved "http://bnpm.byted.org/rc-tooltip/download/rc-tooltip-4.0.3.tgz#728b760863643ec2e85827a2e7fb28d961b3b759"
+  integrity sha1-cot2CGNkPsLoWCei5/so2WGzt1k=
+  dependencies:
+    rc-trigger "^4.0.0"
+
+rc-tree-select@~3.1.0:
+  version "3.1.3"
+  resolved "http://bnpm.byted.org/rc-tree-select/download/rc-tree-select-3.1.3.tgz#d31efbf9955d70b250fe50645b39f3b705a3d124"
+  integrity sha1-0x77+ZVdcLJQ/lBkWznztwWj0SQ=
+  dependencies:
+    classnames "2.x"
+    rc-select "^10.1.0"
+    rc-tree "^3.1.0"
+    rc-util "^4.17.0"
+
+rc-tree@^3.1.0, rc-tree@~3.2.0:
+  version "3.2.2"
+  resolved "http://bnpm.byted.org/rc-tree/download/rc-tree-3.2.2.tgz#9822c4929570156a2170037a4faeb010cae10702"
+  integrity sha1-mCLEkpVwFWohcAN6T66wEMrhBwI=
+  dependencies:
+    classnames "2.x"
+    rc-animate "^3.0.0"
+    rc-util "^4.11.0"
+    rc-virtual-list "^1.1.0"
+
+rc-trigger@^4.0.0, rc-trigger@~4.1.0:
+  version "4.1.0"
+  resolved "http://bnpm.byted.org/rc-trigger/download/rc-trigger-4.1.0.tgz#6b13a41161716d6353e6324a01055efacb07cf71"
+  integrity sha1-axOkEWFxbWNT5jJKAQVe+ssHz3E=
+  dependencies:
+    classnames "^2.2.6"
+    raf "^3.4.1"
+    rc-align "^3.0.0-rc.0"
+    rc-animate "^3.0.0"
+    rc-util "^4.20.0"
+
+rc-upload@~3.0.4:
+  version "3.0.4"
+  resolved "http://bnpm.byted.org/rc-upload/download/rc-upload-3.0.4.tgz#5fd8ba9eefc1e466225240ae997404693d86fa09"
+  integrity sha1-X9i6nu/B5GYiUkCumXQEaT2G+gk=
+  dependencies:
+    babel-runtime "6.x"
+    classnames "^2.2.5"
+
+rc-util@^4.0.4, rc-util@^4.11.0, rc-util@^4.12.0, rc-util@^4.13.0, rc-util@^4.14.0, rc-util@^4.15.3, rc-util@^4.16.1, rc-util@^4.17.0, rc-util@^4.20.0, rc-util@^4.20.1, rc-util@^4.20.3, rc-util@^4.5.1, rc-util@^4.6.0, rc-util@^4.8.0, rc-util@^4.9.0:
+  version "4.20.5"
+  resolved "http://bnpm.byted.org/rc-util/download/rc-util-4.20.5.tgz#f7c77569e971ae6a8ad56f899cadd22275398325"
+  integrity sha1-98d1aelxrmqK1W+JnK3SInU5gyU=
+  dependencies:
+    add-dom-event-listener "^1.1.0"
+    prop-types "^15.5.10"
+    react-is "^16.12.0"
+    react-lifecycles-compat "^3.0.4"
+    shallowequal "^1.1.0"
+
+rc-virtual-list@^1.1.0, rc-virtual-list@^1.1.2:
+  version "1.1.2"
+  resolved "http://bnpm.byted.org/rc-virtual-list/download/rc-virtual-list-1.1.2.tgz#fe3da1136b3ce612b37891fc2cf43447c8a40b2f"
+  integrity sha1-/j2hE2s85hKzeJH8LPQ0R8ikCy8=
+  dependencies:
+    classnames "^2.2.6"
+    raf "^3.4.1"
+    rc-util "^4.8.0"
+
 rc@^1.2.7:
   version "1.2.8"
   resolved "http://registry.npm.taobao.org/rc/download/rc-1.2.8.tgz#cd924bf5200a075b83c188cd6b9e211b7fc0d3ed"
@@ -8538,12 +9142,17 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-is@^16.12.0, react-is@^16.7.0, react-is@^16.8.1:
+  version "16.13.1"
+  resolved "http://bnpm.byted.org/react-is/download/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
+  integrity sha1-eJcppNw23imZ3BVt1sHZwYzqVqQ=
+
 react-is@^16.3.2, react-is@^16.6.0:
   version "16.7.0"
   resolved "http://registry.npm.taobao.org/react-is/download/react-is-16.7.0.tgz#c1bd21c64f1f1364c6f70695ec02d69392f41bfa"
   integrity sha1-wb0hxk8fE2TG9waV7ALWk5L0G/o=
 
-react-lifecycles-compat@^3.0.0:
+react-lifecycles-compat@^3.0.0, react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "http://registry.npm.taobao.org/react-lifecycles-compat/download/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha1-TxonOv38jzSIqMUWv9p4+HI1I2I=
@@ -8746,6 +9355,11 @@ regenerator-runtime@^0.13.2:
   resolved "http://bnpm.byted.org/regenerator-runtime/download/regenerator-runtime-0.13.3.tgz#7cf6a77d8f5c6f60eb73c5fc1955b2ceb01e6bf5"
   integrity sha1-fPanfY9cb2Drc8X8GVWyzrAea/U=
 
+regenerator-runtime@^0.13.4:
+  version "0.13.5"
+  resolved "http://bnpm.byted.org/regenerator-runtime/download/regenerator-runtime-0.13.5.tgz#d878a1d094b4306d10b9096484b33ebd55e26697"
+  integrity sha1-2Hih0JS0MG0QuQlkhLM+vVXiZpc=
+
 regenerator-transform@^0.10.0:
   version "0.10.1"
   resolved "http://registry.npm.taobao.org/regenerator-transform/download/regenerator-transform-0.10.1.tgz#1e4996837231da8b7f3cf4114d71b5691a0680dd"
@@ -8937,6 +9551,11 @@ requires-port@^1.0.0:
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/requires-port/download/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
   integrity sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8=
+
+resize-observer-polyfill@^1.5.0, resize-observer-polyfill@^1.5.1:
+  version "1.5.1"
+  resolved "http://bnpm.byted.org/resize-observer-polyfill/download/resize-observer-polyfill-1.5.1.tgz#0e9020dd3d21024458d4ebd27e23e40269810464"
+  integrity sha1-DpAg3T0hAkRY1OvSfiPkAmmBBGQ=
 
 resolve-cwd@^2.0.0:
   version "2.0.0"
@@ -9241,6 +9860,13 @@ schema-utils@^2.5.0, schema-utils@^2.6.0:
     ajv "^6.10.2"
     ajv-keywords "^3.4.1"
 
+scroll-into-view-if-needed@^2.2.20:
+  version "2.2.24"
+  resolved "http://bnpm.byted.org/scroll-into-view-if-needed/download/scroll-into-view-if-needed-2.2.24.tgz#12bca532990769bd509115a49edcfa755e92a0ea"
+  integrity sha1-ErylMpkHab1QkRWkntz6dV6SoOo=
+  dependencies:
+    compute-scroll-into-view "^1.0.13"
+
 scss-bundle@^2.5.1:
   version "2.5.1"
   resolved "http://bnpm.byted.org/scss-bundle/download/scss-bundle-2.5.1.tgz#def470dcac93484c7e40a6d4f657498ee5400934"
@@ -9445,6 +10071,11 @@ shallow-clone@^3.0.0:
   dependencies:
     kind-of "^6.0.2"
 
+shallowequal@^1.0.2, shallowequal@^1.1.0:
+  version "1.1.0"
+  resolved "http://bnpm.byted.org/shallowequal/download/shallowequal-1.1.0.tgz#188d521de95b9087404fd4dcb68b13df0ae4e7f8"
+  integrity sha1-GI1SHelbkIdAT9TctosT3wrk5/g=
+
 shebang-command@^1.2.0:
   version "1.2.0"
   resolved "http://registry.npm.taobao.org/shebang-command/download/shebang-command-1.2.0.tgz#44aac65b695b03398968c39f363fee5deafdf1ea"
@@ -9541,6 +10172,35 @@ snapdragon@^0.8.1:
     source-map "^0.5.6"
     source-map-resolve "^0.5.0"
     use "^3.1.0"
+
+socket.io-client@^2.3.0:
+  version "2.3.0"
+  resolved "http://bnpm.byted.org/socket.io-client/download/socket.io-client-2.3.0.tgz#14d5ba2e00b9bcd145ae443ab96b3f86cbcc1bb4"
+  integrity sha1-FNW6LgC5vNFFrkQ6uWs/hsvMG7Q=
+  dependencies:
+    backo2 "1.0.2"
+    base64-arraybuffer "0.1.5"
+    component-bind "1.0.0"
+    component-emitter "1.2.1"
+    debug "~4.1.0"
+    engine.io-client "~3.4.0"
+    has-binary2 "~1.0.2"
+    has-cors "1.1.0"
+    indexof "0.0.1"
+    object-component "0.0.3"
+    parseqs "0.0.5"
+    parseuri "0.0.5"
+    socket.io-parser "~3.3.0"
+    to-array "0.1.4"
+
+socket.io-parser@~3.3.0:
+  version "3.3.0"
+  resolved "http://bnpm.byted.org/socket.io-parser/download/socket.io-parser-3.3.0.tgz#2b52a96a509fdf31440ba40fed6094c7d4f1262f"
+  integrity sha1-K1KpalCf3zFEC6QP7WCUx9TxJi8=
+  dependencies:
+    component-emitter "1.2.1"
+    debug "~3.1.0"
+    isarray "2.0.1"
 
 sockjs-client@1.3.0:
   version "1.3.0"
@@ -9846,6 +10506,11 @@ strict-uri-encode@^1.0.0:
   resolved "http://bnpm.byted.org/strict-uri-encode/download/strict-uri-encode-1.1.0.tgz#279b225df1d582b1f54e65addd4352e18faa0713"
   integrity sha1-J5siXfHVgrH1TmWt3UNS4Y+qBxM=
 
+string-convert@^0.2.0:
+  version "0.2.1"
+  resolved "http://bnpm.byted.org/string-convert/download/string-convert-0.2.1.tgz#6982cc3049fbb4cd85f8b24568b9d9bf39eeff97"
+  integrity sha1-aYLMMEn7tM2F+LJFaLnZvznu/5c=
+
 string-hash@^1.1.1:
   version "1.1.3"
   resolved "http://registry.npm.taobao.org/string-hash/download/string-hash-1.1.3.tgz#e8aafc0ac1855b4666929ed7dd1275df5d6c811b"
@@ -10144,10 +10809,10 @@ tar@^4, tar@^4.0.2:
     safe-buffer "^5.1.2"
     yallist "^3.0.2"
 
-taro-ui@^2.3.3:
-  version "2.3.3"
-  resolved "http://bnpm.byted.org/taro-ui/download/taro-ui-2.3.3.tgz#06cfdfbfa36fb549079a38c814b23d9e360de4f7"
-  integrity sha1-Bs/fv6NvtUkHmjjIFLI9njYN5Pc=
+taro-ui@^2.3.4:
+  version "2.3.4"
+  resolved "http://bnpm.byted.org/taro-ui/download/taro-ui-2.3.4.tgz#a7a2cdd67b2b4a49d10c351d89def4d28b9bb192"
+  integrity sha1-p6LN1nsrSknRDDUdid700oubsZI=
   dependencies:
     "@types/react" "^16.7.3"
     bind-decorator "^1.0.11"
@@ -10262,6 +10927,11 @@ timers-browserify@^2.0.4:
   dependencies:
     setimmediate "^1.0.4"
 
+tinycolor2@^1.4.1:
+  version "1.4.1"
+  resolved "http://bnpm.byted.org/tinycolor2/download/tinycolor2-1.4.1.tgz#f4fad333447bc0b07d4dc8e9209d8f39a8ac77e8"
+  integrity sha1-9PrTM0R7wLB9TcjpIJ2POaisd+g=
+
 title-case@^1.1.0:
   version "1.1.2"
   resolved "http://registry.npm.taobao.org/title-case/download/title-case-1.1.2.tgz#fae4a6ae546bfa22d083a0eea910a40d12ed4f5a"
@@ -10276,6 +10946,11 @@ tmp@^0.0.33:
   integrity sha1-bTQzWIl2jSGyvNoKonfO07G/rfk=
   dependencies:
     os-tmpdir "~1.0.2"
+
+to-array@0.1.4:
+  version "0.1.4"
+  resolved "http://bnpm.byted.org/to-array/download/to-array-0.1.4.tgz#17e6c11f73dd4f3d74cda7a4ff3238e9ad9bf890"
+  integrity sha1-F+bBH3PdTz10zaek/zI46a2b+JA=
 
 to-arraybuffer@^1.0.0:
   version "1.0.1"
@@ -10323,6 +10998,11 @@ to-regex@^3.0.1, to-regex@^3.0.2:
     extend-shallow "^3.0.2"
     regex-not "^1.0.2"
     safe-regex "^1.1.0"
+
+toggle-selection@^1.0.6:
+  version "1.0.6"
+  resolved "http://bnpm.byted.org/toggle-selection/download/toggle-selection-1.0.6.tgz#6e45b1263f2017fa0acc7d89d78b15b8bf77da32"
+  integrity sha1-bkWxJj8gF/oKzH2J14sVuL932jI=
 
 topo@1.x.x:
   version "1.1.0"
@@ -10745,6 +11425,13 @@ warning@^3.0.0:
   dependencies:
     loose-envify "^1.0.0"
 
+warning@^4.0.1, warning@^4.0.3, warning@~4.0.3:
+  version "4.0.3"
+  resolved "http://bnpm.byted.org/warning/download/warning-4.0.3.tgz#16e9e077eb8a86d6af7d64aa1e05fd85b4678ca3"
+  integrity sha1-Fungd+uKhtavfWSqHgX9hbRnjKM=
+  dependencies:
+    loose-envify "^1.0.0"
+
 watchpack@^1.5.0, watchpack@^1.6.0:
   version "1.6.0"
   resolved "http://registry.npm.taobao.org/watchpack/download/watchpack-1.6.0.tgz#4bc12c2ebe8aa277a71f1d3f14d685c7b446cd00"
@@ -10767,6 +11454,13 @@ wcwidth@^1.0.1:
   integrity sha1-8LDc+RW8X/FSivrbLA4XtTLaL+g=
   dependencies:
     defaults "^1.0.3"
+
+weapp.socket.io@^2.0.6:
+  version "2.0.6"
+  resolved "http://bnpm.byted.org/weapp.socket.io/download/weapp.socket.io-2.0.6.tgz#b523d62e28c25b9479f16cfb6873f7e23eb6c9ed"
+  integrity sha1-tSPWLijCW5R58Wz7aHP34j62ye0=
+  dependencies:
+    socket.io-client "^2.3.0"
 
 webpack-chain@4.9.0:
   version "4.9.0"
@@ -11046,6 +11740,13 @@ write@^0.2.1:
   dependencies:
     mkdirp "^0.5.1"
 
+ws@~6.1.0:
+  version "6.1.4"
+  resolved "http://bnpm.byted.org/ws/download/ws-6.1.4.tgz#5b5c8800afab925e94ccb29d153c8d02c1776ef9"
+  integrity sha1-W1yIAK+rkl6UzLKdFTyNAsF3bvk=
+  dependencies:
+    async-limiter "~1.0.0"
+
 xdl@48.1.4:
   version "48.1.4"
   resolved "http://registry.npm.taobao.org/xdl/download/xdl-48.1.4.tgz#95e75ab3537034508e5d0e1cb476c8c661df43b4"
@@ -11132,6 +11833,11 @@ xmldom@0.1.x, xmldom@^0.1.27:
   version "0.1.27"
   resolved "http://registry.npm.taobao.org/xmldom/download/xmldom-0.1.27.tgz#d501f97b3bdb403af8ef9ecc20573187aadac0e9"
   integrity sha1-1QH5ezvbQDr4757MIFcxh6rawOk=
+
+xmlhttprequest-ssl@~1.5.4:
+  version "1.5.5"
+  resolved "http://bnpm.byted.org/xmlhttprequest-ssl/download/xmlhttprequest-ssl-1.5.5.tgz#c2876b06168aadc40e57d97e81191ac8f4398b3e"
+  integrity sha1-wodrBhaKrcQOV9l+gRkayPQ5iz4=
 
 xregexp@2.0.0:
   version "2.0.0"
@@ -11264,6 +11970,11 @@ yauzl@2.10.0:
   dependencies:
     buffer-crc32 "~0.2.3"
     fd-slicer "~1.1.0"
+
+yeast@0.1.2:
+  version "0.1.2"
+  resolved "http://bnpm.byted.org/yeast/download/yeast-0.1.2.tgz#008e06d8094320c372dbc2f8ed76a0ca6c8ac419"
+  integrity sha1-AI4G2AlDIMNy28L47XagymyKxBk=
 
 yesno@^0.0.1:
   version "0.0.1"

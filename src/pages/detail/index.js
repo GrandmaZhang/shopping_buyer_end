@@ -5,6 +5,7 @@ import { AtButton, AtToast } from "taro-ui";
 import { connect } from "@tarojs/redux";
 import Request from "../../utils/request";
 import detailAPI from "../../api/detailPage";
+import RootPage from "../RootPage";
 import cart from "../../images/tab/cart.png";
 import { mapStateToProps } from "./connect";
 
@@ -59,24 +60,26 @@ class Detail extends Component {
   render() {
     const { goodsDetail, isToastOpened, toastText } = this.state;
     return (
-      <View className="detail-page">
-        <Image src={goodsDetail.url} className="detail-image" />
-        <View className="detail-desc">
-          <Text className="price">{goodsDetail.price}</Text>
-          <Text className="desc">{goodsDetail.name}</Text>
-          <View className="extra">
-            <Text>快递 15.00</Text>
-            <Text>月销{goodsDetail.sold}</Text>
+      <RootPage>
+        <View className="detail-page">
+          <Image src={goodsDetail.url} className="detail-image" />
+          <View className="detail-desc">
+            <Text className="price">{goodsDetail.price}</Text>
+            <Text className="desc">{goodsDetail.name}</Text>
+            <View className="extra">
+              <Text>快递 15.00</Text>
+              <Text>月销{goodsDetail.sold}</Text>
+            </View>
           </View>
-        </View>
-        <View className="detail-bottom">
-          <Image src={cart} className="cart-icon" />
-          <View className="detail-btn">
-            <AtButton onClick={this.addGoodToCart}>加入购物车</AtButton>
+          <View className="detail-bottom">
+            <Image src={cart} className="cart-icon" />
+            <View className="detail-btn">
+              <AtButton onClick={this.addGoodToCart}>加入购物车</AtButton>
+            </View>
           </View>
+          <AtToast isOpened={isToastOpened} text={toastText} />
         </View>
-        <AtToast isOpened={isToastOpened} text={toastText} />
-      </View>
+      </RootPage>
     );
   }
 }

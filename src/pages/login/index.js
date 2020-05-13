@@ -4,6 +4,7 @@ import { AtForm, AtInput, AtButton, AtToast } from "taro-ui";
 import { connect } from "@tarojs/redux";
 import Request from "../../utils/request";
 import userAPI from "../../api/user";
+import RootPage from "../RootPage";
 import { mapDispatchToProps, mapStateToProps } from "./connect";
 
 import "./index.scss";
@@ -111,39 +112,41 @@ class Login extends Component {
     } = this.state;
 
     return (
-      <View className="login-page" id="login-page">
-        <AtForm
-          onSubmit={
-            loginType === LOGIN ? this.handleLogin : this.handleRegister
-          }
-        >
-          <AtInput
-            name="username"
-            title="用户名"
-            type="text"
-            placeholder="请输入用户名"
-            value={username}
-            onChange={this.handleUserNameChange}
-          />
-          <AtInput
-            name="username"
-            title="密码"
-            type="password"
-            placeholder="请输入密码"
-            value={password}
-            onChange={this.handlePasswordChange}
-          />
-          <AtButton formType="submit">
-            {loginType === LOGIN ? "登录" : "注册"}
-          </AtButton>
-        </AtForm>
-        <Text onClick={this.changeLoginType} className="change-type">
-          {loginType === LOGIN
-            ? "没有账号？请点此注册"
-            : "已有账号？请点此登录"}
-        </Text>
-        <AtToast isOpened={isToastOpened} text={toastText} />
-      </View>
+      <RootPage>
+        <View className="login-page" id="login-page">
+          <AtForm
+            onSubmit={
+              loginType === LOGIN ? this.handleLogin : this.handleRegister
+            }
+          >
+            <AtInput
+              name="username"
+              title="用户名"
+              type="text"
+              placeholder="请输入用户名"
+              value={username}
+              onChange={this.handleUserNameChange}
+            />
+            <AtInput
+              name="username"
+              title="密码"
+              type="password"
+              placeholder="请输入密码"
+              value={password}
+              onChange={this.handlePasswordChange}
+            />
+            <AtButton formType="submit">
+              {loginType === LOGIN ? "登录" : "注册"}
+            </AtButton>
+          </AtForm>
+          <Text onClick={this.changeLoginType} className="change-type">
+            {loginType === LOGIN
+              ? "没有账号？请点此注册"
+              : "已有账号？请点此登录"}
+          </Text>
+          <AtToast isOpened={isToastOpened} text={toastText} />
+        </View>
+      </RootPage>
     );
   }
 }
