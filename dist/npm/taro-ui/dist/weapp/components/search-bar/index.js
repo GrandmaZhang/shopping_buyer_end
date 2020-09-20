@@ -165,7 +165,7 @@ var AtSearchBar = function (_AtComponent) {
 }(_component2.default);
 
 AtSearchBar.$$events = ["handleChange", "handleFocus", "handleBlur", "handleConfirm", "handleClear", "handleActionClick"];
-AtSearchBar.$$componentPath = "Users/zhangmanlu/Desktop/shopping_mall/shopping_buyer_end/node_modules/taro-ui/dist/weapp/components/search-bar/index";
+AtSearchBar.$$componentPath = 'Users/zhangmanlu/Desktop/\u5B66\u6821/shopping_mall/shopping_buyer_end/node_modules/taro-ui/dist/weapp/components/search-bar/index';
 AtSearchBar.defaultProps = {
   value: '',
   placeholder: '搜索',

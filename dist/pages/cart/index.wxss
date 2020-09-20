@@ -16,7 +16,25 @@
     margin-bottom: 100rpx; }
   .cart-page .bottom-bar {
     position: fixed;
+    display: flex;
+    flex-direction: row;
     bottom: 0;
+    width: 95%;
+    justify-content: flex-end;
     background: #fff;
-    width: 100%; }
+    padding: 20rpx 20rpx;
+    box-shadow: 2rpx 2rpx 10rpx 3rpx rgba(0, 0, 0, 0.1);
+    line-height: 66rpx; }
+    .cart-page .bottom-bar .bottom-btn {
+      width: 85%;
+      margin-left: 40rpx; }
+      .cart-page .bottom-bar .bottom-btn .at-button {
+        border: 0;
+        color: #fff;
+        background: linear-gradient(to right, #f2709c, #ff9472); }
+    .cart-page .bottom-bar .total-price {
+      font-size: 50rpx;
+      color: #f6416c;
+      display: inline-block;
+      line-height: 90rpx; }
 

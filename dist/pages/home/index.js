@@ -108,7 +108,7 @@ var HomePage = (_dec = (0, _redux.connect)(_connect.mapStateToProps, _connect.ma
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = HomePage.__proto__ || Object.getPrototypeOf(HomePage)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__221", "$compid__222", "$compid__223", "goods", "banner", "searchValue", "isLogin"], _this.config = {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = HomePage.__proto__ || Object.getPrototypeOf(HomePage)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__0", "$compid__1", "$compid__2", "goods", "banner", "searchValue", "isLogin"], _this.config = {
       navigationBarTitleText: "zml的黑店-首页"
     }, _this.state = {
       goods: [],
@@ -293,20 +293,20 @@ var HomePage = (_dec = (0, _redux.connect)(_connect.mapStateToProps, _connect.ma
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__221"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__0"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__221 = _genCompid2[0],
-          $compid__221 = _genCompid2[1];
+          $prevCompid__0 = _genCompid2[0],
+          $compid__0 = _genCompid2[1];
 
-      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__222"),
+      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__1"),
           _genCompid4 = _slicedToArray(_genCompid3, 2),
-          $prevCompid__222 = _genCompid4[0],
-          $compid__222 = _genCompid4[1];
+          $prevCompid__1 = _genCompid4[0],
+          $compid__1 = _genCompid4[1];
 
-      var _genCompid5 = (0, _taroWeapp.genCompid)(__prefix + "$compid__223"),
+      var _genCompid5 = (0, _taroWeapp.genCompid)(__prefix + "$compid__2"),
           _genCompid6 = _slicedToArray(_genCompid5, 2),
-          $prevCompid__223 = _genCompid6[0],
-          $compid__223 = _genCompid6[1];
+          $prevCompid__2 = _genCompid6[0],
+          $compid__2 = _genCompid6[1];
 
       var _state = this.__state,
           searchValue = _state.searchValue,
@@ -316,17 +316,17 @@ var HomePage = (_dec = (0, _redux.connect)(_connect.mapStateToProps, _connect.ma
       _taroWeapp.propsManager.set({
         "value": searchValue,
         "onFocus": this.goToSearchPage
-      }, $compid__221, $prevCompid__221);
+      }, $compid__0, $prevCompid__0);
       _taroWeapp.propsManager.set({
         "data": banner
-      }, $compid__222, $prevCompid__222);
+      }, $compid__1, $prevCompid__1);
       _taroWeapp.propsManager.set({
         "goods": goods
-      }, $compid__223, $prevCompid__223);
+      }, $compid__2, $prevCompid__2);
       Object.assign(this.__state, {
-        $compid__221: $compid__221,
-        $compid__222: $compid__222,
-        $compid__223: $compid__223
+        $compid__0: $compid__0,
+        $compid__1: $compid__1,
+        $compid__2: $compid__2
       });
       return this.__state;
     }

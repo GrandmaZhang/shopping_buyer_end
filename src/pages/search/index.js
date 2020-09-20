@@ -106,7 +106,7 @@ class SearchPage extends Component {
           <AtTabs
             current={currentTab}
             scroll
-            tabList={[{ title: "全部" }, ...tabList]}
+            tabList={[{ title: "搜索结果" }, ...tabList]}
             onClick={this.handleTabClick}
           >
             <AtTabsPane current={currentTab} index={0}>

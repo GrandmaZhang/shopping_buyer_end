@@ -1,5 +1,6 @@
 export default {
   userInfo: "/userInfo",
   login: "/login",
-  register: "/register"
+  register: "/register",
+  update: "/update-user"
 };

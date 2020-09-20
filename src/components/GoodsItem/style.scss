@@ -6,6 +6,7 @@
   border-radius: 10px;
   height: 490px;
   display: inline-block;
+  width: 89%;
   .goods-img {
     height: 340px;
     border-radius: 10px;
@@ -19,6 +20,9 @@
       display: inline-block;
       height: 66px;
       margin: 20px 0;
+    }
+    .goods-desc-price {
+      color: #f6416c;
     }
   }
 }

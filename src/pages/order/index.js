@@ -20,6 +20,10 @@ class Order extends Component {
   };
 
   async componentDidShow() {
+    this.refresh();
+  }
+
+  refresh = async () => {
     const { userInfo } = this.props;
     try {
       const orders = await Request({
@@ -36,7 +40,38 @@ class Order extends Component {
     } catch (e) {
       console.log(e);
     }
-  }
+  };
+
+  cancleOrder = async id => {
+    try {
+      await Request({
+        url: "/cancel-order",
+        method: "POST",
+        data: {
+          id,
+          status: 3
+        }
+      });
+      this.refresh();
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  deleteOrder = async id => {
+    try {
+      await Request({
+        url: "/delete-order",
+        method: "POST",
+        data: {
+          id
+        }
+      });
+      this.refresh();
+    } catch (e) {
+      console.log(e);
+    }
+  };
 
   render() {
     const { orders } = this.state;
@@ -44,6 +79,7 @@ class Order extends Component {
     return (
       <RootPage>
         <View className="order-page">
+          {!orders.length && <Text>您还没有订单，快去下单吧～</Text>}
           {orders.map(item => {
             const { goods } = item;
             const goodsList = JSON.parse(goods);
@@ -64,6 +100,24 @@ class Order extends Component {
                       {...goodsItem}
                     />
                   ))}
+                </View>
+                <View className="opt-bar">
+                  {item.status === 1 && (
+                    <Text
+                      className="opt-btn"
+                      // eslint-disable-next-line taro/no-anonymous-function-in-props
+                      onClick={() => this.cancleOrder(item.id)}
+                    >
+                      取消订单
+                    </Text>
+                  )}
+                  <Text
+                    className="opt-btn"
+                    // eslint-disable-next-line taro/no-anonymous-function-in-props
+                    onClick={() => this.deleteOrder(item.id)}
+                  >
+                    删除订单
+                  </Text>
                 </View>
               </View>
             );

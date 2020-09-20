@@ -1,7 +1,7 @@
 /* eslint-disable import/no-unresolved */
 import Taro, { Component } from "@tarojs/taro";
 import { View, Text } from "@tarojs/components";
-import { AtAvatar, AtButton } from "taro-ui";
+import { AtAvatar, AtButton, AtIcon } from "taro-ui";
 import { connect } from "@tarojs/redux";
 import userAvatar from "../../images/user/userAvatar.png";
 import { mapStateToProps } from "./connect";
@@ -20,15 +20,28 @@ class User extends Component {
     });
   };
 
+  checkUser = () => {
+    Taro.navigateTo({
+      url: `/pages/userInfo/index`
+    });
+  };
+
   render() {
     const { userInfo } = this.props;
     return (
       <View className="user-page">
         <View className="user-head">
           <AtAvatar circle image={userAvatar}></AtAvatar>
-          <Text>{userInfo.username}</Text>
+          <Text className="user-name">{userInfo.username}</Text>
         </View>
-        <AtButton onClick={this.checkOrder}>查看订单</AtButton>
+        <AtButton onClick={this.checkUser} circle>
+          <AtIcon value="user" size="24" color="#333" />
+          查看个人信息
+        </AtButton>
+        <AtButton onClick={this.checkOrder} circle>
+          <AtIcon value="tags" size="24" color="#333" />
+          查看订单
+        </AtButton>
       </View>
     );
   }

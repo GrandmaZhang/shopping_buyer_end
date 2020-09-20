@@ -26,7 +26,8 @@ class App extends Component {
       "pages/message/index",
       "pages/search/index",
       "pages/detail/index",
-      "pages/order/index"
+      "pages/order/index",
+      "pages/userInfo/index"
     ],
     window: {
       backgroundTextStyle: "dark",

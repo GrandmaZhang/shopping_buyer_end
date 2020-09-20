@@ -1,12 +1,13 @@
 // eslint-disable-next-line no-unused-vars
 import Taro, { Component } from "@tarojs/taro";
 import { View, Image, Text } from "@tarojs/components";
-import { AtButton, AtToast } from "taro-ui";
+import { AtButton, AtToast, AtTag, AtBadge } from "taro-ui";
 import { connect } from "@tarojs/redux";
 import Request from "../../utils/request";
 import detailAPI from "../../api/detailPage";
+import cartAPI from "../../api/cart";
 import RootPage from "../RootPage";
-import cart from "../../images/tab/cart.png";
+import cart from "../../images/tab/cart-active.png";
 import { mapStateToProps } from "./connect";
 
 import "./style.scss";
@@ -16,6 +17,7 @@ class Detail extends Component {
   state = {
     goodsDetail: {},
     isToastOpened: false,
+    cartNum: 0,
     toastText: "已添加商品至购物车"
   };
 
@@ -35,7 +37,27 @@ class Detail extends Component {
     } catch (e) {
       console.log(e);
     }
+
+    this.getCurCartItemNum();
   }
+
+  getCurCartItemNum = async () => {
+    const { userInfo } = this.props;
+    try {
+      const cartItems = await Request({
+        url: cartAPI.getCartItem,
+        method: "GET",
+        data: {
+          userId: userInfo.id
+        }
+      });
+      this.setState({
+        cartNum: cartItems.length
+      });
+    } catch (e) {
+      console.log(e);
+    }
+  };
 
   addGoodToCart = async () => {
     const { userInfo } = this.props;
@@ -49,6 +71,7 @@ class Detail extends Component {
           userId: userInfo.id
         }
       });
+      this.getCurCartItemNum();
       this.setState({
         isToastOpened: true
       });
@@ -58,23 +81,31 @@ class Detail extends Component {
   };
 
   render() {
-    const { goodsDetail, isToastOpened, toastText } = this.state;
+    const { goodsDetail, isToastOpened, toastText, cartNum } = this.state;
     return (
       <RootPage>
         <View className="detail-page">
           <Image src={goodsDetail.url} className="detail-image" />
           <View className="detail-desc">
-            <Text className="price">{goodsDetail.price}</Text>
-            <Text className="desc">{goodsDetail.name}</Text>
+            <Text className="price">{`¥${goodsDetail.price}`}</Text>
+            <Text className="desc">{goodsDetail.desc}</Text>
             <View className="extra">
-              <Text>快递 15.00</Text>
-              <Text>月销{goodsDetail.sold}</Text>
+              <View className="tag1">
+                <AtTag circle>快递 15.00</AtTag>
+              </View>
+              <View className="tag2">
+                <AtTag circle>月销{goodsDetail.sold}</AtTag>
+              </View>
             </View>
           </View>
           <View className="detail-bottom">
-            <Image src={cart} className="cart-icon" />
+            <AtBadge value={cartNum}>
+              <Image src={cart} className="cart-icon" />
+            </AtBadge>
             <View className="detail-btn">
-              <AtButton onClick={this.addGoodToCart}>加入购物车</AtButton>
+              <AtButton circle onClick={this.addGoodToCart}>
+                加入购物车
+              </AtButton>
             </View>
           </View>
           <AtToast isOpened={isToastOpened} text={toastText} />

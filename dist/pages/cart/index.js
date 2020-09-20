@@ -90,7 +90,7 @@ var Cart = (_dec = (0, _redux.connect)(_connect.mapStateToProps, null), _dec(_cl
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Cart.__proto__ || Object.getPrototypeOf(Cart)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray53", "$compid__336", "cartItems", "totalMoney", "userInfo"], _this.config = {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Cart.__proto__ || Object.getPrototypeOf(Cart)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray3", "$compid__5", "cartItems", "totalMoney", "userInfo"], _this.config = {
       navigationBarTitleText: "购物车"
     }, _this.state = {
       cartItems: []
@@ -264,40 +264,41 @@ var Cart = (_dec = (0, _redux.connect)(_connect.mapStateToProps, null), _dec(_cl
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__336"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__5"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__336 = _genCompid2[0],
-          $compid__336 = _genCompid2[1];
+          $prevCompid__5 = _genCompid2[0],
+          $compid__5 = _genCompid2[1];
 
       var userInfo = this.__props.userInfo;
       var cartItems = this.__state.cartItems;
 
       var totalMoney = this.getTotalMoney(cartItems);
-      var loopArray53 = cartItems.map(function (item, _anonIdx) {
+      var loopArray3 = cartItems.map(function (item, _anonIdx) {
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
 
-        var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "gizzzzzzzz" + _anonIdx, true),
+        var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "dzzzzzzzzz" + _anonIdx, true),
             _genCompid4 = _slicedToArray(_genCompid3, 2),
-            $prevCompid__335 = _genCompid4[0],
-            $compid__335 = _genCompid4[1];
+            $prevCompid__4 = _genCompid4[0],
+            $compid__4 = _genCompid4[1];
 
         _taroWeapp.propsManager.set(_extends({}, item.$original, {
           "userId": userInfo.id,
           "refresh": _this3.getCartItem
-        }), $compid__335, $prevCompid__335);
+        }), $compid__4, $prevCompid__4);
         return {
-          $compid__335: $compid__335,
+          $compid__4: $compid__4,
           $original: item.$original
         };
       });
       _taroWeapp.propsManager.set({
+        "circle": true,
         "onClick": this.countMoney
-      }, $compid__336, $prevCompid__336);
+      }, $compid__5, $prevCompid__5);
       Object.assign(this.__state, {
-        loopArray53: loopArray53,
-        $compid__336: $compid__336,
+        loopArray3: loopArray3,
+        $compid__5: $compid__5,
         totalMoney: totalMoney
       });
       return this.__state;

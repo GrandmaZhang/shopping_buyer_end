@@ -68,7 +68,7 @@ var SearchPage = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = SearchPage.__proto__ || Object.getPrototypeOf(SearchPage)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "loopArray34", "$compid__216", "$compid__217", "$compid__218", "$compid__219", "tabList", "searchValue", "goods", "currentTab"], _this.config = {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = SearchPage.__proto__ || Object.getPrototypeOf(SearchPage)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "loopArray4", "$compid__27", "$compid__28", "$compid__29", "$compid__30", "tabList", "searchValue", "goods", "currentTab"], _this.config = {
       navigationBarTitleText: "商品列表"
     }, _this.handleSearch = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
       var searchValue, moreGoods;
@@ -235,25 +235,25 @@ var SearchPage = (_temp2 = _class = function (_BaseComponent) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__216"),
+      var _genCompid = (0, _taroWeapp.genCompid)(__prefix + "$compid__27"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__216 = _genCompid2[0],
-          $compid__216 = _genCompid2[1];
+          $prevCompid__27 = _genCompid2[0],
+          $compid__27 = _genCompid2[1];
 
-      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__217"),
+      var _genCompid3 = (0, _taroWeapp.genCompid)(__prefix + "$compid__28"),
           _genCompid4 = _slicedToArray(_genCompid3, 2),
-          $prevCompid__217 = _genCompid4[0],
-          $compid__217 = _genCompid4[1];
+          $prevCompid__28 = _genCompid4[0],
+          $compid__28 = _genCompid4[1];
 
-      var _genCompid5 = (0, _taroWeapp.genCompid)(__prefix + "$compid__218"),
+      var _genCompid5 = (0, _taroWeapp.genCompid)(__prefix + "$compid__29"),
           _genCompid6 = _slicedToArray(_genCompid5, 2),
-          $prevCompid__218 = _genCompid6[0],
-          $compid__218 = _genCompid6[1];
+          $prevCompid__29 = _genCompid6[0],
+          $compid__29 = _genCompid6[1];
 
-      var _genCompid7 = (0, _taroWeapp.genCompid)(__prefix + "$compid__219"),
+      var _genCompid7 = (0, _taroWeapp.genCompid)(__prefix + "$compid__30"),
           _genCompid8 = _slicedToArray(_genCompid7, 2),
-          $prevCompid__219 = _genCompid8[0],
-          $compid__219 = _genCompid8[1];
+          $prevCompid__30 = _genCompid8[0],
+          $compid__30 = _genCompid8[1];
 
       var _state = this.__state,
           searchValue = _state.searchValue,
@@ -261,35 +261,35 @@ var SearchPage = (_temp2 = _class = function (_BaseComponent) {
           currentTab = _state.currentTab;
 
       console.log(goods, "searchGoods");
-      var anonymousState__temp = [{ title: "全部" }].concat(_toConsumableArray(_config.tabList));
-      var loopArray34 = _config.tabList.map(function (item, index) {
+      var anonymousState__temp = [{ title: "搜索结果" }].concat(_toConsumableArray(_config.tabList));
+      var loopArray4 = _config.tabList.map(function (item, index) {
         item = {
           $original: (0, _taroWeapp.internal_get_original)(item)
         };
         var $loopState__temp3 = index + 1;
 
-        var _genCompid9 = (0, _taroWeapp.genCompid)(__prefix + "edzzzzzzzz" + index, true),
+        var _genCompid9 = (0, _taroWeapp.genCompid)(__prefix + "ezzzzzzzzz" + index, true),
             _genCompid10 = _slicedToArray(_genCompid9, 2),
-            $prevCompid__214 = _genCompid10[0],
-            $compid__214 = _genCompid10[1];
+            $prevCompid__25 = _genCompid10[0],
+            $compid__25 = _genCompid10[1];
 
         _taroWeapp.propsManager.set({
           "current": currentTab,
           "index": $loopState__temp3
-        }, $compid__214, $prevCompid__214);
+        }, $compid__25, $prevCompid__25);
 
-        var _genCompid11 = (0, _taroWeapp.genCompid)(__prefix + "eezzzzzzzz" + index, true),
+        var _genCompid11 = (0, _taroWeapp.genCompid)(__prefix + "fzzzzzzzzz" + index, true),
             _genCompid12 = _slicedToArray(_genCompid11, 2),
-            $prevCompid__215 = _genCompid12[0],
-            $compid__215 = _genCompid12[1];
+            $prevCompid__26 = _genCompid12[0],
+            $compid__26 = _genCompid12[1];
 
         _taroWeapp.propsManager.set({
           "goods": goods
-        }, $compid__215, $prevCompid__215);
+        }, $compid__26, $prevCompid__26);
         return {
           $loopState__temp3: $loopState__temp3,
-          $compid__214: $compid__214,
-          $compid__215: $compid__215,
+          $compid__25: $compid__25,
+          $compid__26: $compid__26,
           $original: item.$original
         };
       });
@@ -298,27 +298,27 @@ var SearchPage = (_temp2 = _class = function (_BaseComponent) {
         "value": searchValue,
         "onChange": this.handleChange,
         "onActionClick": this.handleSearch
-      }, $compid__216, $prevCompid__216);
+      }, $compid__27, $prevCompid__27);
       _taroWeapp.propsManager.set({
         "current": currentTab,
         "scroll": true,
         "tabList": anonymousState__temp,
         "onClick": this.handleTabClick
-      }, $compid__217, $prevCompid__217);
+      }, $compid__28, $prevCompid__28);
       _taroWeapp.propsManager.set({
         "current": currentTab,
         "index": 0
-      }, $compid__218, $prevCompid__218);
+      }, $compid__29, $prevCompid__29);
       _taroWeapp.propsManager.set({
         "goods": goods
-      }, $compid__219, $prevCompid__219);
+      }, $compid__30, $prevCompid__30);
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
-        loopArray34: loopArray34,
-        $compid__216: $compid__216,
-        $compid__217: $compid__217,
-        $compid__218: $compid__218,
-        $compid__219: $compid__219,
+        loopArray4: loopArray4,
+        $compid__27: $compid__27,
+        $compid__28: $compid__28,
+        $compid__29: $compid__29,
+        $compid__30: $compid__30,
         tabList: _config.tabList
       });
       return this.__state;

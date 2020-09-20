@@ -92,13 +92,17 @@ var User = (_dec = (0, _redux.connect)(_connect.mapStateToProps, null), _dec(_cl
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = User.__proto__ || Object.getPrototypeOf(User)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__9", "$compid__10", "userInfo"], _this.config = {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = User.__proto__ || Object.getPrototypeOf(User)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__9", "$compid__10", "$compid__11", "$compid__12", "$compid__13", "userInfo"], _this.config = {
       navigationBarTitleText: "我的"
     }, _this.checkOrder = function () {
       _taroWeapp2.default.navigateTo({
         url: "/pages/order/index"
       });
-    }, _this.customComponents = ["AtAvatar", "AtButton"], _temp), _possibleConstructorReturn(_this, _ret);
+    }, _this.checkUser = function () {
+      _taroWeapp2.default.navigateTo({
+        url: "/pages/userInfo/index"
+      });
+    }, _this.customComponents = ["AtAvatar", "AtButton", "AtIcon"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(User, [{
@@ -127,6 +131,21 @@ var User = (_dec = (0, _redux.connect)(_connect.mapStateToProps, null), _dec(_cl
           $prevCompid__10 = _genCompid4[0],
           $compid__10 = _genCompid4[1];
 
+      var _genCompid5 = (0, _taroWeapp.genCompid)(__prefix + "$compid__11"),
+          _genCompid6 = _slicedToArray(_genCompid5, 2),
+          $prevCompid__11 = _genCompid6[0],
+          $compid__11 = _genCompid6[1];
+
+      var _genCompid7 = (0, _taroWeapp.genCompid)(__prefix + "$compid__12"),
+          _genCompid8 = _slicedToArray(_genCompid7, 2),
+          $prevCompid__12 = _genCompid8[0],
+          $compid__12 = _genCompid8[1];
+
+      var _genCompid9 = (0, _taroWeapp.genCompid)(__prefix + "$compid__13"),
+          _genCompid10 = _slicedToArray(_genCompid9, 2),
+          $prevCompid__13 = _genCompid10[0],
+          $compid__13 = _genCompid10[1];
+
       var userInfo = this.__props.userInfo;
 
       _taroWeapp.propsManager.set({
@@ -134,11 +153,29 @@ var User = (_dec = (0, _redux.connect)(_connect.mapStateToProps, null), _dec(_cl
         "image": _userAvatar2.default
       }, $compid__9, $prevCompid__9);
       _taroWeapp.propsManager.set({
-        "onClick": this.checkOrder
+        "onClick": this.checkUser,
+        "circle": true
       }, $compid__10, $prevCompid__10);
+      _taroWeapp.propsManager.set({
+        "value": "user",
+        "size": "24",
+        "color": "#333"
+      }, $compid__11, $prevCompid__11);
+      _taroWeapp.propsManager.set({
+        "onClick": this.checkOrder,
+        "circle": true
+      }, $compid__12, $prevCompid__12);
+      _taroWeapp.propsManager.set({
+        "value": "tags",
+        "size": "24",
+        "color": "#333"
+      }, $compid__13, $prevCompid__13);
       Object.assign(this.__state, {
         $compid__9: $compid__9,
         $compid__10: $compid__10,
+        $compid__11: $compid__11,
+        $compid__12: $compid__12,
+        $compid__13: $compid__13,
         userInfo: userInfo
       });
       return this.__state;

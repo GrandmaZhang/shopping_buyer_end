@@ -107,8 +107,12 @@ class Cart extends Component {
             ))}
           </View>
           <View className="bottom-bar">
-            <Text>¥{totalMoney}</Text>
-            <AtButton onClick={this.countMoney}>结算</AtButton>
+            <Text className="total-price">¥{totalMoney}</Text>
+            <View className="bottom-btn">
+              <AtButton circle onClick={this.countMoney}>
+                结算
+              </AtButton>
+            </View>
           </View>
         </View>
       </RootPage>

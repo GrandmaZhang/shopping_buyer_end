@@ -1,5 +1,5 @@
 {
-	"projectname": "shopping_buyer_end",
+	"projectname": "dist",
 	"description": "",
 	"appid": "wx9069603313e47dd9",
 	"setting": {
@@ -11,7 +11,7 @@
 		"newFeature": true,
 		"coverView": true,
 		"autoAudits": false,
-		"showShadowRootInWxmlPanel": false,
+		"showShadowRootInWxmlPanel": true,
 		"scopeDataCheck": false,
 		"checkInvalidKey": true,
 		"checkSiteMap": true,

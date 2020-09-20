@@ -18,4 +18,18 @@
     color: #fc392d;
     font-weight: 500;
   }
+  .opt-bar:after {
+    content: " ";
+    height: 0;
+    display: block;
+    clear: both;
+  }
+  .opt-bar {
+    padding: 0 20px 10px;
+  }
+  .opt-btn {
+    margin-left: 20px;
+    color: #5584ff;
+    float: right;
+  }
 }

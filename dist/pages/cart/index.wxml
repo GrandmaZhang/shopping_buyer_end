@@ -2,10 +2,12 @@
     <root-page>
         <view class="cart-page">
             <view class="content">
-                <cart-item wx:key="id" wx:for="{{loopArray114}}" wx:for-item="item" wx:for-index="_anonIdx2" compid="{{item.$compid__760}}"></cart-item>
+                <cart-item wx:key="id" wx:for="{{loopArray3}}" wx:for-item="item" wx:for-index="_anonIdx2" compid="{{item.$compid__4}}"></cart-item>
             </view>
-            <view class="bottom-bar"><text>¥{{totalMoney}}</text>
-                <at-button compid="{{$compid__761}}">结算</at-button>
+            <view class="bottom-bar"><text class="total-price">¥{{totalMoney}}</text>
+                <view class="bottom-btn">
+                    <at-button compid="{{$compid__5}}">结算</at-button>
+                </view>
             </view>
         </view>
     </root-page>

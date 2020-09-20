@@ -92,7 +92,7 @@ var _App = (_dec = (0, _redux.connect)(_connect.mapStateToProps, _connect.mapDis
     }
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = _App.__proto__ || Object.getPrototypeOf(_App)).call.apply(_ref, [this].concat(args))), _this), _this.config = {
-      pages: ["pages/home/index", "pages/cart/index", "pages/user/index", "pages/login/index", "pages/message/index", "pages/search/index", "pages/detail/index", "pages/order/index"],
+      pages: ["pages/home/index", "pages/cart/index", "pages/user/index", "pages/login/index", "pages/message/index", "pages/search/index", "pages/detail/index", "pages/order/index", "pages/userInfo/index"],
       window: {
         backgroundTextStyle: "dark",
         navigationBarBackgroundColor: "#fff",

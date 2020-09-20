@@ -32883,7 +32883,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = {
   userInfo: "/userInfo",
   login: "/login",
-  register: "/register"
+  register: "/register",
+  update: "/update-user"
 };
 
 /***/ }),

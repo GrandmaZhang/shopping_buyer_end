@@ -3,15 +3,60 @@
     width: 100%;
     height: 660px;
   }
+  .detail-desc {
+    padding: 10px 20px;
+    .price {
+      font-size: 50px;
+      color: #f6416c;
+      display: block;
+    }
+    .desc {
+      font-weight: 500;
+    }
+    .extra {
+      .tag1 {
+        display: inline-block;
+        .at-tag {
+          margin-right: 10px;
+          color: #fff;
+          background-image: linear-gradient(135deg, #fff6b7 10%, #f6416c 100%);
+        }
+      }
+      .tag2 {
+        display: inline-block;
+        .at-tag {
+          color: #fff;
+          background-image: linear-gradient(135deg, #5efce8 10%, #736efe 100%);
+        }
+      }
+    }
+  }
   .detail-bottom {
+    position: fixed;
     display: flex;
     flex-direction: row;
+    bottom: 0;
+    width: 95%;
+    justify-content: flex-end;
+    background: #fff;
+    padding: 20px 20px;
+    box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, 0.1);
     .detail-btn {
-      width: 60%;
+      width: 85%;
+      margin-left: 40rpx;
+      .at-button {
+        border: 0;
+        color: #fff;
+        background: linear-gradient(to right, #f2709c, #ff9472);
+      }
     }
     .cart-icon {
       width: 88px;
       height: 88px;
     }
   }
+}
+
+.detail-cartIcon {
+  display: inline-block;
 }
